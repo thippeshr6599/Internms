@@ -34,7 +34,7 @@
   margin-top: 30px;
 }
 
-.icon-box {
+.icon-box-Lfoot {
   width: 46px;
   height: 46px;
   border: 1px solid #2a3449;
@@ -44,35 +44,34 @@
   align-items: center;
   color: white;
   cursor: pointer;
-  transition: 0.3s;
-  background-color: #0f172a;
+  background-color:  #1f2937;
 }
 
 .icon-box:hover {
   background: #1f2937;
 }
 
-.footer-column {
+.footer-column-LF {
   display: flex;
   flex-direction: column;
   gap: 18px;
 }
 
-.footer-column h4 {
+.footer-column-LF h4 {
   font-size: 22px;
   margin-bottom: 10px;
   color: white;
   font-weight: 600;
 }
 
-.footer-column a {
+.footer-column-LF a {
   text-decoration: none;
   color: #8b93a7;
   font-size: 17px;
   transition: 0.3s;
 }
 
-.footer-column a:hover {
+.footer-column-LF a:hover {
   color: white;
 }
 
@@ -90,10 +89,6 @@
   font-size: 15px;
 }
 
-.heart {
-  color: #ef4444;
-  margin: 0 5px;
-}
 .icon-box img {
   width: 22px;
   height: 22px;

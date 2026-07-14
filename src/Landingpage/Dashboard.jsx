@@ -1,6 +1,7 @@
 import { useState } from "react";
 import "../Style.css/Dashboard.css"
 import officeImg from "../assets/Collaborative Modern Office.png";
+import LRrightmark from "../assets/LRightmark.png"
 
 function Dashboard() {
   const [active, setActive] = useState("Students");
@@ -15,7 +16,7 @@ function Dashboard() {
         </h2>
 
         <div className="feature">
-          <div className="check">✓</div>
+          <div className="check"><img src={LRrightmark} alt="" style={{width:"18px"}} /></div>
           <div>
             <h4>One-click Applications</h4>
             <p>
@@ -25,7 +26,7 @@ function Dashboard() {
         </div>
 
         <div className="feature">
-          <div className="check">✓</div>
+          <div className="check"><img src={LRrightmark} alt="" style={{width:"18px"}}  /></div>
           <div>
             <h4>AI Career Coaching</h4>
             <p>
@@ -35,7 +36,7 @@ function Dashboard() {
         </div>
 
         <div className="feature">
-          <div className="check">✓</div>
+          <div className="check"><img src={LRrightmark} alt="" style={{width:"18px"}} /></div>
           <div>
             <h4>Verified Credentials</h4>
             <p>

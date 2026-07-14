@@ -3,6 +3,7 @@ import "../Style.css/Features.css"
 import svgImg from "../assets/Icon.png";
 import bgImg from "../assets/Icon (1).png";
 import vectorImg from "../assets/Icon (2).png";
+import Rightarrow from "../assets/Rightblueicon.png"
 
 function Features() {
   return (
@@ -20,19 +21,18 @@ function Features() {
         </div>
 
         <button className="explore-btn">
-          Explore all features →
+          Explore all features  <img src={Rightarrow} alt="" style={{width:"25px",height:"15px",alignContent:"center"}} />
         </button>
 
       </div>
 
-      <div className="feature-grid">
+      <div className="feature-grid-Land">
 
-        <div className="feature-card">
+        <div className="feature-card-Land">
 
-          <div className="icon-box">
+          <div className="icon-box-Land">
             <img src={svgImg} alt="" className="feature-icon" />
           </div>
-
           <h3>Automated Matching</h3>
 
           <p>
@@ -42,9 +42,8 @@ function Features() {
 
         </div>
 
-        <div className="feature-card">
-
-          <div className="icon-box green">
+        <div className="feature-card-Land">
+          <div className="icon-box-Land">
             <img src={bgImg} alt="" className="feature-icon" />
           </div>
 
@@ -57,9 +56,9 @@ function Features() {
 
         </div>
 
-        <div className="feature-card">
+        <div className="feature-card-Land">
 
-          <div className="icon-box gray">
+          <div className="icon-box-Land">
             <img src={vectorImg} alt="" className="feature-icon" />
           </div>
 

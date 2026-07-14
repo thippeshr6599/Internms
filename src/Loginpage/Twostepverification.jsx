@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "../Login.css/Twostepverification.css"
-import Secure from "../assets/Icon (8).png";
+import Secure from "../assets/Whiteshield.png";
 import Mobilei from "../assets/mobileicon.png";
 import Gmaili  from  "../assets/gmail.png";
 import Leftarrow from "../assets/Leftarrow.png"
@@ -28,7 +28,7 @@ function Twostepverification() {
 
   return (
     <div>
-      <div className="Content">
+      <div className="Content-Two">
 
         <div className="left-panel">
           <div className="left-text1">
@@ -52,11 +52,10 @@ function Twostepverification() {
             </div>
           </div>
 
-          <div className="copyright" style={{fontSize:"10px",marginTop:"90px",marginRight:"250px",marginLeft:"20px"}}>
+          <div className="copyright2" style={{fontSize:"10px",marginTop:"190px",marginRight:"250px",marginLeft:"20px"}}>
             @ 2024 InternMS
           </div>
         </div>
-
         <div className="right-panel">
           <div className="verify-card">
 

@@ -5,6 +5,7 @@ import EyeIcon from "../assets/Eyeicon.png";
 import GoogleIcon from "../assets/SVG.png";
 import Gmail1 from "../assets/Gmail1.png";
 import Lock1 from "../assets/Pass1.png";
+import Rightarrow from "../assets/Righticon (2).png"
 
 
 function App() {
@@ -46,7 +47,7 @@ function App() {
 
 
   return (
-      <div className="Content">
+      <div className="Content-Loginpage">
       <div className="Page-Container">
          <div className="login-page">
 
@@ -86,14 +87,14 @@ function App() {
 
         </div>
 
-        <div className="copyright" style={{marginTop:"80px", marginRight:"280px",fontSize:"10px"}}>
+        <div className="copyright-Login" style={{marginTop:"180px", marginRight:"280px",fontSize:"10px"}}>
            @2024 InternMS
         </div>
          
       </div>
 
 
-      <div className="right-panel">
+      <div className="right-panel-Login">
 
         <div className="login-box">
 
@@ -106,9 +107,9 @@ function App() {
           <label>Email Address</label>
 
           <form onSubmit={handlesubmit}>
-            <div className="input-box">
-            <img src={Gmail1} alt="" style={{width:"22px",height:"18px"}} />
-            <input
+          <div className="input-box-Login">
+          <img src={Gmail1} alt="" style={{width:"22px",height:"18px"}} />
+          <input
               type="email"
               name="email"
               value={formData.email}
@@ -122,7 +123,7 @@ function App() {
             <Link to="/Forgotpassword">Forgot Password?</Link>
           </div>
 
-           <div className="input-box">
+           <div className="input-box-Login">
 
             <img src={Lock1} alt="" style={{width:"20px",height:"20px"}} />
             <input
@@ -150,7 +151,7 @@ function App() {
           </div>
 
            <button type="submit" className="signin">
-            Sign In
+            Sign In <img src={Rightarrow} alt="" style={{width:"18",height:"12px"}}/>
            </button>
           </form>
 

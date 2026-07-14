@@ -1,13 +1,36 @@
-import React, { useRef } from "react";
+import React, { useRef , useState , useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import "../Login.css/Forgototp.css"
 import Forgoticon2 from "../assets/forgoticon2.png"
 import Lockicon from "../assets/Lockicon.png"
 import Lockicon2 from "../assets/Lockicon2.png"
+import Rightarrow from "../assets/Righticon (2).png"
 
 export default function Forgototp() {
   const inputs = useRef([]);
   const navigate = useNavigate();
+  const [seconds, setSeconds] = useState(599); 
+  const [sec, setSec] = useState(59);
+
+  useEffect(() => {
+    if (seconds === 0) return;
+
+    const timer = setInterval(() => {
+      setSeconds((prev) => prev - 1);
+    }, 1000);
+
+     const interval = setInterval(() => {
+      setSec((prev) => (prev > 0 ? prev - 1 : 0));
+    }, 1000);
+
+    return () => {
+          clearInterval(timer);
+           clearInterval(interval);
+        };
+  }, [seconds,sec]);
+
+  const minutes = String(Math.floor(seconds / 60)).padStart(2, "0");
+  const secs = String(seconds % 60).padStart(2, "0");
 
   const handleChange = (e, index) => {
     if (e.target.value.length === 1 && index < 5) {
@@ -35,11 +58,11 @@ export default function Forgototp() {
   };
 
   return (
-    <div className="Content">
+    <div className="Content-Forgototp">
 
       <div className="verify-left">
         <div className="shield-circle">
-           <img src={Forgoticon2} alt="" style={{width:"60px", height:"75px"}}/>
+           <img src={Forgoticon2} alt="" style={{width:"30px", height:"40px"}}/>
         </div>
 
         <h1>Verify Identity</h1>
@@ -61,7 +84,7 @@ export default function Forgototp() {
             We've sent a 6-digit code to your registered Email and
             phone number. The code will
             <br />
-            expire in <span>09:59</span> minutes.
+            expire in <span>{minutes}:{secs}</span> minutes.
           </p>
 
           <div className="otp-boxes">
@@ -77,12 +100,22 @@ export default function Forgototp() {
           </div>
 
            <button className="verify-btn" onClick={handleVerify}>
-            Verify and Continue
+            Verify and Continue <img src={Rightarrow} alt="" style={{width:"18",height:"12px"}}/>
 
           </button>
 
-          <p className="resend">
-            Didn't receive the code? <b>Resend</b> (in 00:55)
+           <p className="resend">
+           Didn't receive the code?{" "}
+           {sec > 0 ? (
+           <span>Resend in 00:{sec.toString().padStart(2, "0")}</span>
+           ) : (
+           <button
+           className="resend-btn"
+           onClick={() => setSec(59)}
+           >
+            Resend Code 
+          </button>
+           )}
           </p>
 
           <div className="bottom-line"></div>

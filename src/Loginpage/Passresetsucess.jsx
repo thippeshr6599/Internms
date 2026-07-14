@@ -1,8 +1,9 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import "../Login.css/Passresetsucess.css"
-import Sucessicon from "../assets/sucess1.png"
+import Sucessicon from "../assets/Rightmark.png"
 import successImg from "../assets/success page.png";
+import Passright from "../assets/Passicon.png"
 
 export default function Passresetsucess() {
   const navigate = useNavigate();
@@ -13,14 +14,14 @@ export default function Passresetsucess() {
 
 
   return (
-    <div className="Content" style={{width:"1250px"}} >
+    <div className="Content-Resetpass">
 
 
-      <div className="left-panel">
+      <div className="left-panel-Resetpass">
 
-        <div className="check-circle">
-          <div className="inner-circle">
-            <img src={Sucessicon} alt="" style={{width:"50px", height:"50px" ,backgroundColor:"blue"}}/>
+        <div className="check-circle-Resetpass">
+          <div className="inner-circle-Resetpass">
+            <img src={Sucessicon} alt="" style={{width:"50px", height:"50px",background:"blue"}}/>
           </div>
         </div>
 
@@ -38,11 +39,11 @@ export default function Passresetsucess() {
         />
       </div>
 
-      <div className="right-panel">
+      <div className="right-panel-Resetpass">
 
-        <div className="status" style={{marginRight:"300px"}}>
+        <div className="status-Resetpass" style={{marginRight:"300px"}}>
 
-          <span>Action Complete</span>
+          <span><img src={Passright} style={{width:"15px",height:"15px",marginTop:"5px"}}/> Action Complete</span>
         </div>
 
         <h2 style={{marginRight:"300px"}}>Success</h2>
@@ -53,7 +54,7 @@ export default function Passresetsucess() {
           anyone.
         </p>
 
-        <button className="login-btn" onClick={handleLogin}>
+        <button className="login-btn-Reset" onClick={handleLogin}>
 
           <span>Back to Login</span>
 

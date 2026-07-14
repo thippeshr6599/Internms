@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "../Login.css/Forgotpassword.css"
 import Forgotimg from "../assets/Forgot.png"
+import Leftline from "../assets/Left line.png"
+import Rightarrow from "../assets/Righticon (2).png"
 
 
 export default function Forgot() {
@@ -18,7 +20,7 @@ export default function Forgot() {
 };
 
   return (
-    <div className="Content">
+    <div className="Content-Forgot">
 
       <div className="forgot-left">
 
@@ -55,7 +57,7 @@ export default function Forgot() {
 
         <div className="form-box">
 
-          <div className="icon-box">
+          <div className="icon-boxf">
               <img src={Forgotimg} alt="" style={{width:"30px", height:"30px"}} />
           </div>
 
@@ -66,7 +68,7 @@ export default function Forgot() {
             code.
           </p>
 
-          <h4>Verification Method</h4>
+          <h4>Verification Method <img src={Rightarrow} alt="" /></h4>
 
 
           <div
@@ -78,7 +80,7 @@ export default function Forgot() {
             </div>
 
             <div className="option-text">
-              <h3 style={{marginRight:"100px"}}>
+              <h3 style={{marginRight:"150px"}}>
                 Email Address
               </h3>
               <p >Send code to j**n@g***l.com</p>
@@ -95,7 +97,7 @@ export default function Forgot() {
             </div>
 
             <div className="option-text">
-              <h3 style={{marginRight:"50px"}}>
+              <h3 style={{marginRight:"105px"}}>
                SMS / Text Message
               </h3>
               <p>Send code to +91 9****5678</p>
@@ -103,15 +105,15 @@ export default function Forgot() {
           </div>
 
           <button
-              className="send-btn"
+              className="send-btn-Forgot"
               onClick={handleSendCode}
               >
-              Send Verification Code
+              Send Verification Code <img src={Rightarrow} alt="" style={{width:"15px"}} />
 
             </button>
 
           <div className="back-btn" onClick={() => navigate("/")}>
-
+            <img src={Leftline} alt="" style={{width:"10px",height:"10px"}} />
             Back to Login
           </div>
 

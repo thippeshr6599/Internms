@@ -11,6 +11,9 @@ import Forgototp from './Loginpage/Forgototp'
 import Setnewpassword from './Loginpage/Setnewpassword'
 import Passresetsucess from './Loginpage/Passresetsucess'
 import Createaccount from './Signuppage/Createaccount'
+import Mentor from './Signuppage/Mentor'
+import Intern from './Signuppage/Intern'
+import Company from './Signuppage/Company'
 
 export default function App() {
   return (
@@ -27,7 +30,10 @@ export default function App() {
         <Route path="/Forgototp" element={<Forgototp/>}/>
         <Route path="/Setnewpassword" element={<Setnewpassword/>}/>
         <Route path="/Passrestsucess" element={<Passresetsucess/>}/>
-        <Route path="/Createaccount" element={<Createaccount/>}/>
+        <Route path="/Createaccount" element={<Createaccount />} />
+        <Route path="/Mentor" element={<Mentor />} />
+        <Route path="/Intern" element={<Intern />} />
+        <Route path="/Company" element={<Company />} />
        </Routes>
        </BrowserRouter>
     </div>

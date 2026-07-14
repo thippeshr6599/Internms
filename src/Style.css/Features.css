@@ -39,13 +39,13 @@
   color: #1d4ed8;
 }
 
-.feature-grid {
+.feature-grid-Land {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 30px;
 }
 
-.feature-card {
+.feature-card-Land {
   background-color: #f2f3f5;
   border-radius: 22px;
   padding: 40px;
@@ -53,11 +53,11 @@
   transition: .3s;
 }
 
-.feature-card:hover {
+.feature-card-Land:hover {
   transform: translateY(-5px);
 }
 
-.icon-box {
+.icon-box-Land {
   width: 70px;
   height: 70px;
   background: #ffffff;
@@ -67,27 +67,32 @@
   align-items: center;
   margin-bottom: 30px;
 }
+.icon-box-Land img{
+  width: 40px;
+  height: 40px;
+  background: none;
+}
 
-.icon-box.green {
+.icon-box-Land-green{
   background: #eaf9f2;
 }
 
-.icon-box.gray {
+.icon-box-Land-gray {
   background: #f2f3f5;
 }
-.feature-icon {
+.feature-icon-Land {
   width: 32px;
   height: 32px;
 }
 
-.feature-card h3 {
+.feature-card-Land h3 {
   font-size: 30px;
   font-weight: 600;
   color: #1f2937;
   margin-bottom: 18px;
 }
 
-.feature-card p {
+.feature-card-Land p {
   color: #6b7280;
   font-size: 18px;
   line-height: 1.8;

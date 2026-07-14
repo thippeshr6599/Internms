@@ -40,7 +40,7 @@ export default function Mobileverification() {
   };
 
   return (
-    <div className="Content">
+    <div className="Content-Mobile">
 
       <div className="mobile-left">
             <div className="shield-boxM">

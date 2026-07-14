@@ -5,6 +5,7 @@ import Newpicon from "../assets/Newpasswordicon.png"
 import Newpasslock from "../assets/Newpasslock.png"
 import Lockicon from "../assets/Lockicon.png"
 import Righticon1 from "../assets/PassRight.png"
+import Rightarrow from "../assets/Righticon (2).png"
 
 export default function Setnewpassword() {
   const [showPass, setShowPass] = useState(false);
@@ -27,7 +28,7 @@ export default function Setnewpassword() {
   };
 
   return (
-    <div className="Content">
+    <div className="Content-Setnew">
 
       <div className="new-left">
         <div>
@@ -103,7 +104,7 @@ export default function Setnewpassword() {
           </div>
 
           <button className="update-btn" onClick={handleUpdate}>
-            Update Password 
+            Update Password <img src={Rightarrow} alt="" style={{width:"18",height:"12px"}}/>
           </button>
 
           <button

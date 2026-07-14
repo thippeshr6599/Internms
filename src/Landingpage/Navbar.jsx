@@ -6,12 +6,12 @@ function Navbar() {
   const navigate = useNavigate();
 
   return (
-    <nav className="navbar">
+    <nav className="navbar-land">
       <div className="logo" style={{color:"#302b92"}}>InternMS</div>
 
       <div className="nav-buttons">
         <span
-          className="login"
+          className="loginnav"
           onClick={() => navigate("/Loginmainpage")}
           style={{ cursor: "pointer" }}
         >

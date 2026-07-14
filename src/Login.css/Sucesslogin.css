@@ -5,12 +5,8 @@
     font-family:Inter,sans-serif;
 }
 
-body{
-    background:#8a8796;
-}
 
-
-.Content{
+.Content-Sucesslogin{
     width:1100px;
     height:700px;
     margin:20px auto;
@@ -21,7 +17,7 @@ body{
 }
 
 
-.left-panel{
+.left-panel-Sucesslogin{
     width:48%;
     background:linear-gradient(180deg,#2f59d8,#0f1b44);
     display:flex;
@@ -32,9 +28,9 @@ body{
     padding:60px 65px;
 }
 
-.check-circle{
+.check-circle-Sucess{
     width:90px;
-    height:120px;
+    height:90px;
     border-radius:50%;
     background:rgba(255,255,255,0.10);
     display:flex;
@@ -44,7 +40,7 @@ body{
     margin-bottom:40px;
 }
 
-.inner-circle{
+.inner-circle-Sucess{
     width:46px;
     height:46px;
     border-radius:50%;
@@ -52,11 +48,10 @@ body{
     display:flex;
     justify-content:center;
     align-items:center;
-    color:#2f59d8;
     font-size:28px;
 }
 
-.left-panel h1{
+.left-panel-Sucesslogin h1{
     font-size:30px;
     line-height:1.15;
     text-align:center;
@@ -64,7 +59,7 @@ body{
     margin-bottom:20px;
 }
 
-.left-panel p{
+.left-panel-Sucesslogin p{
     text-align:center;
     color:#d8dcef;
     font-size:18px;
@@ -80,13 +75,14 @@ body{
 }
 
 
-.right-panel{
+.right-panel-Sucesslogin{
     width:48%;
     display:flex;
     flex-direction:column;
     justify-content:center;
     padding:10px;
     background:#fff;
+    margin: 50px;
 }
 
 .status{

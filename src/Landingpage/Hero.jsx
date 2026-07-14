@@ -2,15 +2,21 @@ import React from "react";
 import "../Style.css/Hero.css"
 import dashboard from "../assets/Internship Management Dashboard.png";
 import successIcon from "../assets/Icon (4).png";
+import Star from "../assets/Landingpagestar.png"
+import Righticon from "../assets/Righticon (2).png"
+import { useNavigate } from "react-router-dom";
 
 function Hero() {
+
+     const navigate = useNavigate();
+
   return (
     <section className="hero">
 
       <div className="hero-left">
 
         <div className="hero-badge">
-          ✦ Next-Generation Placement OS
+          <img src={Star} alt="" style={{width:"15px", height:"15px"}} /> Next-Generation Placement OS
         </div>
 
         <h1>
@@ -31,9 +37,9 @@ function Hero() {
         </p>
 
         <div className="hero-buttons">
-          <button className="primary-btn">
+          <button className="primary-btn" onClick={() => navigate("/Createaccount")}>
             Get Started
-            <span>→</span>
+            <span> <img src={Righticon} alt="" style={{width:"20px", height:"15px"}} /></span>
           </button>
 
           <button className="secondary-btn">

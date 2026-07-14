@@ -2,26 +2,21 @@
     margin:0;
     padding:0;
     box-sizing:border-box;
-    font-family:Inter,sans-serif;
-}
-
-body{
-    background:#8a8796;
 }
 
 
-.Content{
-    width:1100px;
+.Content-Resetpass{
+    border: 1px solid rgb(211, 202, 202);
+    width:1000px;
     height:700px;
     margin:20px auto;
     display:flex;
-    background:#fff;
     border-radius:12px;
     overflow:hidden;
 }
 
 
-.left-panel{
+.left-panel-Resetpass{
     width:48%;
     background:linear-gradient(180deg,#2f59d8,#0f1b44);
     display:flex;
@@ -32,9 +27,9 @@ body{
     padding:60px 65px;
 }
 
-.check-circle{
+.check-circle-Resetpass{
     width:90px;
-    height:120px;
+    height:90px;
     border-radius:50%;
     background:rgba(255,255,255,0.10);
     display:flex;
@@ -44,7 +39,7 @@ body{
     margin-bottom:40px;
 }
 
-.inner-circle{
+.inner-circle-Resetpass{
     width:46px;
     height:46px;
     border-radius:50%;
@@ -52,11 +47,10 @@ body{
     display:flex;
     justify-content:center;
     align-items:center;
-    color:#2f59d8;
     font-size:28px;
 }
 
-.left-panel h1{
+.left-panel-Resetpass h1{
     font-size:30px;
     line-height:1.15;
     text-align:center;
@@ -64,7 +58,7 @@ body{
     margin-bottom:20px;
 }
 
-.left-panel p{
+.left-panel-Resetpass p{
     text-align:center;
     color:#d8dcef;
     font-size:18px;
@@ -80,16 +74,17 @@ body{
 }
 
 
-.right-panel{
+.right-panel-Resetpass{
     width:48%;
     display:flex;
     flex-direction:column;
     justify-content:center;
     padding:10px;
-    background:#fff;
+    margin: 50px;
+    margin-right: 50px;
 }
 
-.status{
+.status-Resetpass{
     display:inline-flex;
     align-items:center;
     gap:8px;
@@ -103,21 +98,22 @@ body{
     margin-bottom:30px;
 }
 
-.right-panel h2{
+.right-panel-Resetpass h2{
     font-size:40px;
     color:#151515;
     margin-bottom:20px;
 }
 
 .description{
-    font-size:21px;
+    font-size:18px;
     line-height:36px;
     color:#666;
     margin-bottom:45px;
+    margin-right: 50px;
 }
 
-.login-btn{
-    width:100%;
+.login-btn-Reset{
+    width:400px;
     height:55px;
     border:none;
     border-radius:8px;
@@ -133,11 +129,11 @@ body{
     transition:.3s;
 }
 
-.login-btn:hover{
+.login-btn-Reset:hover{
     background:#351bc5;
 }
 
-.right-panel hr{
+.right-panel-Resetpass hr{
     margin-top:45px;
     border:none;
     border-top:1px solid #ddd;

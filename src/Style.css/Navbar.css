@@ -1,8 +1,7 @@
-.navbar{
+.navbar-land{
     display:flex;
     justify-content:space-between;
     align-items:center;
-    padding:25px 50px;
     background:white;
     border-bottom:1px solid #eee;
 }
@@ -10,6 +9,7 @@
 .logo{
     font-size:40px;
     font-weight:700;
+    margin-top: 25px;
 }
 
 .nav-links{
@@ -24,16 +24,17 @@
     display:flex;
     align-items:center;
     gap:20px;
+    padding-right: 50px;
 }
 .nav-buttons button:hover{
        background:#1f195f;
 }
 
-.login{
+.loginnav{
     color:#07061b;
     cursor:pointer;
 }
-.login:hover {
+.loginnav:hover {
     color:red;
 }
 

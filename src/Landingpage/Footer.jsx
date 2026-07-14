@@ -1,8 +1,8 @@
 import React from "react";
 import "../Style.css/Footer.css"
-
-import globeIcon from "../assets/Icon (5).png";
-import mailIcon from "../assets/Icon (6).png";
+import globeIcon from "../assets/Web.png";
+import mailIcon from "../assets/Gamilwhite.png";
+import Heart from "../assets/Heart.png"
 
 function Footer() {
   return (
@@ -22,17 +22,17 @@ function Footer() {
           </p>
 
           <div className="footer-icons">
-            <div className="icon-box">
-              <img src={globeIcon} alt="Website" />
+            <div className="icon-box-Lfoot">
+              <img src={globeIcon} alt="Website" style={{width:"30px"}} />
             </div>
 
-            <div className="icon-box">
-              <img src={mailIcon} alt="Email" />
+            <div className="icon-box-Lfoot">
+              <img src={mailIcon} alt="Email"  style={{width:"30px"}} />
             </div>
           </div>
         </div>
 
-        <div className="footer-column">
+        <div className="footer-column-LF">
           <h4>Product</h4>
 
           <a href="#">For Students</a>
@@ -41,7 +41,7 @@ function Footer() {
           <a href="#">Pricing</a>
         </div>
 
-        <div className="footer-column">
+        <div className="footer-column-LF">
           <h4>Company</h4>
 
           <a href="#">Privacy Policy</a>
@@ -55,10 +55,10 @@ function Footer() {
       <hr />
 
       <div className="footer-bottom">
-        <p>© 2024 InternMS. All rights reserved.</p>
+        <p>@ 2024 InternMS. All rights reserved.</p>
 
         <p>
-          Made with  for the future workforce
+          Made with <img src={Heart} alt="" style={{width:"10px"}} />  for the future workforce
         </p>
       </div>
     </footer>

@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import "../Login.css/Sucesslogin.css"
 import successImg from "../assets/success page.png";
 import Verifyicon from "../assets/Verificationicon.png";
-import Righticon from "../assets/Righticon.png"
+import Righticon from "../assets/Rightmark.png"
 
 export default function Sucesslogin() {
 const navigate = useNavigate();
@@ -14,13 +14,13 @@ const navigate = useNavigate();
 
 
   return (
-    <div className="Content" style={{width:"1250px"}} >
+    <div className="Content-Sucesslogin" style={{width:"1250px"}} >
 
 
-      <div className="left-panel">
+      <div className="left-panel-Sucesslogin">
 
-        <div className="check-circle">
-          <div className="inner-circle">
+        <div className="check-circle-Sucess">
+          <div className="inner-circle-Sucess">
              <img src={Righticon} alt="" style={{width:"50px", height:"50px", background:"blue"}}/>
           </div>
         </div>
@@ -38,7 +38,7 @@ const navigate = useNavigate();
         />
       </div>
 
-      <div className="right-panel">
+      <div className="right-panel-Sucesslogin">
 
         <div className="status" style={{marginRight:"300px"}}>
 
@@ -60,7 +60,9 @@ const navigate = useNavigate();
         </button>
 
         <hr />
-
+        <div>
+           <p onClick={() => navigate("/")}>Land</p>
+        </div>
       </div>
 
     </div>

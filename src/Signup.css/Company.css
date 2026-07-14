@@ -1,165 +1,123 @@
-.Content{
-    border: 1px solid rgb(220, 207, 207);
+.company-page{
     width:1100px;
-    height:800px;
     margin:20px auto;
-    display:flex;
+    background:#fff;
     border-radius:12px;
+    overflow:hidden;
+    box-shadow:0 6px 20px rgba(0,0,0,.08);
+}
+.Content-Company{
+    width:100%;
+    min-height:1000px;
+    display:flex;
+    background:#fff;
+}
+
+/* ================= LEFT PANEL ================= */
+
+.Left-panel-Company{
+    width:500px;
+    height:1000px;
+    background:linear-gradient(180deg,#3d73e2 0%, #203d78 100%);
+    color:#fff;
+    position:relative;
     overflow:hidden;
 }
 
+/* light blur circle */
 
-.Left-content{
-    width:500px;
-    height:900px;
-    background:linear-gradient(160deg,#2f5fc6,#27479d);
-    padding:45px;
-    display:flex;
-    flex-direction:column;
-    justify-content:space-between;
-    color:#fff;
+.Left-panel-Company::before{
+    content:"";
+    position:absolute;
+    width:250px;
+    height:250px;
+    border-radius:50%;
+    background:rgba(255,255,255,.08);
+    filter:blur(70px);
+    left:-80px;
+    bottom:30px;
 }
 
+.company-left-content{
+    padding:120px 55px 50px;
+}
 
-.logoC h3{
+.company-left-content h1{
     font-size:28px;
-    font-weight:600;
-}
-
-
-.hero-content{
-    margin-top:150px;
-}
-
-.hero-content h1{
-    font-size:35px;
-    line-height:1.15;
+    line-height:42px;
     font-weight:700;
     margin-bottom:20px;
 }
 
-.hero-content p{
-    font-size:16px;
-    line-height:1.8;
-    color:rgba(255,255,255,.75);
-    width:360px;
-    margin-bottom:40px;
+.company-description{
+    color:#dbe4ff;
+    font-size:15px;
+    line-height:20px;
+    margin-bottom:35px;
 }
 
-
-.dashboard-card {
-  width: 400px;
-  height: 140px;
-  padding: 22px;
-  border-radius: 16px;
-  background: rgba(255, 255, 255, 0.08);
-  backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.15);
-  box-sizing: border-box;
-  margin-bottom: 48px;
+/* Features */
+.Icon-back {
+    width: 40px;
+    height: 40px;
+    border: 1px solid none;
+    border-radius: 50%;
+    background-color: #3525CD;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
-
-.card-header {
-  display: flex;
-  align-items: flex-start;
-  gap: 16px;
+.Icon-back img {
+    width: 23px;
+    height: 18px;
+    display: block;
 }
-
-.icon-box {
-  width: 50px;
-  height: 50px;
-  min-width: 50px;
-  border-radius: 50%;
-  background: #8d48ff;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border: none;
+.Icon-text {
+    font-size: 13px;
 }
-
-.icon-box img {
-  width: 22px;
-  height: 18px;
+.Icon-text{
+    color:#dbe4ff;
+    font-size:12px;
+    line-height:20px;
 }
-
-.text-content {
-  flex: 1;
+.Features {
+    display: flex;
+    gap: 25px;
 }
+/* Bottom Card */
 
-.text-content h3 {
-  margin: 0;
-  font-size: 16px;
-  font-weight: 600;
-  color: #fff;
-}
-
-.text-content p {
-  margin: 4px 0 18px;
-  font-size: 13px;
-  color: rgba(255, 255, 255, 0.75);
-}
-
-.progress-section {
-  width: 100%;
-}
-
-.progress-bar {
-  width: 100%;
-  height: 7px;
-  background: rgba(255, 255, 255, 0.18);
-  border-radius: 20px;
-  overflow: hidden;
-}
-
-.progress-fill {
-  width: 82%;
-  height: 100%;
-  background: linear-gradient(90deg, #efc6ff, #cb82ff);
-  border-radius: 20px;
-}
-
-.progress-info {
-  display: flex;
-  justify-content: space-between;
-  margin-top: 8px;
-}
-
-.progress-info span {
-  font-size: 11px;
-  color: rgba(255, 255, 255, 0.75);
-}
-
-
-.statsC{
+.company-card{
+    width:300px;
+    height:250px;
+    margin:60px auto 0;
+    border-radius:18px;
+    border:1px solid rgba(255,255,255,.15);
+    background:rgba(255,255,255,.08);
+    backdrop-filter:blur(12px);
     display:flex;
-    gap:50px;
+    justify-content:center;
+    align-items:center;
+    margin-top: 100px;
 }
 
-.statsC h2{
-    font-size:24px;
-    margin-bottom:5px;
+.company-card img{
+    width:95px;
+    opacity:.8;
 }
-
-.statsC p{
-    font-size:10px;
-    letter-spacing:1px;
-    color:rgba(255,255,255,.75);
-}
-
-
-.Right-content{
+.Right-panel-Company{
     width:600px;
     min-height:700px;
     padding:35px;
     background:#fff;
     box-sizing:border-box;
+    margin-top: 50px;
 }
 .Right-head{
     margin-bottom:20px;
 }
 
 .Right-head h2{
-    font-size:36px;
+    font-size:30px;
     color:#222;
     margin-bottom:6px;
 }
@@ -208,6 +166,12 @@
 }
 
 
+.Icon1:hover img {
+    transition: none;
+}
+
+
+
 .Icon1 img{
     width:22px;
     margin-bottom:8px;
@@ -226,7 +190,7 @@
     display:grid;
     grid-template-columns:repeat(2,1fr);
     column-gap:18px;
-    row-gap:18px;
+    row-gap:5px;
 }
 
 
@@ -301,7 +265,7 @@
 }
 
 .phone-box select{
-    width:50px;
+    width:75px;
 }
 
 .phone-box input{
@@ -418,4 +382,122 @@
     cursor:pointer;
     font-weight:600;
 }
+.company-nav-footer{
+    width:100%;
+    height:55px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:0 30px;
+    border-top:1px solid #e8e8e8;
+    box-sizing:border-box;
+    background:#fff;
+}
 
+.company-logo{
+    font-size:20px;
+    font-weight:700;
+    color:#3b46d3;
+}
+
+.company-nav-links{
+    display:flex;
+    gap:45px;
+    font-size:14px;
+    font-weight:600;
+    color:#333;
+}
+
+.company-nav-links span{
+    cursor:pointer;
+}
+
+.company-login-link{
+    font-size:14px;
+    font-weight:600;
+    color:#3b46d3;
+    cursor:pointer;
+}
+
+/*================ MAIN FOOTER ================*/
+
+.company-footer{
+    width:100%;
+    background:#dfe9ff;
+    padding:45px 35px 20px;
+    box-sizing:border-box;
+}
+
+.footer-content{
+
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-start;
+
+}
+
+.footer-column{
+
+    width:180px;
+
+}
+
+.footer-brand{
+
+    width:290px;
+
+}
+
+.footer-column h3{
+
+    margin-bottom:20px;
+    font-size:22px;
+    color:#3548d3;
+
+}
+
+.footer-column h4{
+
+    margin-bottom:20px;
+    color:#222;
+    font-size:17px;
+
+}
+
+.footer-column p{
+
+    color:#555;
+    line-height:28px;
+    font-size:14px;
+    margin:0;
+
+}
+
+.company-footer hr{
+
+    margin:35px 0 20px;
+    border:none;
+    border-top:1px solid #c8d4ef;
+
+}
+
+.footer-bottom{
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+}
+
+.footer-bottom p{
+
+    font-size:13px;
+    color:#555;
+
+}
+
+.footer-icons span img{
+        width: 25px;
+        height: 25px;
+        cursor: pointer;
+}
