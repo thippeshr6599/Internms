@@ -13,18 +13,17 @@
     background:#fff;
 }
 
-/* ================= LEFT PANEL ================= */
+
 
 .Left-panel-Company{
     width:500px;
     height:1000px;
-    background:linear-gradient(180deg,#3d73e2 0%, #203d78 100%);
+    background:linear-gradient(180deg,#467EE5, #1B2F4C);
     color:#fff;
     position:relative;
     overflow:hidden;
 }
 
-/* light blur circle */
 
 .Left-panel-Company::before{
     content:"";
@@ -419,11 +418,10 @@
     cursor:pointer;
 }
 
-/*================ MAIN FOOTER ================*/
 
 .company-footer{
     width:100%;
-    background:#dfe9ff;
+    background:#DEE8FF;
     padding:45px 35px 20px;
     box-sizing:border-box;
 }

@@ -155,7 +155,7 @@ export default function Mentor() {
 
         </div>
 
-        <div className="office-image">
+        <div className="office-image" style={{marginBottom:"100px"}}>
           <img src={Mentoroffice} alt="Office" />
         </div>
       </div>

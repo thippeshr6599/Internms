@@ -13,7 +13,7 @@
 .left-panel{
     width:500px;
     height:100%;
-    background:linear-gradient(180deg,#2f63d6,#162b63);
+    background:linear-gradient(180deg,#275EC3,#0D204A);
     box-sizing:border-box;
     display:flex;
     flex-direction:column;

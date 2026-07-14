@@ -12,7 +12,7 @@
 
 .verify-left {
   width: 52%;
-  background: linear-gradient(180deg, #5f82ef 0%, #3d417f 100%);
+  background: linear-gradient(180deg, #5883F0, #323B50);
   display: flex;
   flex-direction: column;
   justify-content: center;
