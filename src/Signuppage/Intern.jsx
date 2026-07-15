@@ -8,6 +8,7 @@ import Mentor from "../assets/Mentor.png"
 import Intern2 from "../assets/Intern.png"
 import Company from "../assets/Company.png"
 import EyeIcon from "../assets/Eyeicon.png";
+import UploadIcon from "../assets/Uploadicon.png"
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 
@@ -16,7 +17,8 @@ export default function Intern() {
   const navigate = useNavigate();
      const [showPassword, setShowPassword] = useState(false);
      const [showConfirmPassword, setShowConfirmPassword] = useState(false);
-     const [formData, setformData] = useState ({
+     const [resume, setResume] = useState("");
+      const [formData, setformData] = useState ({
        username :"",
        email :"",
        number:"",
@@ -77,6 +79,11 @@ export default function Intern() {
           navigate("/Loginmainpage");
 
          }
+         const handleResumeChange = (e) => {
+               if (e.target.files.length > 0) {
+                   setResume(e.target.files[0].name);
+                }
+        };
   return (
     <div className="Content-intern">
 
@@ -290,13 +297,24 @@ export default function Intern() {
             </select>
           </div>
 
-           <div className="form-group">
-            <label> Resume (Optional)</label>
-             <input 
-             type="text"
-             placeholder=""
-              />
-          </div>
+          <div className="form-group">
+           <label>Resume (Optional)</label>
+
+            <input
+              type="file"
+              id="resume"
+              accept=".pdf,.doc,.docx"
+              onChange={handleResumeChange}
+              hidden
+             />
+
+            <label htmlFor="resume" className="resume-upload">
+             <img src={UploadIcon} alt="Upload" />
+            <span>
+            {resume || "Upload PDF, DOCX (Max 5MB)"}
+            </span>
+            </label>
+            </div>
 
           <div className="form-group">
             <label>Password <span style={{color:"red"}}>*</span></label>
