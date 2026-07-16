@@ -18,6 +18,7 @@ export default function Createaccount() {
        username :"",
        email :"",
        number:"",
+       department:"",
        company:"",
        password:"",
        confirmpassword:"",
@@ -33,39 +34,32 @@ export default function Createaccount() {
      }
      const handlesubmit = (e) => {
           e.preventDefault();
-          if ( !formData.username || !formData.email || !formData.number || !formData.company ||!formData.password || !formData.confirmpassword ){
+          if ( !formData.username || !formData.email || !formData.number || !formData.department || !formData.company ){
              setError("All fields are required");
              return;
           }
-          if (!formData.username){
-            setError("Full name Required");
-            return;
-          }
-          if (!formData.email){
-             setError("Enter your email");
-             return;
-          }
-          if (!formData.number){
-            setError("Enter your 10-digit number");
-            return;
-          }
+
           if (formData.number.length !== 10) {
           setError("Enter a valid 10-digit phone number");
            return;
           }
-          if (!formData.company){
-            setError("Enter your company name ");
+
+          if (!formData.password || !formData.confirmpassword){
+            setError("Password is required");
             return;
           }
-          if (!formData.password || !formData.confirmpassword){
-            setError("Password is required")
-          }
+        const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&#^()_+\-=\[\]{};':"\\|,.<>\/~`]).{8,}$/;
+         if (!passwordRegex.test(formData.password)) {
+          setError( "Use 8+ characters, including A-Z, a-z, 0-9, and a special character.");
+          return;
+        }
+
           if (!formData.terms){
             setError("Accept the check box");
             return;
           }
           if (formData.password !== formData.confirmpassword) {
-            setError("Password and Confirm Password should match");
+            setError("Passwords don't match");
              return;
           }
 
@@ -75,17 +69,21 @@ export default function Createaccount() {
 
          }
   return (
-  <div className="Content" style={{height:"900px"}}>
-    <div className="Left-content">
-    <div className="logoC">
+  <div className="Content-HR" >
+    <div className="Left-content-HR">
+       <div className="logoC">
       <h3>InterMS</h3>
-    </div>
-     <div className="hero-content">
-    <h1>Empower your team with top-tier talent.</h1>
-    <p>
+      </div>
+    <div className="Left-border-HR">
+      <div className="Left-border2-HR">
+         <div className="hero-content">
+      <h1>Empower your team with top-tier talent.</h1>
+     <div className="Left-create-p">
+      <p>
       Streamline your recruitment process, manage internships with ease,
       and connect with the next generation of industry leaders.
     </p> 
+    </div>
      </div>
     <div className="dashboard-card">
     <div className="card-header">
@@ -108,36 +106,36 @@ export default function Createaccount() {
         </div>
       </div>
     </div>
-    <div className="statsC">
-    <div>
+      </div>
+    </div>
+    <div className="stats-HR">
+      <div className="stats-HR-cr">
       <h2>500+</h2>
       <p>COMPANIES</p>
-    </div>
-
-    <div>
+     </div> 
+     <div className="stats-HR-cr">
       <h2>10k+</h2>
       <p>STUDENTS</p>
-    </div>
-
-     </div>
+      </div>
+   </div>
 
     </div>
    {/* Right Content Start */}
     
-  <div className="Right-content">
-
-  <div className="Right-head">
+  <div className="Right-content-HR">
+  <div className="Right-content2-HR">
+  <div className="Right-head-HR">
     <h2>Create your HR account</h2>
     <p>Join our ecosystem of professional employers.</p>
   </div>
 
-  <div className="register-section">
-    <p className="register-title">Registering as</p>
+  <div className="register-section-HR">
+    <p className="register-title-HR">Registering as</p>
 
-    <div className="Icon-group">
+    <div className="Icon-group-HR">
 
       <div 
-      className="Icon1 active"
+      className="Icon1-HR active-HR"
       onClick={() => navigate("/Createaccount")}
       
       >
@@ -146,7 +144,7 @@ export default function Createaccount() {
       </div>
 
       <div
-       className="Icon1"
+       className="Icon1-HR"
        onClick={() => navigate("/Mentor")}
        style={{ cursor: "pointer" }}
       >
@@ -155,7 +153,7 @@ export default function Createaccount() {
       </div>
 
       <div
-       className="Icon1"
+       className="Icon1-HR"
        onClick={() => navigate("/Intern")}
        style={{ cursor: "pointer" }}
        >
@@ -165,7 +163,7 @@ export default function Createaccount() {
 
 
         <div
-          className="Icon1"
+          className="Icon1-HR"
           onClick={() => navigate("/Company")}
           style={{ cursor: "pointer" }}
         >
@@ -177,9 +175,10 @@ export default function Createaccount() {
 
     </div>
 
-  <form className="form-area" onSubmit={handlesubmit}>
+     <div className="form-area-borderHR">
+      <form className="form-area-HR" onSubmit={handlesubmit}>
 
-    <div className="form-group">
+    <div className="form-group-HR">
       <label>Full Name <span style={{color:"red"}}>*</span></label>
       <input 
       type="text" 
@@ -189,7 +188,7 @@ export default function Createaccount() {
       placeholder="John Doe" />
     </div>
 
-    <div className="form-group">
+    <div className="form-group-HR">
       <label>Work Email Address <span style={{color:"red"}}>*</span> </label>
       <input 
       type="email" 
@@ -199,13 +198,11 @@ export default function Createaccount() {
       placeholder="john.doe@company.com" />
     </div>
 
-    <div className="form-group">
+    <div className="form-group-HR">
       <label>Phone Number <span style={{color:"red"}}>*</span></label>
 
-      <div className="phone-box">
-        <select>
-          <option>+91</option>
-        </select>
+      <div className="phone-box-HR">
+      <div className="country-code-box">+91</div>
 
       <input
          type="tel"
@@ -221,15 +218,24 @@ export default function Createaccount() {
       </div>
     </div>
 
-    <div className="form-group">
+    <div className="form-group-HR">
       <label>Department <span style={{color:"red"}}>*</span></label>
 
-      <select>
-        <option>Select department</option>
+     <select
+       name="department"
+       value={formData.department}
+       onChange={handlechange}
+      >
+      <option value="">Select department</option>
+      <option value="HR">HR</option>
+      <option value="IT">IT</option>
+      <option value="Finance">Finance</option>
+      <option value="Marketing">Marketing</option>
+      <option value="Operations">Operations</option>
       </select>
-    </div>
+      </div>
       
-      <div className="form-group company-group">
+      <div className="form-group-HR company-group-HR">
       <label>
        Company Name <span style={{ color: "red" }}>*</span>
       </label>
@@ -247,7 +253,7 @@ export default function Createaccount() {
       </div>
       </div>
 
-    <div className="form-group">
+    <div className="form-group-HR">
       <label>Password <span style={{color:"red"}}>*</span></label>
 
       <div className="password-box">
@@ -263,13 +269,13 @@ export default function Createaccount() {
          alt="Toggle Password"
          className="eye-icon"
          onClick={() => setShowPassword(!showPassword)}
-         style={{width:"20px",height:"13px"}}
+         style={{width:"14.67px",height:"10px"}}
          />
         <span></span>
       </div>
     </div>
 
-    <div className="form-group">
+    <div className="form-group-HR">
       <label>Confirm Password <span style={{color:"red"}}>*</span></label>
 
       <div className="password-box">
@@ -285,12 +291,12 @@ export default function Createaccount() {
          alt="Toggle Password"
          className="eye-icon"
          onClick={() => setShowConfirmPassword(!showConfirmPassword)}
-         style={{width:"20px",height:"13px"}}
+         style={{width:"14.67px",height:"10px"}}
          />
         <span></span>
       </div>
     </div>
-    <div className="agree">
+    <div className="agree-HR">
      <input
       type="checkbox"
       name="terms"
@@ -303,7 +309,11 @@ export default function Createaccount() {
       <span> Privacy Policy</span>
      </p>
      </div>
-     {Error && <h3 style={{color:"red", fontSize:"15px", marginTop:"10px",textAlign:"center"}}> <span style={{color:"red"}}>*</span> {Error}</h3>}
+     {Error && (
+     <h3 className="error-message">
+      <span>*</span> {Error}
+      </h3>
+      )}
 
     <div className="button-row">
       <button type="submit" className="create-btn">
@@ -323,8 +333,10 @@ export default function Createaccount() {
     Already have an account?
     <span onClick={() => navigate("/Loginmainpage")}> Sign In</span>
     </p>
+     </div>
 
    </div>
+    </div>
    </div>
   );
 }

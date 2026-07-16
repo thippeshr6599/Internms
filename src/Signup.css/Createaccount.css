@@ -1,7 +1,7 @@
-.Content{
+.Content-HR{
     border: 1px solid rgb(220, 207, 207);
-    width:1100px;
-    height:800px;
+    width:1280px;
+    height:1050px;
     margin:20px auto;
     display:flex;
     border-radius:12px;
@@ -9,54 +9,88 @@
 }
 
 
-.Left-content{
-    width:500px;
-    height:900px;
+.Left-content-HR{
+    width:537.59px;
+    height:1050px;
     background:linear-gradient(160deg,#3571CA,#29436B);
-    padding:45px;
+    padding:64px;
     display:flex;
     flex-direction:column;
     justify-content:space-between;
     color:#fff;
+    display: grid;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
 }
 
-
+.logoC {
+    border: 1px solid none;
+    width: 89px;
+    height: 32px;
+}
 .logoC h3{
-    font-size:28px;
-    font-weight:600;
-}
-
-
-.hero-content{
-    margin-top:150px;
-}
-
-.hero-content h1{
-    font-size:35px;
-    line-height:1.15;
+    font-size:24px;
     font-weight:700;
-    margin-bottom:20px;
+    line-height: 32px;
+}
+
+.Left-border-HR{
+    border: 1px solid none;
+    width: 409.59px;
+    height: 525px;
+    padding-top: 48px;
+    padding-bottom: 48px;
+    margin-top: 50px;
+}
+.Left-border2-HR{
+    border: 1px solid none;
+    width: 409.59;
+    height: 429px;
+}
+.Border2{
+    border: 1px solid none;
+    width: 409.59px;
+    height: 429px;
+}
+.Left-create-p{
+    border: 1px solid none;
+    width: 409.59px;
+    height: 124px;
+    margin-bottom: 24px;
+}
+.hero-content h1{
+    font-size:40px;
+    line-height:50px;
+    font-weight:700;
+    letter-spacing: -0.8px;
+    border: 1px solid none;
+    width: 409.59px;
+    height: 100px;
+    margin-bottom: 24px;
 }
 
 .hero-content p{
-    font-size:16px;
-    line-height:1.8;
-    color:rgba(255,255,255,.75);
-    width:360px;
-    margin-bottom:40px;
+    font-size:18px;
+    font-weight: 300;
+    line-height:28px;
+    letter-spacing: 0px;
+    color:#DAD7FF;
+    border: 1px solid none;
+    width: 409.59px;
+    height: 84px;
 }
 
 
 .dashboard-card {
-  width: 400px;
-  height: 140px;
-  padding: 22px;
+  width: 409.59px;
+  height: 157px;
+  padding: 24px;
+  gap: 24px;
   border-radius: 16px;
-  background: rgba(255, 255, 255, 0.08);
-  backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(4px);
+  background-color: #FFFFFF1A;
+  border: 1px solid #FFFFFF33;
   box-sizing: border-box;
-  margin-bottom: 48px;
 }
 
 .card-header {
@@ -70,7 +104,7 @@
   height: 50px;
   min-width: 50px;
   border-radius: 50%;
-  background: #8d48ff;
+  background:#8A4CFC;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -88,15 +122,19 @@
 
 .text-content h3 {
   margin: 0;
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 600;
-  color: #fff;
+  line-height: 20px;
+  letter-spacing: 0.7px;
+  color: #FFFFFF;
 }
 
 .text-content p {
   margin: 4px 0 18px;
-  font-size: 13px;
-  color: rgba(255, 255, 255, 0.75);
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  color: #DAD7FF;
 }
 
 .progress-section {
@@ -109,87 +147,119 @@
   background: rgba(255, 255, 255, 0.18);
   border-radius: 20px;
   overflow: hidden;
+  margin-top: 20px;
 }
 
 .progress-fill {
   width: 82%;
   height: 100%;
-  background: linear-gradient(90deg, #efc6ff, #cb82ff);
+  background:#D2BBFF;
   border-radius: 20px;
 }
 
 .progress-info {
   display: flex;
   justify-content: space-between;
-  margin-top: 8px;
+  margin-top: 15px;
 }
 
 .progress-info span {
   font-size: 11px;
-  color: rgba(255, 255, 255, 0.75);
+  color: #DAD7FF;
 }
 
 
-.statsC{
-    display:flex;
-    gap:50px;
+.stats-HR{
+    border: 1px solid none;
+    width: 409.59px;
+    height: 48px;
+    display: flex;
+    gap: 32px;
+    margin-top: 100px;
+    margin-bottom: 0;
 }
 
-.statsC h2{
+.stats-HR h2{
     font-size:24px;
-    margin-bottom:5px;
+    font-weight: 600;
+    line-height: 32px;
+    letter-spacing: 0;
 }
 
-.statsC p{
+.stats-HR p{
     font-size:10px;
     letter-spacing:1px;
-    color:rgba(255,255,255,.75);
+    color:#DAD7FF;
 }
 
 
-.Right-content{
-    width:600px;
-    min-height:700px;
-    padding:35px;
-    background:#fff;
+.Right-content-HR{
+    width:742.39px;
+    height:1050px;
+    padding: 64px ;
+    background:#FFFFFF;
     box-sizing:border-box;
 }
-.Right-head{
-    margin-bottom:20px;
+.Right-content2-HR{
+    border:1px solid black;
+    width: 614.39;
+    max-width:672px;
+    height: 926px;
+    box-sizing:border-box;
+    display: grid;
+    gap: 24px;
+}
+.Right-head-HR{
+    border: 1px solid black;
+    height: 72px;
+}
+.Right-head-HR h2{
+    font-size:32px;
+    line-height: 40px;
+    font-weight: 600;
+    letter-spacing: 0.32px;
+    color:#111C2D;
 }
 
-.Right-head h2{
-    font-size:36px;
-    color:#222;
-    margin-bottom:6px;
+.Right-head-HR p{
+    color:#464555;
+    font-size:16px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0px;
 }
 
-.Right-head p{
-    color:#777;
-    font-size:14px;
-}
-
-.register-section{
-    margin-top:25px;
-    margin-left: 50px;
+.register-section-HR{
+    border: 1px solid black;
+    width: 614.39px;
+    height: 134px;
+    box-sizing: border-box;
+    padding-top: 8px;
+    gap: 16px;
 } 
 
-.register-title{
-    font-size:13px;
+.register-title-HR{
+    font-size:14px;
     font-weight:600;
+    letter-spacing: 0.7px;
+    line-height: 20px;
     margin-bottom:10px;
+    margin-left: 35px;
+    color: #464555;
 }
 
-.Icon-group{
+.Icon-group-HR{
     display:flex;
     gap:12px;
+    justify-content: center;
 }
 
-.Icon1 {
-    width: 82px;
-    height: 78px;
-    border: 1px solid #e5e5e5;
-    border-radius: 12px;
+.Icon1-HR {
+    width: fixed(113px);
+    height: fixed(90px);
+    border: 1px solid #C7C4D8;
+    border-radius: 16px;
+    padding: 24px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -198,67 +268,73 @@
     transition: none;
 }
 
-.Icon1:hover {
+.Icon1-HR:hover {
     background: #eaf5ff; 
 }
 
-.Icon1:hover span {
-    color: #2f63d6;
+.Icon1-HR:hover span {
+    color: #C7E6FF;
     font-weight: 600;
 }
 
 
-.Icon1 img{
+.Icon1-HR img{
     width:22px;
     margin-bottom:8px;
 }
 
-.Icon1 span{
+.Icon1-HR span{
     font-size:12px;
 }
-.Icon1.active{
-    background:#eaf5ff;
-    border:2px solid #83b8ff;
+.Icon1-HR.active{
+    background:#C7E6FF;
+    border:2px solid #C7C4D8;
 }
-
-.form-area{
-    margin-top:28px;
+.form-area-borderHR{
+    border: 1px solid none;
+    width: 100%;
+    height: 656px;
+    gap: 24px;
+}
+.form-area-HR{
     display:grid;
     grid-template-columns:repeat(2,1fr);
-    column-gap:18px;
-    row-gap:18px;
+    column-gap: 18px;
+    row-gap: 18px;
 }
-
-
-.form-group{
+.form-group-HR{
     display:flex;
     flex-direction:column;
     width:100%;
 }
 
-.form-group label{
+.form-group-HR label{
     margin-bottom:8px;
-    font-size:13px;
+    font-size:14px;
     font-weight:600;
+    line-height: 20px;
+    letter-spacing: 0.7px;
+    margin-top: 2px;
 }
 
-.form-group input,
-.form-group select{
+.form-group-HR input,
+.form-group-HR select{
     width:100%;
-    height:44px;
-    border:1px solid #dcdcdc;
+    height:50px;
+    border:1px solid #C7C4D8;
     border-radius:8px;
-    padding:0 14px;
     font-size:13px;
+    padding-right: 16px;
+    padding-left: 16px;
     box-sizing:border-box;
     outline:none;
 }
 
-.form-group input:focus,
-.form-group select:focus{
+.form-group-HR input:focus,
+.form-group-HR select:focus{
     border-color:#4d6fff;
 }
-.company-group{
+.company-group-HR{
     grid-column:1 / -1;
 }
 
@@ -269,8 +345,8 @@
 
 .company-box input{
     width:100%;
-    height:44px;
-    border:1px solid #dcdcdc;
+    height:50px;
+    border:1px solid #C7C4D8;
     border-radius:8px;
     padding-left:42px;
     padding-right:14px;
@@ -294,44 +370,34 @@
     pointer-events:none;
 }
 
-.resume-upload {
-  width: 100%;
-  height: 44px;
-  border: 1.5px dashed #6C4DFF;
+.phone-box-HR{
+    display:flex;
+    width:100%;
+    gap:4px;
+}
+
+.phone-box-HR select{
+    flex:0 0 70px;
+    padding-left: 5px;
+}
+
+.phone-box-HR input{
+    flex:1;
+    min-width:0;
+}
+.country-code-box {
+  width: 50px;
+  height: 50px;
+  color: #000000;
+  border: 1px solid #C7C4D8;
   border-radius: 8px;
   display: flex;
   align-items: center;
-  gap: 10px;
-  padding: 0 15px;
-  cursor: pointer;
-  color: #6C4DFF;
-  font-size: 14px;
+  justify-content: center;
   background: #fff;
-  box-sizing: border-box;
-  margin-top: 0;
+  font-size: 16px;
+  font-weight: 500;
 }
-
-.resume-upload img {
-  width: 16px;
-  height: 16px;
-}
-
-.resume-upload:hover {
-  background: #f8f6ff;
-}
-.phone-box{
-    display:flex;
-    gap:8px;
-}
-
-.phone-box select{
-    width:50px;
-}
-
-.phone-box input{
-    flex:1;
-}
-
 
 .password-box{
     position:relative;
@@ -340,8 +406,8 @@
 
 .password-box input{
     width:100%;
-    height:44px;
-    border:1px solid #dcdcdc;
+    height:50px;
+    border:1px solid  #C7C4D8;
     border-radius:8px;
     padding:0 14px;
     font-size:13px;
@@ -359,43 +425,61 @@
     transform:translateY(-50%);
     cursor:pointer;
 }
-.agree{
+.agree-HR{
     grid-column: 1 / -1;
     display: flex;
     align-items: center;
     gap: 10px;
     width: 100%;
+    margin-top: 5px;
 }
 
-.agree input{
+.agree-HR input{
     width: 16px;
     height: 16px;
     flex-shrink: 0;
 }
 
-.agree p{
-    margin: 0;
-    font-size: 12px;
-    line-height: 1;
+.agree-HR p{
+    color: #464555;
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: 0px;
     white-space: nowrap;
+    font-weight: 400;
 }
 
-.agree span{
-    color: #5a36ff;
+.agree-HR span{
+    color: #3525CD;
     cursor: pointer;
 }
 
 .button-row{
     grid-column:1 / -1;
     width:100%;
+    margin-bottom: 18px;
+}
+.error-message {
+    color: red;
+    font-size: 13px;
+    margin-top: 5px;
+    line-height: 1.5;
+    white-space: normal;   
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    max-width: 100%;
+    text-align: left;     
 }
 
+.error-message span {
+  color: red;
+}
 .create-btn{
     width:100%;
     height:48px;
     border:none;
     border-radius:8px;
-    background:#4328f5;
+    background:#3525CD;
     color:#fff;
     font-size:15px;
     font-weight:600;
@@ -411,7 +495,6 @@
     display:flex;
     align-items:center;
     gap:12px;
-    margin:20px 0;
     color:#999;
     font-size:12px;
     justify-content: center;
@@ -420,25 +503,22 @@
 .dividerC hr {
     flex: 1;
     border: none;
-    border-top: 1px solid #d1d5db;
+    border-top: 1px solid #C7C4D8;
 }
 .dividerC span {
-    color: #666;
+    color: #464555;
     font-size: 14px;
     font-weight: 500;
     text-transform: lowercase;
 }
-
-
-
 .signin1{
     text-align:center;
     font-size:13px;
-    color:#666;
+    color:#464555;
 }
 
 .signin1 span{
-    color:#3f32f4;
+    color:#3525CD;
     cursor:pointer;
     font-weight:600;
 }
