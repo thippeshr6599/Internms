@@ -24,6 +24,8 @@ export default function Mentor() {
        number:"",
        proffesional:"",
        skills:"",
+       years:"",
+       about:"",
        password:"",
        confirmpassword:"",
        terms :""
@@ -38,43 +40,30 @@ export default function Mentor() {
      }
      const handlesubmit = (e) => {
           e.preventDefault();
-          if ( !formData.username || !formData.email || !formData.number ||!formData.password || !formData.confirmpassword ){
+          if ( !formData.username || !formData.email || !formData.number|| !formData.proffesional || !formData.skills || !formData.years || !formData.about  ){
              setError("All fields are required");
              return;
-          }
-          if (!formData.username){
-            setError("Full name Required");
-            return;
-          }
-          if (!formData.email){
-             setError("Enter your email");
-             return;
-          }
-          if (!formData.number){
-            setError("Enter your 10-digit number");
-            return;
           }
           if (formData.number.length !== 10) {
             setError("Enter a valid 10-digit phone number");
             return;
           }
-          if (!formData.proffesional){
-            setError("Enter your Proffesional Title ");
-            return;
-          }
-          if (!formData.skills){
-            setError("Enter your Skills/Expertise ");
-            return;
-          }
+         
           if (!formData.password || !formData.confirmpassword){
-            setError("Password is required")
+            setError("Create your password");
+            return;
           }
+          const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&#^()_+\-=\[\]{};':"\\|,.<>\/~`]).{8,}$/;
+         if (!passwordRegex.test(formData.password)) {
+          setError( "Use 8+ characters, including A-Z, a-z, 0-9, and a special character.");
+          return;
+        }
           if (!formData.terms){
             setError("Accept the check box");
             return;
           }
           if (formData.password !== formData.confirmpassword) {
-            setError("Password and Confirm Password should match");
+            setError("Password do not match");
              return;
           }
           setError("");
@@ -84,16 +73,16 @@ export default function Mentor() {
          }
 
   return (
-    <div className="Content">
+    <div className="Content-Mentor">
 
       {/* LEFT PANEL */}
-      <div className="left-panel">
+      <div className="left-panel-Mentor">
 
-        <div className="left-top">
+       <h2 className="logo-Mentor">InternMS</h2>
 
-          <h2 className="logo">InternMS</h2>
+         <div className="left-top-Mentor">
 
-          <div className="hero-text">
+          <div className="hero-text-Mentor">
             <h1>
               Empower the next
               <br />
@@ -107,10 +96,10 @@ export default function Mentor() {
             </p>
           </div>
 
-          <div className="feature-list">
+          <div className="feature-list-Mentor">
 
-            <div className="feature-item">
-              <div className="feature-icon">
+            <div className="feature-item-Mentor">
+              <div className="feature-icon-Mentor">
                 <img src={Mentorright} alt="" />
               </div>
 
@@ -123,9 +112,9 @@ export default function Mentor() {
               </div>
             </div>
 
-            <div className="feature-item">
-              <div className="feature-icon">
-                <img src={Mentorteams} alt="" />
+            <div className="feature-item-Mentor">
+              <div className="feature-icon-Mentor">
+                <img src={Mentorteams} alt="" style={{width:"15px"}} />
               </div>
 
               <div>
@@ -137,8 +126,8 @@ export default function Mentor() {
               </div>
             </div>
 
-            <div className="feature-item">
-              <div className="feature-icon">
+            <div className="feature-item-Mentor">
+              <div className="feature-icon-Mentor">
                 <img src={Mentorstar} alt="" />
               </div>
 
@@ -154,25 +143,31 @@ export default function Mentor() {
           </div>
 
         </div>
+        
 
-        <div className="office-image" style={{marginBottom:"100px"}}>
+
+        <div className="office-image-Mentor" >
           <img src={Mentoroffice} alt="Office" />
         </div>
       </div>
-     <div className="Right-content">
+
+
+
+     <div className="Right-content-Mentor">
     
-      <div className="Right-head">
+      <div className="Right-content-Mentorbox">
+          <div className="Right-head-Mentor">
         <h2>Mentor Registration</h2>
         <p>Complete your profile to start connecting with students.</p>
       </div>
     
-      <div className="register-section">
-        <p className="register-title">Registering as <span style={{color:"red"}}>*</span></p>
+      <div className="register-section-Mentor">
+        <p className="register-title-Mentor">Registering as <span style={{color:"red"}}>*</span></p>
     
-        <div className="Icon-group">
+        <div className="Icon-group-Mentor">
     
           <div 
-          className="Icon1"
+          className="Icon1-Mentor"
           onClick={() => navigate("/Createaccount")}
           style={{cursor:"pointer"}}
           >
@@ -181,7 +176,7 @@ export default function Mentor() {
           </div>
     
           <div
-           className="Icon1 active"
+           className="Icon1-Mentor active-Mentor"
            onClick={() => navigate("/Mentor")}
            style={{ cursor: "pointer" }}
           >
@@ -190,7 +185,7 @@ export default function Mentor() {
           </div>
     
           <div
-           className="Icon1"
+           className="Icon1-Mentor"
            onClick={() => navigate("/Intern")}
            style={{ cursor: "pointer" }}
            >
@@ -200,7 +195,7 @@ export default function Mentor() {
     
     
             <div
-              className="Icon1"
+              className="Icon1-Mentor"
               onClick={() => navigate("/Company")}
               style={{ cursor: "pointer" }}
             >
@@ -212,9 +207,10 @@ export default function Mentor() {
     
         </div>
     
-      <form className="form-area" onSubmit={handlesubmit}>
+        <div className="form-border-Mentor">
+        <form className="form-area-Mentor" onSubmit={handlesubmit}>
     
-        <div className="form-group">
+        <div className="form-group-Mentor">
           <label>Full Name <span style={{color:"red"}}>*</span></label>
           <input 
           type="text" 
@@ -224,7 +220,7 @@ export default function Mentor() {
           placeholder="Enter full name" />
         </div>
     
-        <div className="form-group">
+        <div className="form-group-Mentor">
           <label>Work Email Address <span style={{color:"red"}}>*</span> </label>
           <input 
           type="email" 
@@ -234,13 +230,11 @@ export default function Mentor() {
           placeholder="Enter your email address" />
         </div>
     
-        <div className="form-group">
+        <div className="form-group-Mentor">
           <label>Phone Number <span style={{color:"red"}}>*</span></label>
     
-          <div className="phone-box">
-            <select>
-              <option>+91</option>
-            </select>
+          <div className="phone-box-Mentor">
+            <div className="country-code-box">+91</div>
     
             <input
              type="tel"
@@ -256,7 +250,7 @@ export default function Mentor() {
           </div>
         </div>
     
-        <div className="form-group">
+        <div className="form-group-Mentor">
           <label >Professional Title <span style={{color:"red"}}>*</span></label>
           <input
            type="text"
@@ -266,7 +260,7 @@ export default function Mentor() {
             placeholder="e.g. Senior Software Engineer" />
          </div>
 
-          <div className="form-group">
+          <div className="form-group-Mentor">
           <label >Skills/Expertise <span style={{color:"red"}}>*</span></label>
           <input
            type="text"
@@ -276,72 +270,78 @@ export default function Mentor() {
             placeholder="e.g. UI/UX, React, Mentoring" />
          </div>
 
-          <div className="form-group">
+          <div className="form-group-Mentor">
           <label >Years of Experience <span style={{color:"red"}}>*</span></label>
            <select>
             <option>Slect experience level</option>
+            <option value="two">2 Years</option>
+            <option value="three">3 Years</option>
+            <option value="four">4 Years</option>
+            <option value="more">More than 5 years</option>
            </select>
          </div>
 
-          <div className="form-group bio-group">
+          <div className="form-group-Mentpr bio-group-Mentor">
             <label>
                Bio / About You <span style={{ color: "red" }}>*</span>
             </label>
             <textarea 
              type ="text"
+             name="about"
+             value={formData.about}
+             onChange={handlechange}
              placeholder="Tell us about yourself, your background and why you're passionate about mentoring..."
             ></textarea>
             </div>
 
-        <div className="form-group password-group">
-          <label>Password <span style={{color:"red"}}>*</span></label>
-    
-          <div className="password-box">
-            <input
-              type={showPassword ? "text" : "password"}
-              name = "password"
-              value={formData.password}
-              onChange={handlechange}
-              placeholder="Create a strong password"
-            />
-            <img
-             src={EyeIcon}
-             alt="Toggle Password"
-             className="eye-icon"
-             onClick={() => setShowPassword(!showPassword)}
-             style={{width:"20px",height:"13px"}}
-             />
-            <span></span>
-          </div>
-        </div>
-    
-        <div className="form-group password-group">
-          <label>Confirm Password <span style={{color:"red"}}>*</span></label>
-    
-          <div className="password-box">
-            <input
-              type={showConfirmPassword ? "text" : "password"}
-              name = "confirmpassword"
-              value={formData.confirmpassword}
-              onChange={handlechange}
-              placeholder="Confirm your password"
-            />
-             <img
-             src={EyeIcon}
-             alt="Toggle Password"
-             className="eye-icon"
-             onClick={() => setShowConfirmPassword(!showConfirmPassword)}
-             style={{width:"20px",height:"13px"}}
-             />
-            <span></span>
-          </div>
-        </div>
-        <div className="agree">
+          <div className="form-group-HR">
+               <label>Password <span style={{color:"red"}}>*</span></label>
+         
+               <div className="password-box-HR">
+                 <input
+                   type={showPassword ? "text" : "password"}
+                   name = "password"
+                   value={formData.password}
+                   onChange={handlechange}
+                   placeholder="Create a strong password"
+                 />
+                 <img
+                  src={EyeIcon}
+                  alt="Toggle Password"
+                  className="eye-icon-HR"
+                  onClick={() => setShowPassword(!showPassword)}
+                  style={{width:"14.67px",height:"10px"}}
+                  />
+               </div>
+             </div>
+         
+             <div className="form-group-HR">
+               <label>Confirm Password <span style={{color:"red"}}>*</span></label>
+         
+               <div className="password-box-HR">
+                 <input
+                   type={showConfirmPassword ? "text" : "password"}
+                   name = "confirmpassword"
+                   value={formData.confirmpassword}
+                   onChange={handlechange}
+                   placeholder="Confirm your password"
+                 />
+                  <img
+                  src={EyeIcon}
+                  alt="Toggle Password"
+                  className="eye-icon-HR"
+                  onClick={() => setShowConfirmPassword(!showConfirmPassword)}
+                  style={{width:"14.67px",height:"10px"}}
+                  />
+               </div>
+             </div>
+        <div className="agree-Mentor">
          <input
           type="checkbox"
           name="terms"
           checked={formData.terms}
           onChange={handlechange}
+          className="checkbox-Mentor"
          />
     
          <p>
@@ -349,14 +349,14 @@ export default function Mentor() {
           <span> Privacy Policy</span>
          </p>
          </div>
-              {Error && <h3 style={{color:"red", fontSize:"15px", marginTop:"10px",textAlign:"center"}}> <span style={{color:"red"}}>*</span> {Error}</h3>}
-        <div className="button-row">
-          <button type="submit" className="create-btn">
+        {Error && <h3 style={{color:"red", fontSize:"15px", marginLeft:"25px"}}> <span style={{color:"red"}}>*</span> {Error}</h3>}
+        <div className="button-row-Mentor">
+          <button type="submit" className="create-btn-Mentor">
             Create Account
           </button>
          </div>
       </form>
-      <div className="dividerC">
+      <div className="divider-Mentor">
         <hr />
         <span></span>
         OR
@@ -364,21 +364,22 @@ export default function Mentor() {
         <hr />
       </div>
     
-      <p className="signin1">
+      <p className="signin-Mentor">
         Already have an account?
         <span onClick={() => navigate("/Loginmainpage")}> Sign In</span>
         </p>
-        <br /><br /><br />
-       <div className="footer-linem"></div>
+        </div>
+       <div className="footer-linem-Mentor"></div>
        <hr />
-       <div className="footerm">
+       <div className="footerm-Mentor">
        <p>@ 2024 InternHub. All rights reserved.</p>
 
-       <div className="footer-linksm">
+       <div className="footer-linksm-Mentor">
         <span>Support</span>
         <span>Contact Us</span>
         </div>
         </div>
+      </div>
        </div>
       
 

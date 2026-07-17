@@ -24,6 +24,9 @@ export default function Intern() {
        number:"",
        DOB:"",
        college:"",
+       field:"",
+       graduation:"",
+       resume:"",
        password:"",
        confirmpassword:"",
        terms :""
@@ -38,33 +41,24 @@ export default function Intern() {
      }
      const handlesubmit = (e) => {
           e.preventDefault();
-          if ( !formData.username || !formData.email || !formData.number || !formData.password || !formData.confirmpassword ){
+          if ( !formData.username || !formData.email || !formData.number|| !formData.DOB || !formData.college || !formData.field || !formData.graduation || !formData.resume  ){
              setError("All fields are required");
              return;
-          }
-          if (!formData.username){
-            setError("Full name Required");
-            return;
-          }
-          if (!formData.email){
-             setError("Enter your email");
-             return;
-          }
-          if (!formData.number){
-            setError("Enter your 10-digit number");
-            return;
           }
           if (formData.number.length !== 10) {
             setError("Enter a valid 10-digit phone number");
             return;
           }
-          if (!formData.DOB){
-            setError("Enter your Date of Birth");
+       
+          if (!formData.password || !formData.confirmpassword){
+            setError("Create your Password");
             return;
           }
-          if (!formData.password || !formData.confirmpassword){
-            setError("Password is required")
-          }
+          const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&#^()_+\-=\[\]{};':"\\|,.<>\/~`]).{8,}$/;
+         if (!passwordRegex.test(formData.password)) {
+          setError( "Use 8+ characters, including A-Z, a-z, 0-9, and a special character.");
+          return;
+        }
           if (!formData.terms){
             setError("Accept the check box");
             return;
@@ -85,15 +79,14 @@ export default function Intern() {
                 }
         };
   return (
-    <div className="Content-intern">
+    <div className="Content-Intern">
 
-      {/* LEFT PANEL */}
+      <div className="Left-panel-Intern">
 
-      <div className="Left-panel-intern">
+       <div className="Logo-box-Intern">
+           <h2 className="logo-Intern">InternMS</h2>
 
-        <h2 className="intern-logo">InternMS</h2>
-
-        <div className="intern-content">
+        <div className="Top-Intern">
 
           <h1>
             Your gateway to
@@ -109,12 +102,14 @@ export default function Intern() {
           </p>
 
         </div>
+       </div>
 
         {/* Feature Cards */}
 
-        <div className="feature-section">
+       <div className="Left-panel-Box2Intern">
+          <div className="feature-section-Intern">
 
-          <div className="feature-card">
+          <div className="feature-card-Intern">
 
             <img src={Internright} alt="" />
 
@@ -128,7 +123,7 @@ export default function Intern() {
 
           </div>
 
-          <div className="feature-card">
+          <div className="feature-card-Intern">
 
             <img src={Internsmart} alt="" />
 
@@ -144,18 +139,16 @@ export default function Intern() {
 
         </div>
 
-        {/* Bottom */}
-
-        <div className="testimonial">
+        <div className="testimonial-Intern">
 
           <hr />
 
-          <p className="quote">
+          <p className="quote-Intern">
             "InternMS helped me land my dream internship at a Fortune 500
             company within 3 weeks of joining."
           </p>
 
-          <div className="user-info">
+          <div className="user-info-Intern">
 
             <img src={Internvector} alt=""/>
 
@@ -164,24 +157,24 @@ export default function Intern() {
           </div>
 
         </div>
+       </div>
 
       </div>
 
-
       <div className="Right-content-Intern">
-      
-        <div className="Right-head">
+       <div className="Right-insidecontent-Intern"> 
+        <div className="Right-head-Intern">
           <h2>Intern Registration</h2>
           <p>Fill in the details below to craete your professional account</p>
         </div>
       
-        <div className="register-section">
-          <p className="register-title">Registering as</p>
+        <div className="register-section-Intern">
+          <p className="register-title-Intern">Registering as</p>
       
-          <div className="Icon-group">
+          <div className="Icon-group-Intern">
       
             <div 
-            className="Icon1"
+            className="Icon1-Intern"
             onClick={() => navigate("/Createaccount")}
             
             >
@@ -190,7 +183,7 @@ export default function Intern() {
             </div>
       
             <div
-             className="Icon1"
+             className="Icon1-Intern"
              onClick={() => navigate("/Mentor")}
              style={{ cursor: "pointer" }}
             >
@@ -199,7 +192,7 @@ export default function Intern() {
             </div>
       
             <div
-             className="Icon1 active"
+             className="Icon1-Intern active-Intern"
              onClick={() => navigate("/Intern")}
              style={{ cursor: "pointer" }}
              >
@@ -209,7 +202,7 @@ export default function Intern() {
       
       
               <div
-                className="Icon1"
+                className="Icon1-Intern"
                 onClick={() => navigate("/Company")}
                 style={{ cursor: "pointer" }}
               >
@@ -221,9 +214,10 @@ export default function Intern() {
       
           </div>
       
-        <form className="form-area" onSubmit={handlesubmit}>
+        <div className="form-box-Intern">
+           <form className="form-area-Intern" onSubmit={handlesubmit}>
       
-          <div className="form-group">
+          <div className="form-group-Intern">
             <label>Full Name <span style={{color:"red"}}>*</span></label>
             <input 
             type="text" 
@@ -233,7 +227,7 @@ export default function Intern() {
             placeholder="Enter your full name" />
           </div>
       
-          <div className="form-group">
+          <div className="form-group-Intern">
             <label>Work Email Address <span style={{color:"red"}}>*</span> </label>
             <input 
             type="email" 
@@ -243,13 +237,11 @@ export default function Intern() {
             placeholder="Enter your email address" />
           </div>
       
-          <div className="form-group">
+          <div className="form-group-Intern">
             <label>Phone Number <span style={{color:"red"}}>*</span></label>
       
             <div className="phone-box">
-              <select>
-                <option>+91</option>
-              </select>
+             <div className="country-code-box">+91</div>
       
               <input
                 type="tel"
@@ -265,39 +257,51 @@ export default function Intern() {
             </div>
           </div>
       
-          <div className="form-group">
+          <div className="form-group-Intern">
             <label>Date of Birth<span style={{color:"red"}}>*</span></label>
               <input
-                type="number"
-                name="number"
+                type="DOB"
+                name="DOB"
                 value={formData.DOB}
                 onChange={handlechange}
                 placeholder="mm/dd/yyyy"
               />
           </div>
           
-          <div className="form-group">
+          <div className="form-group-Intern">
             <label>College/ University<span style={{color:"red"}}>*</span></label>
             <input 
             type="text" 
+            name="college"
+            value={formData.college}
+            onChange={handlechange}
             placeholder="Enter your University name" />
           </div>
           
-          <div className="form-group">
+          <div className="form-group-Intern">
             <label> Field of Study <span style={{color:"red"}}>*</span></label>
-            <select>
+            <select
+            name="field"
+            type="text"
+            value={formData.field}
+            onChange={handlechange}
+            >
               <option > Select Your field of study</option>
             </select>
           </div>
 
-           <div className="form-group">
+           <div className="form-group-Intern">
             <label> Graduation Year <span style={{color:"red"}}>*</span></label>
-            <select>
+            <select 
+            name="year"
+            value={formData.graduation}
+            onChange={handlechange}
+            >
               <option > Select your graduation year</option>
             </select>
           </div>
 
-          <div className="form-group">
+          <div className="form-group-Intern">
            <label>Resume (Optional)</label>
 
             <input
@@ -316,70 +320,69 @@ export default function Intern() {
             </label>
             </div>
 
-          <div className="form-group">
+          <div className="form-group-Intern">
             <label>Password <span style={{color:"red"}}>*</span></label>
-      
-            <div className="password-box">
-              <input
-                type={showPassword ? "text" : "password"}
-                name = "password"
-                value={formData.password}
-                onChange={handlechange}
-                placeholder="Create a strong password"
-              />
-              <img
-               src={EyeIcon}
-               alt="Toggle Password"
-               className="eye-icon"
-               onClick={() => setShowPassword(!showPassword)}
-               style={{width:"20px",height:"13px"}}
+                   
+             <div className="password-box-Intern">
+               <input
+                 type={showPassword ? "text" : "password"}
+                 name = "password"
+                 value={formData.password}
+                 onChange={handlechange}
+                 placeholder="Create a strong password"
+                   />
+                 <img
+                    src={EyeIcon}
+                    alt="Toggle Password"
+                    className="eye-icon-Intern"
+                    onClick={() => setShowPassword(!showPassword)}
+                    style={{width:"14.67px",height:"10px"}}
+                    />
+                 </div>
+                 </div>
+                   
+            <div className="form-group-Intern">
+              <label>Confirm Password <span style={{color:"red"}}>*</span></label>
+                   
+               <div className="password-box-Intern">
+               <input
+                 type={showConfirmPassword ? "text" : "password"}
+                 name = "confirmpassword"
+                 value={formData.confirmpassword}
+                 onChange={handlechange}
+                 placeholder="Confirm your password"
+                 />
+                <img
+                src={EyeIcon}
+                alt="Toggle Password"
+                className="eye-icon-Intern"
+                onClick={() => setShowConfirmPassword(!showConfirmPassword)}
+                style={{width:"14.67px",height:"10px"}}
                />
-              <span></span>
-            </div>
+             </div>
           </div>
-      
-          <div className="form-group">
-            <label>Confirm Password <span style={{color:"red"}}>*</span></label>
-      
-            <div className="password-box">
-              <input
-                type={showConfirmPassword ? "text" : "password"}
-                name = "confirmpassword"
-                value={formData.confirmpassword}
-                onChange={handlechange}
-                placeholder="Confirm your password"
-              />
-               <img
-               src={EyeIcon}
-               alt="Toggle Password"
-               className="eye-icon"
-               onClick={() => setShowConfirmPassword(!showConfirmPassword)}
-               style={{width:"20px",height:"13px"}}
-               />
-              <span></span>
-            </div>
-          </div>
-          <div className="agree">
-           <input
-            type="checkbox"
-            name="terms"
-            checked={formData.terms}
-            onChange={handlechange}
-           />
-      
-           <p>
-             I agree to the <span>Terms of Service</span> and
-            <span> Privacy Policy</span>
-           </p>
-           </div>
+          <div className="agree-Intern">
+         <input
+          type="checkbox"
+          name="terms"
+          checked={formData.terms}
+          onChange={handlechange}
+          className="checkbox-Intern"
+         />
+    
+         <p>
+           I agree to the <span>Terms of Service</span> and
+          <span> Privacy Policy</span>
+         </p>
+         </div>
                 {Error && <h3 style={{color:"red", fontSize:"15px", marginTop:"10px",textAlign:"center"}}> <span style={{color:"red"}}>*</span> {Error}</h3>}
-          <div className="button-row">
-            <button type="submit" className="create-btn">
+          <div className="button-row-Intern">
+            <button type="submit" className="create-btn-Intern">
               Create Account
             </button>
            </div>
         </form>
-        <div className="dividerC">
+        <div className="divider-Intern">
           <hr />
           <span></span>
           OR
@@ -387,12 +390,14 @@ export default function Intern() {
           <hr />
         </div>
       
-        <p className="signin1">
+        <p className="signin-Intern">
           Already have an account?
           <span onClick={() => navigate("/Loginmainpage")}> Sign In</span>
           </p>
       
+        </div>
          </div>
+      </div>
 
     </div>
   );

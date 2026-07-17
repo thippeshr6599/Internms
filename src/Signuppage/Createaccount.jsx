@@ -45,7 +45,7 @@ export default function Createaccount() {
           }
 
           if (!formData.password || !formData.confirmpassword){
-            setError("Password is required");
+            setError("Create your password");
             return;
           }
         const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&#^()_+\-=\[\]{};':"\\|,.<>\/~`]).{8,}$/;
@@ -59,7 +59,7 @@ export default function Createaccount() {
             return;
           }
           if (formData.password !== formData.confirmpassword) {
-            setError("Passwords don't match");
+            setError("Passwords do not match");
              return;
           }
 
@@ -139,7 +139,7 @@ export default function Createaccount() {
       onClick={() => navigate("/Createaccount")}
       
       >
-        <img src={HRimg} alt="" />
+        <img src={HRimg} alt="HRimage" />
         <span>HR</span>
       </div>
 
@@ -148,7 +148,7 @@ export default function Createaccount() {
        onClick={() => navigate("/Mentor")}
        style={{ cursor: "pointer" }}
       >
-       <img src={Mentor} alt="" />
+       <img src={Mentor} alt="Mentorimage" />
        <span>Mentor</span>
       </div>
 
@@ -157,7 +157,7 @@ export default function Createaccount() {
        onClick={() => navigate("/Intern")}
        style={{ cursor: "pointer" }}
        >
-       <img src={Intern} alt="" />
+       <img src={Intern} alt="Internimage" />
        <span>Intern</span>
        </div>
 
@@ -167,7 +167,7 @@ export default function Createaccount() {
           onClick={() => navigate("/Company")}
           style={{ cursor: "pointer" }}
         >
-       <img src={Company} alt="" />
+       <img src={Company} alt="Companyimage" />
        <span>Company</span>
        </div>
 
@@ -240,8 +240,8 @@ export default function Createaccount() {
        Company Name <span style={{ color: "red" }}>*</span>
       </label>
 
-      <div className="company-box">
-      <img src={Internhub} alt="Company Icon" className="company-icon" />
+      <div className="company-box-HR">
+      <img src={Internhub} alt="Company Icon" className="company-icon-HR" />
 
       <input
        type="text"
@@ -256,7 +256,7 @@ export default function Createaccount() {
     <div className="form-group-HR">
       <label>Password <span style={{color:"red"}}>*</span></label>
 
-      <div className="password-box">
+      <div className="password-box-HR">
         <input
           type={showPassword ? "text" : "password"}
           name = "password"
@@ -267,18 +267,17 @@ export default function Createaccount() {
         <img
          src={EyeIcon}
          alt="Toggle Password"
-         className="eye-icon"
+         className="eye-icon-HR"
          onClick={() => setShowPassword(!showPassword)}
          style={{width:"14.67px",height:"10px"}}
          />
-        <span></span>
       </div>
     </div>
 
     <div className="form-group-HR">
       <label>Confirm Password <span style={{color:"red"}}>*</span></label>
 
-      <div className="password-box">
+      <div className="password-box-HR">
         <input
           type={showConfirmPassword ? "text" : "password"}
           name = "confirmpassword"
@@ -289,11 +288,10 @@ export default function Createaccount() {
          <img
          src={EyeIcon}
          alt="Toggle Password"
-         className="eye-icon"
+         className="eye-icon-HR"
          onClick={() => setShowConfirmPassword(!showConfirmPassword)}
          style={{width:"14.67px",height:"10px"}}
          />
-        <span></span>
       </div>
     </div>
     <div className="agree-HR">
@@ -315,13 +313,13 @@ export default function Createaccount() {
       </h3>
       )}
 
-    <div className="button-row">
+    <div className="button-row-HR">
       <button type="submit" className="create-btn">
         Create Account
       </button>
      </div>
   </form>
-  <div className="dividerC">
+  <div className="divider-HR">
     <hr />
     <span></span>
     OR
@@ -329,7 +327,7 @@ export default function Createaccount() {
     <hr />
   </div>
 
-  <p className="signin1">
+  <p className="signin-HR">
     Already have an account?
     <span onClick={() => navigate("/Loginmainpage")}> Sign In</span>
     </p>
