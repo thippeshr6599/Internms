@@ -329,7 +329,7 @@ export default function Createaccount() {
 
   <p className="signin-HR">
     Already have an account?
-    <span onClick={() => navigate("/Loginmainpage")}> Sign In</span>
+    <span onClick={() => navigate("/HRandCompanyport")}> Sign In</span>
     </p>
      </div>
 

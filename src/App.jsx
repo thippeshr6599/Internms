@@ -15,6 +15,7 @@ import Mentor from './Signuppage/Mentor'
 import Intern from './Signuppage/Intern'
 import Company from './Signuppage/Company'
 import Admin from './Signuppage/Admin'
+import HRandCompanyport from './Loginpage/HRandCompanyport'
 
 
 export default function App() {
@@ -37,6 +38,7 @@ export default function App() {
         <Route path="/Intern" element={<Intern />} />
         <Route path="/Company" element={<Company />} />
         <Route path="/Admin" element={<Admin />} />
+        <Route path="/HRandCompanyport" element={<HRandCompanyport />} />
        </Routes>
        </BrowserRouter>
     </div>

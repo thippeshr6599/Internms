@@ -352,7 +352,7 @@ export default function Company() {
            
              <p className="signin-Company">
                Already have an account?
-               <span onClick={() => navigate("/Loginmainpage")}> Log In</span>
+               <span onClick={() => navigate("/HRandCompanyport")}> Log In</span>
                </p>
              </div>
       </div>
@@ -368,7 +368,7 @@ export default function Company() {
 
   <div
     className="top-footer-login-Company"
-    onClick={() => navigate("/Loginmainpage")}
+    onClick={() => navigate("/HRandCompanyport")}
   >
     Log In
   </div>

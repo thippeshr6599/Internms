@@ -47,9 +47,9 @@ export default function Emailverification() {
   return (
     <div className="Content-Email">
       <div className="left-panel-Email">
-        <div className="shield-box-Email">
+        <div className="left-content-Email">
+          <div className="shield-box-Email">
            <img src={Verifyicon} alt="verifyicon"  />
-
         </div>
 
         <h1>Security first.</h1>
@@ -60,19 +60,20 @@ export default function Emailverification() {
         </p>
 
         <span>Joined by 10k+ professionals</span>
+        </div>
       </div>
 
 
-      <div className="right-panelE" style={{marginRight:"100px",marginTop:"100px"}}>
-        <div className="verification-box">
+      <div className="right-panel-Email">
+        <div className="verification-box-Email">
           <h2>Enter Verification Code</h2>
 
-          <p className="subtitleE">
+          <p className="subtitle-Email">
             We've sent a 6-digit code to your email
             j**n@g***t.com
           </p>
 
-          <div className="otp-boxes">
+          <div className="otp-boxes-Email">
             {otp.map((digit, index) => (
               <input
                 key={index}
@@ -87,18 +88,18 @@ export default function Emailverification() {
 
           {Error && <h3 style={{color:"red", fontSize:"15px",margin:"10px"}}>{Error}</h3>}
 
-          <button className="verify-btn" onClick={handleVerify}>
+          <button className="verify-btn-Email" onClick={handleVerify}>
             Verify Identity 
             <img src={Righticon} alt="" style={{width:"15px",height:"10px"}} />
           </button>
 
-           <p className="resend">
+           <p className="resend-Email">
            Didn't receive the code?{" "}
            {sec > 0 ? (
            <span>Resend in 00:{sec.toString().padStart(2, "0")}</span>
            ) : (
            <button
-           className="resend-btn"
+           className="resend-btn-Email"
            onClick={() => setSec(59)}
            >
             Resend Code 
@@ -108,7 +109,7 @@ export default function Emailverification() {
 
           <hr />
 
-          <button className="back-btn">
+          <button className="back-btn-Email">
            <img src={Backtover} alt="" style={{width:"12px", height:"12px"}}/>
            Back to verification options
           </button>
