@@ -62,6 +62,7 @@ const navigate = useNavigate();
         <hr />
         <div>
            <p onClick={() => navigate("/")}>Land</p>
+           <p onClick={() => navigate("/Admin")}> Admin</p>
         </div>
       </div>
 
