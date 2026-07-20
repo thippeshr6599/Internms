@@ -6,21 +6,22 @@
 }
 
 .Content-Email{
-    width:1000px;
-    height:700px;
+    border: 1px solid rgb(162, 148, 148);
+    width:1280px;
+    height:718px;
     margin:20px auto;
     display:flex;
-    background:#fff;
+    background:#FFFFFF;
     border-radius:10px;
     overflow:hidden;
 }
 
-
-
 .left-panel-Email{
-    width:42%;
-    margin:55px;
-    border-radius:14px;
+    width:490px;
+    height: 569px;
+    border-radius:12px;
+    margin-left: 73px;
+    margin-top: 64px;
     padding:50px 35px;
     color:#fff;
     display:flex;

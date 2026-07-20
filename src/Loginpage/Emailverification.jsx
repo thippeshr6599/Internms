@@ -45,10 +45,10 @@ export default function Emailverification() {
   };
 
   return (
-    <div className="Content-Email" style={{width:"1300px"}}>
+    <div className="Content-Email">
       <div className="left-panel-Email">
-        <div className="shield-box1">
-           <img src={Verifyicon} alt=""  style={{width:"35px", height:"40px",}}/>
+        <div className="shield-box-Email">
+           <img src={Verifyicon} alt="verifyicon"  />
 
         </div>
 

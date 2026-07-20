@@ -240,7 +240,7 @@ export default function Intern() {
           <div className="form-group-Intern">
             <label>Phone Number <span style={{color:"red"}}>*</span></label>
       
-            <div className="phone-box">
+            <div className="phone-box-Intern">
              <div className="country-code-box">+91</div>
       
               <input

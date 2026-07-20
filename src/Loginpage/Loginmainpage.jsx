@@ -24,6 +24,7 @@ function App() {
        [name]: value,
     });
     };
+
    const handlesubmit = (e) => {
           e.preventDefault();
       if (!formData.email || !formData.password) {
@@ -41,70 +42,68 @@ function App() {
     return;
   }
 
-  setError("");
-  navigate("/Twostepverification");
+   setError("");
+   navigate("/Twostepverification");
 };
 
 
   return (
-      <div className="Content-Loginpage">
-      <div className="Page-Container">
-         <div className="login-page">
+     <div className="Content-Loginpage">
+        <div className="left-panel-Loginpage">
 
+        <div className="left-content-Loginpage">
 
-          <div className="left-panel">
+        <div className="Left-top-Loginpage">
+           <h1 className="logo-Loginpage">InternHub</h1>
 
-          <div className="left-content">
-   
-          <h1 className="logo" style={{marginRight:"300px",marginTop:"50px",fontWeight:"700" , fontSize:"30px"}}>InternHub</h1>
-
-          <h2 style={{marginLeft:"25px",fontSize:"30px",}}>
+           <h2>
             Your next big leap starts
             <br />
             here.
-          </h2>
+           </h2>
 
-          <p style={{textAlign:"start",marginLeft:"25px", fontSize:"14px"}}>
-            Connect with industry leaders, manage your
-            applications, and accelerate your career path
-            with our comprehensive internship management
-            platform.
-          </p>
+           <p>
+             Connect with industry leaders, manage your
+             applications, and accelerate your career path
+             with our comprehensive internship management
+             platform.
+           </p>
 
-          <div className="stat" style={{backgroundColor:"none"}}>
-
-            <div style={{marginLeft:"40px"}} >
-              <h3>500+</h3>
-              <span style={{fontSize:"10px"}}>PARTNER COMPANIES</span>
-            </div>
-
-            <div>
-              <h3>10k+</h3>
-              <span style={{fontSize:"10px"}}>SUCCESS STORIES</span>
-            </div>
-
+          <div className="stat-Loginpage">
+          <div>
+            <h3>500+</h3>
+            <span>PARTNER COMPANIES</span>
           </div>
 
+          <div>
+            <h3>10k+</h3>
+            <span>SUCCESS STORIES</span>
+          </div>
         </div>
-
-        <div className="copyright-Login" style={{marginTop:"180px", marginRight:"280px",fontSize:"10px"}}>
-           @2024 InternMS
-        </div>
-         
       </div>
 
+    </div>
 
-      <div className="right-panel-Login">
+    <div className="copyright-Login">
+      @2024 InternMS
+    </div>
 
-        <div className="login-box">
+</div>
+    <div className="right-panel-Login">
 
+       <div className="right-content-Login">
+         <div className="login-box">
+
+          <div className="head-Login">
           <h1>Welcome Back</h1>
 
-          <p className="subtitle" style={{fontSize:"16px"}}>
+          <p>
             Manage your career journey.
           </p>
+          </div>
 
-          <label>Email Address</label>
+          <div className="Form-Login">
+            <label>Email Address</label>
 
           <form onSubmit={handlesubmit}>
           <div className="input-box-Login">
@@ -143,19 +142,20 @@ function App() {
 
            </div>
         
-           {Error && <h3 style={{color:"red", fontSize:"13px"}}> {Error}</h3>}
+           {Error && <h3 style={{color:"red", fontSize:"16px",marginTop:"25px"}}> {Error}</h3>}
            <br />
           <div className="remember">
             <input type="checkbox" />
             <span>Keep me signed in</span>
           </div>
 
-           <button type="submit" className="signin">
+           <button type="submit" className="signin-Login">
             Sign In <img src={Rightarrow} alt="" style={{width:"18",height:"12px"}}/>
            </button>
           </form>
+          </div>
 
-          <div className="divider">
+          <div className="divider-Login">
             <span>OR CONTINUE WITH</span>
           </div>
 
@@ -164,12 +164,12 @@ function App() {
              Google
            </button>
 
-         <p className="signup">
+         <p className="signup-Login">
             Don't have an account?
             <Link to="/Createaccount"> Create Account</Link>
            </p>
 
-          <div className="footer-links">
+          <div className="footer-links-Login">
             <a href="#">Help</a>
             <span>•</span>
             <a href="#">Privacy</a>
@@ -178,13 +178,11 @@ function App() {
           </div>
 
         </div>
+       </div>
 
       </div>
 
        </div>
-      </div>
-
-      </div>
   );
 }
 

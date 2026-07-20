@@ -30,49 +30,49 @@ function Twostepverification() {
     <div>
       <div className="Content-Two">
 
-        <div className="left-panel">
-          <div className="left-text1">
-            <h1 style={{fontSize:"30px",marginRight:"20px",marginLeft:"20px",marginTop:"50px"}}>Secure Your Account</h1>
+        <div className="left-panel-Two">
+          <div className="left-text-Two">
+            <h1>Secure Your Account</h1>
 
-            <p style={{fontSize:"15px",marginLeft:"20px"}}>
+            <p>
               Protecting your professional profile and
               application history is our top priority.
               Choose a method to verify your identity.
             </p>
 
-            <div className="security-box" style={{marginLeft:"20px"}}>
-              <div className="shield">
-                 <img src={Secure} alt="Secureicon" style={{width:"20px", height:"25px"}}/>
+            <div className="security-box-Two">
+              <div className="shield-Two">
+                 <img src={Secure} alt="Secureicon" />
               </div>
 
-              <div>
-                <h4 style={{fontSize:"13px"}}>256-bit Encryption</h4>
-                <span style={{fontSize:"12px"}}>Bank-grade security standards</span>
+              <div className="security-two-data">
+                <h4>256-bit Encryption</h4>
+                <span>Bank-grade security standards</span>
               </div>
             </div>
           </div>
 
-          <div className="copyright2" style={{fontSize:"10px",marginTop:"190px",marginRight:"250px",marginLeft:"20px"}}>
+          <div className="copyright-Two">
             @ 2024 InternMS
           </div>
         </div>
-        <div className="right-panel">
-          <div className="verify-card">
+        <div className="right-panel-Two">
+          <div className="right-content-Two">
+            <div className="verify-card-Two">
 
-            <h1 style={{fontSize:"24px",marginTop:"100px"}}>Two-Step Verification</h1>
+            <h1>Two-Step Verification</h1>
 
-            <p className="subtitle" style={{fontSize:"15px"}}>
+            <p>
               Choose how you'd like to verify your identity.
             </p>
 
             <div
-            style={{height:"75px"}}
-              className={selected === "email" ? "option active" : "option"}
+              className={selected === "email" ? "option-Two active-Two" : "option-Two"}
               onClick={() => setSelected("email")}
             >
-              <div className="option-left">
-                <div className="icon-boxT">
-                    <img src={Gmaili} alt="" style={{width:"20px",height:"20px"}} />
+              <div className="option-left-Two">
+                <div className="icon-box-Two">
+                    <img src={Gmaili} alt="" style={{width:"20px",height:"16px"}} />
                 </div>
 
                 <div>
@@ -81,18 +81,17 @@ function Twostepverification() {
                 </div>
               </div>
 
-              <div className="radio">
-                {selected === "email" && <div className="dot"></div>}
+              <div className="radio-Two">
+                {selected === "email" && <div className="dot-Two"></div>}
               </div>
             </div>
 
             <div
-            style={{height:"75px"}}
-              className={selected === "mobile" ? "option active" : "option"}
+              className={selected === "mobile" ? "option-Two active-Two" : "option-Two"}
               onClick={() => setSelected("mobile")}
             >
-              <div className="option-left">
-                <div className="icon-boxT">
+              <div className="option-left-Two">
+                <div className="icon-box-Two">
                      <img src={Mobilei} alt="" style={{width:"15px",height:"25px"}}  />
                 </div>
 
@@ -102,27 +101,28 @@ function Twostepverification() {
                 </div>
               </div>
 
-              <div className="radio">
-                {selected === "mobile" && <div className="dot"></div>}
+              <div className="radio-Two">
+                {selected === "mobile" && <div className="dot-Two"></div>}
               </div>
             </div>
 
-            <button className="send-btn" onClick={handleSendCode}>
+            <button className="send-btn-Two" onClick={handleSendCode}>
               Send Verification Code
-             <img src={Righticon} alt="" style={{width:"15px",height:"10px"}} />
+             <img src={Righticon} alt="" style={{color:"#FFFFFF",width:"9.33px",height:"9.33px"}} />
             </button>
 
-            <div className="back" onClick={handleBack}>
-               <img src={Leftarrow} alt="" style={{width:"15px", height:"10px",marginRight:"5px"}} />
+            <div className="back-Two" onClick={handleBack}>
+               <img src={Leftarrow} alt="" style={{color:"#3525CD",width:"12px", height:"12px",marginRight:"5px"}} />
                 Back to Login
             </div>
 
             <hr />
 
-            <p className="help">
+            <p className="help-Two">
               Need help? <span>Contact Support</span>
             </p>
 
+          </div>
           </div>
         </div>
 
