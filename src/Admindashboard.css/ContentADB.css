@@ -1,0 +1,72 @@
+.Dashboard-panel-ADB{
+    display: grid;
+    gap: 25px;
+}
+.Welcome-content-ADB{
+    border: 1px solid black;
+    width: 1123px;
+    height: 168px;
+}
+.Welcome-content-ADB h2{
+    color: #000000;
+    font-size:24px;
+    font-weight:700;
+    font-style: bold;
+    line-height: 100%;
+    margin-bottom: 3px;
+}
+.Welcome-content-ADB p {
+    color: #000000;
+    font-size:15px;
+    font-weight:500;
+    line-height:100%;
+    margin-bottom: 35px;
+}
+.Interndetails-Content-ADB{
+    display: flex;
+    gap:41px;
+}
+.Intern-details-ADB{
+    border: 1px solid none;
+    box-shadow: 0px 0px 5px 0px #00000040;
+    width: 250px;
+    height:90px;
+    box-sizing: border-box;
+    border-radius: 5px;
+    padding: 17px 6px 0px 14px;
+    
+}
+.Intern-total-ADB{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-right: 25px;
+}
+.Intern-total-ADB img {
+    width: 30px;
+    height: 20px;  
+    margin-bottom: 50px;
+    margin-left: 0;
+}
+.Total-details-ADB h3{
+    color:#1E40AF;
+    font-size: 12px;
+    font-style: bold;
+    font-weight: 700;
+    line-height: 100%;
+    margin-bottom: 4px;
+}
+.Total-details-ADB h2 {
+    color: #000000;
+    font-size: 16px;
+    font-weight: 700;
+    font-style: bold;
+    line-height: 100%;
+    margin-bottom: 8px;
+}
+.Total-details-ADB p {
+    color: #000000;
+    font-size: 14px;
+    font-weight: 400;
+}
+

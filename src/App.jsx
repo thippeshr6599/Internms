@@ -16,6 +16,7 @@ import Intern from './Signuppage/Intern'
 import Company from './Signuppage/Company'
 import Admin from './Signuppage/Admin'
 import HRandCompanyport from './Loginpage/HRandCompanyport'
+import Admindashboard from './Admindashboard/Admindashboard'
 
 
 export default function App() {
@@ -39,6 +40,7 @@ export default function App() {
         <Route path="/Company" element={<Company />} />
         <Route path="/Admin" element={<Admin />} />
         <Route path="/HRandCompanyport" element={<HRandCompanyport />} />
+        <Route path="/Admindashboard" element={<Admindashboard />} />
        </Routes>
        </BrowserRouter>
     </div>

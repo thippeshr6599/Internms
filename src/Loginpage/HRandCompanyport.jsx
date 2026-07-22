@@ -40,7 +40,7 @@ export default function HRandCompanyport() {
   }
 
    setError("");
-   navigate("/Twostepverification");
+   navigate("/Admindashboard");
 };
   return (
     <div className='Content-HRandCompany'>
