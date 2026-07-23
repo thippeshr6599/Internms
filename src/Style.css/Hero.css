@@ -1,0 +1,149 @@
+.hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 90px 80px;
+    min-height: 100vh;
+    background: linear-gradient(135deg,#f7f9ff,#eef4ff);
+    overflow: hidden;
+}
+
+
+
+.hero-left{
+    width:50%;
+}
+
+.hero-badge{
+    display:inline-block;
+    padding:10px 20px;
+    background:#DCE9FF;
+    color:#0058BE;
+    border-radius:25px;
+    font-size:15px;
+    margin-bottom:30px;
+}
+
+.hero-left h1{
+    font-size:78px;
+    line-height:88px;
+    font-weight:300;
+    color:#111827;
+}
+
+.hero-left h1 span{
+    color:#1157ba;
+}
+
+.hero-line{
+    width:470px;
+    height:6px;
+    background:#b8d4ff;
+    margin:25px 0;
+}
+
+.hero-left p{
+    width:520px;
+    color:#555;
+    font-size:24px;
+    line-height:40px;
+    margin-bottom:45px;
+}
+
+.hero-buttons{
+    display:flex;
+    gap:25px;
+}
+
+.primary-btn{
+    background:#1350a5;
+    color:white;
+    border:none;
+    padding:18px 40px;
+    border-radius:14px;
+    font-size:18px;
+    cursor:pointer;
+    display:flex;
+    align-items:center;
+    gap:15px;
+    box-shadow:0 10px 20px rgba(0,0,0,.15);
+}
+
+.primary-btn span{
+    font-size:25px;
+}
+
+.secondary-btn{
+    background:white;
+    border:1px solid #ddd;
+    padding:18px 38px;
+    border-radius:14px;
+    font-size:18px;
+    cursor:pointer;
+    box-shadow:0 10px 20px rgba(0,0,0,.08);
+}
+
+
+.hero-right{
+    width:60%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    position:relative;
+}
+
+.image-box{
+    width:560px;
+    height:560px;
+    background:#b8dfe4;
+    border:10px solid white;
+    border-radius:22px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    box-shadow:0 20px 40px rgba(0,0,0,.1);
+}
+
+.image-box img{
+    width:540px;
+}
+
+.success-card{
+    position:absolute;
+    bottom:10px;
+    left:40px;
+    background:white;
+    display:flex;
+    align-items:center;
+    gap:15px;
+    padding:18px 25px;
+    border-radius:12px;
+    box-shadow:0 15px 30px rgba(0,0,0,.15);
+}
+
+.icon{
+    width:50px;
+    height:50px;
+    background:#1ee8a8;
+    border-radius:50%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:24px;
+}
+
+.success-card small{
+    color:#777;
+    font-size:14px;
+}
+
+.success-card h3{
+    margin-top:4px;
+    font-size:20px;
+}
+.success-card .icon img {
+  width: 30px;
+  height: 30px;
+  object-fit: contain;
+  display: block;
+}

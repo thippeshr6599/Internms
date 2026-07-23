@@ -1,0 +1,161 @@
+.Content-Forgototp {
+  width: 1100px;
+  height: 700px;
+  margin: 20px auto;
+  display: flex;
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  font-family: "Poppins", sans-serif;
+}
+
+
+.verify-left {
+  width: 52%;
+  background: linear-gradient(180deg, #5883F0, #323B50);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+.shield-circle {
+  width: 88px;
+  height: 88px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.shield-icon {
+  font-size: 34px;
+}
+
+.verify-left h1 {
+  margin-top: 30px;
+  font-size: 40px;
+  font-weight: 600;
+}
+
+.verify-left p {
+  margin-top: 15px;
+  font-size: 18px;
+  line-height: 34px;
+  color: rgba(255,255,255,0.8);
+  text-align: center;
+}
+
+
+.verify-right {
+  width: 48%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: white;
+}
+
+.verify-box {
+  width: 430px;
+}
+
+.verify-box h2 {
+  font-size: 30px;
+  color: #222;
+  margin-bottom: 15px;
+}
+
+.sub-text {
+  color: #666;
+  font-size: 16px;
+  line-height: 30px;
+  margin-bottom: 40px;
+}
+
+.sub-text span {
+  color: #5644ff;
+  font-weight: 600;
+}
+
+.otp-boxes {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 40px;
+}
+
+.otp-boxes input {
+  width: 54px;
+  height: 54px;
+  border: 2px solid #d6d6df;
+  border-radius: 12px;
+  font-size: 22px;
+  text-align: center;
+  outline: none;
+  transition: 0.3s;
+}
+
+.otp-boxes input:first-child {
+  border-color: #4e6dff;
+}
+
+.otp-boxes input:focus {
+  border-color: #4e6dff;
+}
+
+.verify-btn {
+  width: 100%;
+  height: 52px;
+  border: none;
+  border-radius: 8px;
+  background: #4527d8;
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.verify-btn:hover {
+  background: #371bc8;
+}
+
+.resend {
+  margin-top: 24px;
+  text-align: center;
+  color: #555;
+  font-size: 15px;
+}
+
+.resend b {
+  color: #4527d8;
+  cursor: pointer;
+}
+
+.bottom-line {
+  width: 100%;
+  height: 1px;
+  background: #ececec;
+  margin: 55px 0 28px;
+}
+
+.security {
+  display: flex;
+  justify-content: center;
+  gap: 35px;
+  color: #888;
+  font-size: 12px;
+  letter-spacing: 1px;
+}
+
+.security span {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}

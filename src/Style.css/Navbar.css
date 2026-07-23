@@ -1,0 +1,48 @@
+.navbar-land{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    background:white;
+    border-bottom:1px solid #eee;
+}
+
+.logo{
+    font-size:40px;
+    font-weight:700;
+    margin-top: 25px;
+}
+
+.nav-links{
+    display:flex;
+    list-style:none;
+    gap:40px;
+    font-size:15px;
+    color:#45464D;
+}
+
+.nav-buttons{
+    display:flex;
+    align-items:center;
+    gap:20px;
+    padding-right: 50px;
+}
+.nav-buttons button:hover{
+       background:#1f195f;
+}
+
+.loginnav{
+    color:#000000;
+    cursor:pointer;
+}
+.loginnav:hover {
+    color:red;
+}
+
+.nav-buttons button{
+    background:#0a0822;
+    border:none;
+    padding:12px 20px;
+    color:white;
+    border-radius:8px;
+    cursor:pointer;
+}
