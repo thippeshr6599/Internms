@@ -22,7 +22,7 @@ import Admindashboard from './Admindashboard/Admindashboard'
 export default function App() {
   return (
     <div>
-       <BrowserRouter>
+       <BrowserRouter basename="/Internms">
        <Routes>
         <Route path="/" element={<Landingpage/>}/>
         <Route path="/Loginmainpage" element={<Loginmainpage/>}/>
