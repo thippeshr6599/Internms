@@ -17,6 +17,7 @@ import Company from './Signuppage/Company'
 import Admin from './Signuppage/Admin'
 import HRandCompanyport from './Loginpage/HRandCompanyport'
 import Admindashboard from './Admindashboard/Admindashboard'
+import Interndashboard from './Interndashboard/Interndashboard'
 
 
 export default function App() {
@@ -40,6 +41,7 @@ export default function App() {
         <Route path="/Admin" element={<Admin />} />
         <Route path="/HRandCompanyport" element={<HRandCompanyport />} />
         <Route path="/Admindashboard" element={<Admindashboard />} />
+        <Route path="/Interndashboard" element={<Interndashboard />} />
        </Routes>
     </div>
   )

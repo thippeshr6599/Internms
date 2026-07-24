@@ -40,7 +40,7 @@ export default function HRandCompanyport() {
   }
 
    setError("");
-   navigate("/Admindashboard");
+   navigate("/Interndashboard");
 };
   return (
     <div className='Content-HRandCompany'>
