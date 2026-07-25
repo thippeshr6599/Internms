@@ -58,12 +58,9 @@
     display: flex;
     padding-top: 30px;
     padding-left: 16px;
-    margin-left: 20px;
+    align-items: start;
 }
-.header-sidebar-IDB img{
-    width: 21px;
-    height: 21px;
-}
+
 .header-sidebar-IDB span {
     color: #FFFFFF;
     font-size: 15px;
