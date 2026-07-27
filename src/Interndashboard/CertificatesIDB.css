@@ -1,5 +1,5 @@
 .Content-Cer-IDB{
-     margin-top: 550px;
+     margin-top: 0px;
      margin-left: 20px;
      border: 1px solid none;
      box-shadow: 0px 0px 4px 0px #00000040;
@@ -49,6 +49,7 @@
     justify-content: space-between;
     padding: 0px 10px;
     align-items: center;
+    cursor: pointer;
 }
 .Down-IDB h3 {
     color: #2675FA;

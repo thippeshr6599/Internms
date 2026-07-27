@@ -3,6 +3,7 @@ import Internsidebar from './Internsidebar'
 import "../Interndashboard/Interndashboard.css"
 import NavbarIDB from './NavbarIDB'
 import SectiononeIDB from './SectiononeIDB'
+import SectionmiddleIDB from './SectionmiddleIDB'
 import CertificatesIDB from './CertificatesIDB'
 
 export default function Interndashboard() {
@@ -15,6 +16,9 @@ export default function Interndashboard() {
 
         <div className="Section-IDB">
           <SectiononeIDB />
+        </div>
+        <div>
+           <SectionmiddleIDB/>
         </div>
         <div>
           <CertificatesIDB/>

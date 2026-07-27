@@ -1,12 +1,21 @@
+
 .header-Sectionone-IDB h2{
     color:#003073;
-    width:173px;
     height:19px;
     font-size:16px;
     font-weight:700;
     line-height:100%;
     font-style: bold;
-    margin-left: 37px;
+    margin-left: 30px;
+}
+.mainhead-IDB{
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+.header-Sectionone-IDB img{
+    width: 24px;
+    height: 24px;
 }
 .header-Sectionone-IDB p {
     width:352px;
@@ -15,7 +24,7 @@
     font-size:11px;
     font-weight:400;
     line-height:100%;
-    margin-left: 37px;
+    margin-left: 30px;
 }
 .header2-Sectionone-IDB {
     display: flex;

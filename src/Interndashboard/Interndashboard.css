@@ -1,11 +1,12 @@
 .Content-IDB{
-    border: 1px solid black;
+    border: 1px solid rgb(242, 235, 235);
     width: 1440px ;
     height: 1024px ;
     boxSizing: border-box ;
     margin: 2px auto ;
     display: flex ;
     overflow: hidden ;
+    margin-top: 10px;
 }
 
 .Main-IDB {

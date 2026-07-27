@@ -5,12 +5,16 @@ import IDBsectiononearrow from "../assets/IDBsectionarrow.png"
 import InternshipduratoinIDB from "../assets/IntenshipdurationIDB.png"
 import Overallprogress from "../assets/Overallprogress.png"
 import Reportsubmitted from "../assets/Reportsubmitted.png"
+import WavinghandIDB from "../assets/WavinghandIDB.png"
 
 export default function SectiononeIDB() {
   return (
     <div>
        <div className='header-Sectionone-IDB'>
-         <h2>Welcome Back, Rahul!</h2>
+         <div className='mainhead-IDB'>
+           <h2>Welcome Back, Rahul!</h2>
+          <img src={WavinghandIDB} alt="wavinghand" />
+         </div>
          <p>Here's an overview of your Intenship Journey.</p>
        </div>
      <div className='header2-Sectionone-IDB'>
