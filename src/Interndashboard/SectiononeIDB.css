@@ -1,3 +1,20 @@
+.mainhead-IDB {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+.mainhead-IDB h2 {
+  width: 173px;
+  height: 19px;
+  font-size: 16px;
+  font-weight: 700;
+  margin-left: 29px;
+}
+.mainhead-IDB p {
+   color: #003073;
+   font-size:11px;
+   font-weight:400;
+}
 .header2-Sectionone-IDB {
   display: flex;
   flex-wrap: wrap;
@@ -26,11 +43,7 @@
   box-sizing: border-box;
 }
 
-.mainhead-IDB {
-  display: flex;
-  gap: 15px;
-  align-items: center;
-}
+
 .header-Sectionone-IDB img {
   width: 24px;
   height: 24px;
