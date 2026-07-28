@@ -1,9 +1,9 @@
-.Content-Sidebar-IDB{
-    border: 1px solid none;
-    width: 278px;
-    height: 100%;
-    background-color: #00328D;
-    box-sizing: border-box;
+.Content-Sidebar-IDB {
+  width: 278px;
+  min-height: 100vh;
+  background-color: #00328d;
+  box-sizing: border-box;
+  flex-shrink: 0;
 }
 .head1-Sidebar-IDB{
     width:220px;
