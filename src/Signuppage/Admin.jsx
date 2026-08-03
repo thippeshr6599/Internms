@@ -1,5 +1,5 @@
 import React from 'react'
-import "../Signup.css/Admin.css"
+import "../Signuppage/Admin.css"
 import Adminleft from "../assets/Adminleftimage.png"
 import Adminright from "../assets/Adminright.png"
 import Admintrust from "../assets/Admintrust.png"

@@ -1,5 +1,5 @@
 import React from "react";
-import "../Signup.css/Company.css";
+import "../Signuppage/Company.css";
 import Addicon from "../assets/Addcontact.png";
 import Companyright from "../assets/Companyright.png"
 import Handicon from "../assets/Hand.png"

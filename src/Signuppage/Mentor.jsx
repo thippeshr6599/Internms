@@ -1,5 +1,5 @@
 import React from "react";
-import "../Signup.css/Mentor.css";
+import "../Signuppage/Mentor.css"
 import Mentorright from "../assets/Mentor Right.png"
 import Mentorteams from "../assets/MentorTeams.png"
 import Mentorstar from "../assets/Metrostar.png"

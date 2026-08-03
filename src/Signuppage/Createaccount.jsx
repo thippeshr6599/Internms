@@ -5,8 +5,8 @@ import Mentor from "../assets/Mentor.png"
 import Intern from "../assets/Intern.png"
 import Company from "../assets/Company.png"
 import EyeIcon from "../assets/Eyeicon.png";
-import Internhub from "../assets/Internhub inside.png"
-import "../Signup.css/Createaccount.css"
+import Internhub from "../assets/Internhub inside.png";
+import "../Signuppage/HRaccount.css";
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 

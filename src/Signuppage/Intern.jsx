@@ -1,5 +1,5 @@
 import React from "react";
-import "../Signup.css/Intern.css";
+import "../Signuppage/Intern.css"
 import Internright from "../assets/Internright.png"
 import Internsmart from "../assets/Internsmart.png"
 import Internvector from "../assets/Internvector.png"
