@@ -1,5 +1,5 @@
 import React from "react";
-import "../Style.css/Hero.css"
+import "../Landingpage/Hero.css"
 import dashboard from "../assets/Internship Management Dashboard.png";
 import successIcon from "../assets/Icon (4).png";
 import Star from "../assets/Landingpagestar.png"

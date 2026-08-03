@@ -1,5 +1,5 @@
 import React from "react";
-import "../Style.css/Features.css"
+import "../Landingpage/Features.css"
 import svgImg from "../assets/Icon.png";
 import bgImg from "../assets/Icon (1).png";
 import vectorImg from "../assets/Icon (2).png";

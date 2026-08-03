@@ -1,6 +1,6 @@
 import React, { useRef, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import "../Login.css/Mobileverification.css"
+import "../Loginpage/Mobileverification.css"
 import Verifyicon from "../assets/Verificationicon.png"
 import Righticon from "../assets/Righticon (2).png"
 import Backtover from "../assets/Backtover.png";

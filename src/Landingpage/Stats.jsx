@@ -1,5 +1,5 @@
 import React from "react";
-import "../Style.css/Stats.css"
+import "../Landingpage/Stats.css"
 
 function Stats() {
   return (

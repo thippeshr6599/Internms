@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import "../Login.css/Emailverification.css"
+import "../Loginpage/Emailverification.css"
 import Verifyicon from "../assets/Verificationicon.png";
 import Righticon from "../assets/Righticon (2).png"
 import Backtover from "../assets/Backtover.png";

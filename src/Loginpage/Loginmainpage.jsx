@@ -1,6 +1,6 @@
 import React, {useState} from "react";
 import { useNavigate, Link } from "react-router-dom";
-import "../Login.css/Loginmainpage.css"
+import "../Loginpage/Loginmainpage.css"
 import EyeIcon from "../assets/Eyeicon.png";
 import GoogleIcon from "../assets/SVG.png";
 import Gmail1 from "../assets/Gmail1.png";

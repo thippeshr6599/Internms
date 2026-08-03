@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import "../Login.css/Forgotpassword.css"
+import "../Loginpage/Forgotpassword.css"
 import Forgotimg from "../assets/Forgot.png"
 import Leftline from "../assets/Left line.png"
 import Rightarrow from "../assets/Righticon (2).png"

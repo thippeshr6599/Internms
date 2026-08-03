@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import "../Login.css/Twostepverification.css"
+import "../Loginpage/Twostepverification.css"
 import Secure from "../assets/Whiteshield.png";
 import Mobilei from "../assets/mobileicon.png";
 import Gmaili  from  "../assets/gmail.png";

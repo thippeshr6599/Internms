@@ -1,6 +1,6 @@
 import React from 'react'
 import { useNavigate } from "react-router-dom";
-import "../Login.css/Sucesslogin.css"
+import "../Loginpage/Sucesslogin.css"
 import successImg from "../assets/success page.png";
 import Verifyicon from "../assets/Verificationicon.png";
 import Righticon from "../assets/Rightmark.png"

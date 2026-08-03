@@ -2,7 +2,7 @@ import React, {useState} from "react";
 import { useNavigate, Link } from "react-router-dom";
 import EyeIcon from "../assets/Eyeicon.png";
 import GoogleIcon from "../assets/SVG.png";
-import "../Login.css/HRandCompanyport.css"
+import "../Loginpage/HRandCompanyportal.css"
 import HRandCompany from "../assets/HRandCompanyimageBackground.png"
 import username from "../assets/username.png"
 import Lock1 from "../assets/Pass1.png";
