@@ -165,7 +165,7 @@
 .search-box {
   width: 316.63px;
   height: 48px;
-  background: #ffffff;
+  background: #FFFFFF;
   border-radius: 11px;
   display: flex;
   align-items: center;
@@ -184,7 +184,6 @@
   outline: none;
   width: 100%;
   font-size: 14px;
-  color: #ffffff;
 }
 
 .search-box input::placeholder {
