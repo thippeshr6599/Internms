@@ -1,7 +1,7 @@
-import React,  { useState } from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import '../Interndashboard/InternDashboard.css'
-import IDBmore from "../assets/ADBmore.png"
+import "../Interndashboard/InternDashboard.css"
+import IDBmore from "../assets/ADBmore.png";
 import IDBsearch from "../assets/ADBsearch.png";
 import IDBnotification from "../assets/ADBnotification.png";
 import IDBaccount from "../assets/ADBaccount.png";
@@ -42,7 +42,7 @@ import CerificateLast from "../assets/tabler_certificate.png";
 import DownloadIDB from "../assets/DownloadIDB.png";
 import { PieChart, Pie, Cell, ResponsiveContainer } from "recharts";
 
-  export const InternDashboard = () => {
+export const InternDashboard = () => {
   const [Show, setShow] = useState(false);
   const tasksData = [
     {
@@ -107,6 +107,27 @@ import { PieChart, Pie, Cell, ResponsiveContainer } from "recharts";
       status: "upcoming",
     },
   ];
+
+  // used for application status workflow order
+  const workflowOrder = [
+    "Application Submitted",
+    "Application Reviewed",
+    "Shortlisted",
+    "Offer Accepted",
+    "Onboarding",
+  ];
+
+  // Keep only one step for each label
+  const uniqueSteps = Array.from(
+    new Map(steps.map((step) => [step.label, step])).values(),
+  );
+
+  // Keep steps in the correct workflow order
+  const orderedSteps = [...uniqueSteps]
+    .sort(
+      (a, b) => workflowOrder.indexOf(a.label) - workflowOrder.indexOf(b.label),
+    )
+    .slice(0, 5);
 
   const reports = [
     {
@@ -219,65 +240,103 @@ import { PieChart, Pie, Cell, ResponsiveContainer } from "recharts";
   return (
     <div className={`Content-IDB ${Show ? "Show" : ""}`}>
       <div className={`Sidebar-Content-IDB ${Show ? "Show" : ""}`}>
-       <div className="Sidebar-IDB-head1">
-        <h2>InternMS</h2>
-        <p>Internship Management System</p>
-       </div>
-    
-       <div className="sidebar-menu-IDB">
+        <div className="Sidebar-IDB-head1">
+          <h2>InternMS</h2>
+          <p>Internship Management System</p>
+        </div>
 
-         <div className="sidebar-item-IDB active-IDB">
-           <img src={HomeIDB} alt="homeidb" style={{width:"20px",height:"17px"}} />
-           {!Show && <span>Dashboard</span>}
-         </div>
-
-         <div className="sidebar-item-IDB">
-          <img src={Myinternship} alt="myinternship" style={{width:"21px",height:"21px"}} />
-          {!Show && <span>My Internships</span>}
-         </div>
-
-         <div className="sidebar-item-IDB">
-          <img src={Applicationstatus} alt="applicationstatus" style={{width:"16.9px",height:"21.54px"}} />
-          {!Show && <span>Applications Status</span>}
-         </div>
-
-         <div className="sidebar-item-IDB">
-          <img src={Assignedmentor} alt="assignedmentor" style={{width:"18px",height:"18px"}}/>
-           {!Show && <span>Assigned Mentor</span>}
+        <div className="sidebar-menu-IDB">
+          <div className="sidebar-item-IDB active-IDB">
+            <img
+              src={HomeIDB}
+              alt="homeidb"
+              style={{ width: "20px", height: "17px" }}
+            />
+            {!Show && <span>Dashboard</span>}
           </div>
 
           <div className="sidebar-item-IDB">
-           <img src={Progresstracking} alt="progresstracking" style={{width:"18px",height:"20px"}}/>
-           {!Show && <span>Progress Tracking</span>}
+            <img
+              src={Myinternship}
+              alt="myinternship"
+              style={{ width: "21px", height: "21px" }}
+            />
+            {!Show && <span>My Internships</span>}
           </div>
 
           <div className="sidebar-item-IDB">
-          <img src={Weeklyreports} alt="weeklyreports" style={{width:"17.52px",height:"21.6px"}} />
-          {!Show && <span>Weekly Reports</span>}
+            <img
+              src={Applicationstatus}
+              alt="applicationstatus"
+              style={{ width: "16.9px", height: "21.54px" }}
+            />
+            {!Show && <span>Applications Status</span>}
           </div>
 
           <div className="sidebar-item-IDB">
-           <img src={TasksIDB} alt="tasksidb" style={{width:"18px",height:"20px"}}/>
-           {!Show && <span>Tasks & Deliverables</span>}
+            <img
+              src={Assignedmentor}
+              alt="assignedmentor"
+              style={{ width: "18px", height: "18px" }}
+            />
+            {!Show && <span>Assigned Mentor</span>}
           </div>
 
           <div className="sidebar-item-IDB">
-           <img src={Notificationsidb} alt="notificationidb" style={{width:"16px",height:"20px"}}/>
-           {!Show && <span>Notifications</span>}
+            <img
+              src={Progresstracking}
+              alt="progresstracking"
+              style={{ width: "18px", height: "20px" }}
+            />
+            {!Show && <span>Progress Tracking</span>}
           </div>
 
-         <div className="sidebar-item-IDB">
-          <img src={Certificateidb} alt="certificateidb" style={{width:"18px",height:"17px"}}/>
-          {!Show && <span>Certificates</span>}
-         </div>
-        
-         <div className="sidebar-item-IDB">
-          <img src={Performanceidb} alt="" style={{width:"24px",height:"24px"}}/>
-          {!Show && <span>Performance Metrics</span>}
-         </div>
+          <div className="sidebar-item-IDB">
+            <img
+              src={Weeklyreports}
+              alt="weeklyreports"
+              style={{ width: "17.52px", height: "21.6px" }}
+            />
+            {!Show && <span>Weekly Reports</span>}
+          </div>
 
-       </div>
-     </div>
+          <div className="sidebar-item-IDB">
+            <img
+              src={TasksIDB}
+              alt="tasksidb"
+              style={{ width: "18px", height: "20px" }}
+            />
+            {!Show && <span>Tasks & Deliverables</span>}
+          </div>
+
+          <div className="sidebar-item-IDB">
+            <img
+              src={Notificationsidb}
+              alt="notificationidb"
+              style={{ width: "16px", height: "20px" }}
+            />
+            {!Show && <span>Notifications</span>}
+          </div>
+
+          <div className="sidebar-item-IDB">
+            <img
+              src={Certificateidb}
+              alt="certificateidb"
+              style={{ width: "18px", height: "17px" }}
+            />
+            {!Show && <span>Certificates</span>}
+          </div>
+
+          <div className="sidebar-item-IDB">
+            <img
+              src={Performanceidb}
+              alt="Performanceidb"
+              style={{ width: "24px", height: "24px" }}
+            />
+            {!Show && <span>Performance Metrics</span>}
+          </div>
+        </div>
+      </div>
 
       <div className="Main-IDB">
         {/* Navbar */}
@@ -444,7 +503,9 @@ import { PieChart, Pie, Cell, ResponsiveContainer } from "recharts";
             <div className="task-card">
               <div className="task-header ">
                 <h2 className="task-tittle">Task & Deliverables</h2>
-                <button className="view-all-btn">View all</button>
+                <Link to="/task-deliverables" className="view-all-btn">
+                  View all
+                </Link>
               </div>
 
               <div className="task-list">
@@ -488,9 +549,9 @@ import { PieChart, Pie, Cell, ResponsiveContainer } from "recharts";
             <div className="Mentor-card">
               <div className="mentor-header">
                 <h2>Assigned Mentor</h2>
-                <button type="button" className="view-profile">
+                <Link to="/assigned-mentor" className="view-profile">
                   View Profile
-                </button>
+                </Link>
               </div>
               <div className="mentor-profile ">
                 <div>
@@ -528,12 +589,15 @@ import { PieChart, Pie, Cell, ResponsiveContainer } from "recharts";
             <div className="appliction-status-card">
               <div className="AS-header">
                 <h2 className="AS-title">Application Status</h2>
-                <button className="view-all-btn">View all</button>
+                <Link to="/applications" className="view-all-btn">
+                  View all
+                </Link>
               </div>
+
               <div className="tracker-container">
                 <div className="progress-steps">
-                  {steps.map((step, index) => (
-                    <div className="progress-item" key={index}>
+                  {orderedSteps.map((step, index) => (
+                    <div className={`progress-item ${step.status}`} key={index}>
                       <div className="status-icon-wrapper">
                         <img
                           src={statusIcons[step.status]}
@@ -541,8 +605,10 @@ import { PieChart, Pie, Cell, ResponsiveContainer } from "recharts";
                           className="idb-status-icon"
                         />
                       </div>
+
                       <div className="progress-content">
                         <p className="progress-label">{step.label}</p>
+
                         <p className="progress-date">{step.date}</p>
                       </div>
                     </div>
@@ -555,7 +621,9 @@ import { PieChart, Pie, Cell, ResponsiveContainer } from "recharts";
             <section className="weekly-reports-card">
               <div className="weekly-reports-header">
                 <h2>Weekly Reports</h2>
-                <button className="view-all-btn">View All</button>
+                <Link to="/weekly-reports" className="view-all-btn">
+                  View All
+                </Link>
               </div>
               <div className="reports-details-primary">
                 {reports.slice(0, 4).map((report) => (
@@ -591,7 +659,9 @@ import { PieChart, Pie, Cell, ResponsiveContainer } from "recharts";
             <div className="notification-card">
               <div className="notification-header">
                 <h2>Notifications</h2>
-                <button>View all</button>
+                <Link to="/notifications" className="view-all-btn">
+                  View all
+                </Link>
               </div>
               <div className="notification-list-wrapper">
                 {notifications.slice(0, 4).map((notification) => (
@@ -618,9 +688,12 @@ import { PieChart, Pie, Cell, ResponsiveContainer } from "recharts";
             <div className="performance-dashboard">
               <div className="performance-header">
                 <h3>Notifications</h3>
-                <button type="button" className="view-details-btn">
+                <Link
+                  to="/overall-rating-dashboard "
+                  className="view-details-btn"
+                >
                   View details
-                </button>
+                </Link>
               </div>
 
               <div className="performance-container">
