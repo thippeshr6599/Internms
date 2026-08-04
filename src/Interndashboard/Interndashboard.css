@@ -8,7 +8,7 @@
 .Sidebar-Content-IDB {
   width: 278px;
   height: 100vh;
-  background: #013594;
+  background: #00328D;
   transition: .3s;
   flex-shrink: 0;
   position: fixed;
@@ -31,10 +31,6 @@
     align-items: center;
     gap: 0;
 }
-.Sidebar-IDB-head1 h2 span{
-    display: inline;
-}
-
 
 .Sidebar-IDB-head1 p{
     color:#FFFFFF;
@@ -78,12 +74,10 @@
   width: 82px;
 }
 
-/* Hide the heading completely */
 .Sidebar-Content-IDB.Show .Sidebar-IDB-head1 {
   display: none;
 }
 
-/* Menu starts from top */
 .Sidebar-Content-IDB.Show .sidebar-menu-IDB {
   display: flex;
   flex-direction: column;
@@ -91,7 +85,6 @@
   margin-top: 25px;
 }
 
-/* Only icons */
 .Sidebar-Content-IDB.Show .sidebar-item-IDB {
   width: 50px;
   height: 50px;
@@ -101,27 +94,12 @@
   align-items: center;
 }
 
-/* Hide text */
 .Sidebar-Content-IDB.Show .sidebar-item-IDB span {
   display: none;
 }
 
-/* Remove icon spacing */
 .Sidebar-Content-IDB.Show .sidebar-item-IDB img {
   margin: 0;
-}
-.Sidebar-Content-IDB.Show .sidebar-item-IDB{
-    justify-content:center;
-    padding:0;
-    margin:8px;
-}
-
-.Sidebar-Content-IDB.Show .sidebar-item-IDB span{
-    display:none;
-}
-
-.Sidebar-Content-IDB.Show .sidebar-item-IDB img{
-    margin:0;
 }
 
 .Main-IDB{
