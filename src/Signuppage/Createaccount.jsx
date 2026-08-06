@@ -6,6 +6,7 @@ import Intern from "../assets/Intern.png"
 import Company from "../assets/Company.png"
 import EyeIcon from "../assets/Eyeicon.png";
 import Internhub from "../assets/Internhub inside.png";
+import Adminimage from "../assets/Adminimage.png"
 import "../Signuppage/HRaccount.css";
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
@@ -65,7 +66,7 @@ export default function Createaccount() {
 
           setError("");
           alert(" Sucessfully created your account")
-          navigate("/Loginmainpage");
+          navigate("/HRandCompanyport");
 
          }
   return (
@@ -170,7 +171,15 @@ export default function Createaccount() {
        <img src={Company} alt="Companyimage" />
        <span>Company</span>
        </div>
-
+       
+        <div
+          className="Icon1-HR"
+          onClick={() => navigate("/Admin")}
+          style={{ cursor: "pointer" }}
+        >
+       <img src={Adminimage} alt="Companyimage" />
+       <span>Admin</span>
+       </div>
      </div>
 
     </div>

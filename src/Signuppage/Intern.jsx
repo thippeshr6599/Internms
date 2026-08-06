@@ -9,6 +9,7 @@ import Intern2 from "../assets/Intern.png"
 import Company from "../assets/Company.png"
 import EyeIcon from "../assets/Eyeicon.png";
 import UploadIcon from "../assets/Uploadicon.png"
+import Adminimage from "../assets/Adminimage.png"
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 
@@ -208,6 +209,15 @@ export default function Intern() {
               >
              <img src={Company} alt="" />
              <span>Company</span>
+             </div>
+
+              <div
+                className="Icon1-Intern"
+                onClick={() => navigate("/Admin")}
+                style={{ cursor: "pointer" }}
+              >
+             <img src={Adminimage} alt="" />
+             <span>Admin</span>
              </div>
       
            </div>

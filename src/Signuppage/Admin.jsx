@@ -5,6 +5,10 @@ import Adminright from "../assets/Adminright.png"
 import Admintrust from "../assets/Admintrust.png"
 import EyeIcon from "../assets/Eyeicon.png";
 import Adminimage from "../assets/Adminimage.png"
+import HRimg from "../assets/HR.png"
+import Mentor from "../assets/Mentor.png"
+import Intern from "../assets/Intern.png"
+import Company from "../assets/Company.png"
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 
@@ -127,17 +131,51 @@ export default function Admin() {
            
                <div className="Icon-group-Admin">
            
-                 <div 
+                <div 
                  className="Icon1-Admin"
-                 onClick={() => navigate("/Admin")}
-                 style={{cursor:"pointer"}}
+                 onClick={() => navigate("/Createaccount")}
                  >
-                   <img src={Adminimage} alt="" />
-                   <span>Admin</span>
-                 </div>
-           
+                <img src={HRimg} alt="HRimage" />
+                  <span>HR</span>
                 </div>
-           
+
+                <div
+                 className="Icon1-Admin"
+                 onClick={() => navigate("/Mentor")}
+                 style={{ cursor: "pointer" }}
+                >
+                  <img src={Mentor} alt="Mentorimage" />
+                <span>Mentor</span>
+                </div>
+
+               <div
+                  className="Icon1-Admin"
+                  onClick={() => navigate("/Intern")}
+                  style={{ cursor: "pointer" }}
+                  >
+                <img src={Intern} alt="Internimage" />
+               <span>Intern</span>
+               </div>
+
+
+               <div
+                  className="Icon1-Admin"
+                  onClick={() => navigate("/Company")}
+                  style={{ cursor: "pointer" }}
+                  >
+              <img src={Company} alt="Companyimage" />
+                <span>Company</span>
+               </div>
+       
+              <div
+                className="Icon1-Admin active-Admin"
+                onClick={() => navigate("/Admin")}
+                style={{ cursor: "pointer" }}
+                 >
+                <img src={Adminimage} alt="Companyimage" />
+              <span>Admin</span>
+              </div>
+                </div>
                </div>
            
                <div className="form-border-Admin">

@@ -145,13 +145,13 @@
 }
 
 .register-section-Company{
-    margin-left: 93.4px;
     margin-top: 40.5px;
 } 
 
 .Icon-group-Company{
     display:flex;
     gap:12px;
+    justify-content: center;
 }
 
 .Icon1-Company {

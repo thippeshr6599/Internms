@@ -9,6 +9,7 @@ import Mentor1 from "../assets/Mentor.png"
 import Intern from "../assets/Intern.png"
 import Company from "../assets/Company.png"
 import EyeIcon from "../assets/Eyeicon.png";
+import Adminimage from "../assets/Adminimage.png"
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 
@@ -201,6 +202,15 @@ export default function Mentor() {
             >
            <img src={Company} alt="" />
            <span>Company</span>
+           </div>
+
+            <div
+              className="Icon1-Mentor"
+              onClick={() => navigate("/Admin")}
+              style={{ cursor: "pointer" }}
+            >
+           <img src={Adminimage} alt="" />
+           <span>Admin</span>
            </div>
     
          </div>

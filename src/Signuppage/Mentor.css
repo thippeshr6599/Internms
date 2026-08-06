@@ -185,9 +185,6 @@
 }
 
 .Icon-group-Mentor{
-    border: 1px solid none;
-    width:495px;
-    height:90px;
     display:flex;
     flex-wrap: wrap;
     gap: 12px;

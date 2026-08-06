@@ -11,6 +11,7 @@ import EyeIcon from "../assets/Eyeicon.png";
 import Faceicon from "../assets/Faceicon.png"
 import Aticon from "../assets/Aticon.png"
 import Share from "../assets/Shareicon.png"
+import Adminimage from "../assets/Adminimage.png"
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 
@@ -69,7 +70,8 @@ export default function Company() {
             }
   
             setError("");
-            alert(" Sucessfully created your account")
+            alert(" Sucessfully created your account");
+            navigate("/HRandCompanyport");
            }
   return (
 <div className="company-page">
@@ -179,6 +181,15 @@ export default function Company() {
                    >
                   <img src={Company2} alt="" />
                   <span>Company</span>
+                  </div>
+
+                  <div
+                  className="Icon1-Company"
+                  onClick={() => navigate("/Admin")}
+                  style={{ cursor: "pointer" }}
+                  >
+                  <img src={Adminimage} alt="" />
+                  <span>Admin</span>
                   </div>
            
                 </div>
