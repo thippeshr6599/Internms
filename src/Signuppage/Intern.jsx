@@ -42,7 +42,7 @@ export default function Intern() {
      }
      const handlesubmit = (e) => {
           e.preventDefault();
-          if ( !formData.username || !formData.email || !formData.number|| !formData.DOB || !formData.college || !formData.field || !formData.graduation || !formData.resume  ){
+          if ( !formData.username || !formData.email || !formData.number|| !formData.DOB || !formData.college || !formData.field || !formData.graduation  ){
              setError("All fields are required");
              return;
           }
@@ -170,7 +170,7 @@ export default function Intern() {
         </div>
       
         <div className="register-section-Intern">
-          <p className="register-title-Intern">Registering as</p>
+          <p className="register-title-Intern">Registering as <span style={{color:"red"}}>*</span></p>
       
           <div className="Icon-group-Intern">
       
@@ -270,7 +270,7 @@ export default function Intern() {
           <div className="form-group-Intern">
             <label>Date of Birth<span style={{color:"red"}}>*</span></label>
               <input
-                type="DOB"
+                type="date"
                 name="DOB"
                 value={formData.DOB}
                 onChange={handlechange}
@@ -296,18 +296,22 @@ export default function Intern() {
             value={formData.field}
             onChange={handlechange}
             >
-              <option > Select Your field of study</option>
+              <option value=""> Select Your field of study</option>
+              <option value="Computer Science"> Computer science</option>
+              <option value="Civil Engineer"> Civil Engineer</option>
             </select>
           </div>
 
            <div className="form-group-Intern">
             <label> Graduation Year <span style={{color:"red"}}>*</span></label>
             <select 
-            name="year"
+            name="graduation"
             value={formData.graduation}
             onChange={handlechange}
             >
               <option > Select your graduation year</option>
+              <option >2025</option>
+              <option >2026</option>
             </select>
           </div>
 

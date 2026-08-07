@@ -38,7 +38,7 @@ export default function Emailverification() {
     const code = otp.join("");
 
     if (code.length === 6) {
-      navigate("/Sucesslogin");
+      navigate("/InternDashboard");
     } else {
       setError ("Enter 6 Digit OTP sent Your Mobile Number");
     }

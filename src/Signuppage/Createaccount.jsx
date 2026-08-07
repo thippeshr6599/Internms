@@ -131,7 +131,7 @@ export default function Createaccount() {
   </div>
 
   <div className="register-section-HR">
-    <p className="register-title-HR">Registering as</p>
+    <p className="register-title-HR">Registering as <span style={{color:"red"}}>*</span></p>
 
     <div className="Icon-group-HR">
 

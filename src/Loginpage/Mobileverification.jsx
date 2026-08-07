@@ -33,7 +33,7 @@ export default function Mobileverification() {
     const enteredOtp = otp.join("");
 
     if (enteredOtp.length === 6) {
-      navigate("/Sucesslogin");
+      navigate("/InternDashboard");
     } else {
       alert("Please enter the 6-digit verification code.");
     }
