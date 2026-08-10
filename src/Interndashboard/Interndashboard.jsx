@@ -7,15 +7,17 @@ import IDBnotification from "../assets/ADBnotification.png";
 import IDBaccount from "../assets/ADBaccount.png";
 import IDBdownarrow from "../assets/ADBdownaeeow.png";
 import HomeIDB from "../assets/HomeAdmindash.png";
-import Myinternship from "../assets/Myinternship.png";
-import Applicationstatus from "../assets/Applicationstatus.png";
-import Assignedmentor from "../assets/Assignedmentor.png";
-import Progresstracking from "../assets/Progresstracking.png";
+import MyprofileIDB from "../assets/MyprofileIDB.png";
+import InternshipIDB from "../assets/Myinternship.png"
+import TasksIDB from "../assets/TasksIDB.png"
+import AttendanceIDB from "../assets/AttendanceIDB.png";
+import ProjectsIDB from "../assets/ProjectsIDB.png"
 import Weeklyreports from "../assets/Weeklyreports.png";
-import TasksIDB from "../assets/IDBtasks.png";
-import Notificationsidb from "../assets/Notificationidb.png";
+import MentorIDB from "../assets/MentorIDB.png";
+import LearningIDB from "../assets/LearningIDB.png";
+import ResourcesIDB from "../assets/ResourcesIDB.png"
 import Certificateidb from "../assets/Certificatesidb.png";
-import Performanceidb from "../assets/Peromanceidb.png";
+import SettingsIDB from "../assets/SettingsIDB.png";
 import Currentinternships from "../assets/Currentinternship.png";
 import IDBsectiononearrow from "../assets/IDBsectionarrow.png";
 import InternshipduratoinIDB from "../assets/IntenshipdurationIDB.png";
@@ -240,11 +242,6 @@ export const InternDashboard = () => {
   return (
     <div className={`Content-IDB ${Show ? "Show" : ""}`}>
       <div className={`Sidebar-Content-IDB ${Show ? "Show" : ""}`}>
-        <div className="Sidebar-IDB-head1">
-          <h2>InternMS</h2>
-          <p>Internship Management System</p>
-        </div>
-
         <div className="sidebar-menu-IDB">
           <div className="sidebar-item-IDB active-IDB">
             <img
@@ -257,38 +254,38 @@ export const InternDashboard = () => {
 
           <div className="sidebar-item-IDB">
             <img
-              src={Myinternship}
-              alt="myinternship"
+              src={MyprofileIDB}
+              alt="myprofileidb"
+              style={{ width: "24px", height: "24px" }}
+            />
+            {!Show && <span>My Profile</span>}
+          </div>
+
+          <div className="sidebar-item-IDB">
+            <img
+              src={InternshipIDB}
+              alt="internshipidb"
               style={{ width: "21px", height: "21px" }}
             />
-            {!Show && <span>My Internships</span>}
+            {!Show && <span>Internship</span>}
           </div>
 
           <div className="sidebar-item-IDB">
             <img
-              src={Applicationstatus}
-              alt="applicationstatus"
-              style={{ width: "16.9px", height: "21.54px" }}
+              src={TasksIDB}
+              alt="tasksidb"
+              style={{ width: "15px", height: "20px" }}
             />
-            {!Show && <span>Applications Status</span>}
+            {!Show && <span>Tasks</span>}
           </div>
 
           <div className="sidebar-item-IDB">
             <img
-              src={Assignedmentor}
-              alt="assignedmentor"
-              style={{ width: "18px", height: "18px" }}
+              src={AttendanceIDB}
+              alt="Attendance"
+              style={{ width: "24px", height: "24px" }}
             />
-            {!Show && <span>Assigned Mentor</span>}
-          </div>
-
-          <div className="sidebar-item-IDB">
-            <img
-              src={Progresstracking}
-              alt="progresstracking"
-              style={{ width: "18px", height: "20px" }}
-            />
-            {!Show && <span>Progress Tracking</span>}
+            {!Show && <span>Attendance</span>}
           </div>
 
           <div className="sidebar-item-IDB">
@@ -297,25 +294,43 @@ export const InternDashboard = () => {
               alt="weeklyreports"
               style={{ width: "17.52px", height: "21.6px" }}
             />
-            {!Show && <span>Weekly Reports</span>}
+            {!Show && <span>Reports</span>}
           </div>
 
           <div className="sidebar-item-IDB">
             <img
-              src={TasksIDB}
-              alt="tasksidb"
-              style={{ width: "18px", height: "20px" }}
+              src={ProjectsIDB}
+              alt="projectsidb"
+              style={{ width: "24px", height: "24px" }}
             />
-            {!Show && <span>Tasks & Deliverables</span>}
+            {!Show && <span>Projects</span>}
           </div>
 
           <div className="sidebar-item-IDB">
             <img
-              src={Notificationsidb}
-              alt="notificationidb"
-              style={{ width: "16px", height: "20px" }}
+              src={MentorIDB}
+              alt="mentoridb"
+              style={{ width: "24px", height: "24px" }}
             />
-            {!Show && <span>Notifications</span>}
+            {!Show && <span>Mentor</span>}
+          </div>
+
+          <div className="sidebar-item-IDB">
+            <img
+              src={LearningIDB}
+              alt="Learningidb"
+              style={{ width: "24px", height: "24px" }}
+            />
+            {!Show && <span>Learning</span>}
+          </div>
+
+          <div className="sidebar-item-IDB">
+            <img
+              src={ResourcesIDB}
+              alt="Resourcesidb"
+              style={{ width: "24px", height: "24px" }}
+            />
+            {!Show && <span>Resources</span>}
           </div>
 
           <div className="sidebar-item-IDB">
@@ -329,11 +344,11 @@ export const InternDashboard = () => {
 
           <div className="sidebar-item-IDB">
             <img
-              src={Performanceidb}
-              alt="Performanceidb"
+              src={SettingsIDB}
+              alt="Settingsidb"
               style={{ width: "24px", height: "24px" }}
             />
-            {!Show && <span>Performance Metrics</span>}
+            {!Show && <span>Settings</span>}
           </div>
         </div>
       </div>

@@ -1,105 +1,121 @@
-import React, { useRef, useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import "../Loginpage/Mobileverification.css"
-import Verifyicon from "../assets/Verificationicon.png"
+import Verifyicon from "../assets/Verificationicon.png";
 import Righticon from "../assets/Righticon (2).png"
 import Backtover from "../assets/Backtover.png";
 
-
 export default function Mobileverification() {
-  const inputs = useRef([]);
-  const [otp, setOtp] = useState(Array(6).fill(""));
   const navigate = useNavigate();
+   const [sec, setSec] = useState(59);
 
-  const handleChange = (e, index) => {
-    const value = e.target.value.replace(/\D/g, "");
+    useEffect(() => {
+    if (sec === 0) return;
+
+      const interval = setInterval(() => {
+      setSec((prev) => prev - 1);
+    }, 1000);
+
+    return () => clearInterval(interval);
+    }, [sec]);
+
+  const [otp, setOtp] = useState(["", "", "", "", "", ""]);
+  const [Error, setError] = useState("");
+
+  const handleChange = (value, index) => {
+    if (!/^\d?$/.test(value)) return; 
 
     const newOtp = [...otp];
     newOtp[index] = value;
     setOtp(newOtp);
 
     if (value && index < 5) {
-      inputs.current[index + 1].focus();
-    }
-  };
-
-  const handleKeyDown = (e, index) => {
-    if (e.key === "Backspace" && !e.target.value && index > 0) {
-      inputs.current[index - 1].focus();
+      document.getElementById(`otp-${index + 1}`).focus();
     }
   };
 
   const handleVerify = () => {
-    const enteredOtp = otp.join("");
+    const code = otp.join("");
 
-    if (enteredOtp.length === 6) {
+    if (code.length === 6) {
       navigate("/InternDashboard");
     } else {
-      alert("Please enter the 6-digit verification code.");
+      setError ("Enter 6 Digit OTP sent Your Mobile Number");
     }
   };
 
   return (
     <div className="Content-Mobile">
-
-      <div className="mobile-left">
-            <div className="shield-boxM">
-                <img src={Verifyicon} alt=""  style={{width:"35px", height:"40px"}}/>
-         
-              </div>
+      <div className="left-panel-Mobile">
+        <div className="left-content-Mobile">
+          <div className="shield-box-Mobile">
+           <img src={Verifyicon} alt="verifyicon"  />
+        </div>
 
         <h1>Security first.</h1>
 
         <p>
-          We take your account security seriously. Verify your
-          identity to protect your internship applications and
-          sensitive professional data.
+          We take your account security seriously. Verify your identity to
+          protect your internship applications and sensitive professional data.
         </p>
 
         <span>Joined by 10k+ professionals</span>
-      </div>
-
-      <div className="mobile-right">
-        <h1>Enter Verification Code</h1>
-
-        <p className="subtitle">
-          We've sent a 6-digit code to your mobile number
-          <strong> +91 9•••• 5678</strong>
-        </p>
-
-        <div className="otp-boxes">
-          {otp.map((digit, index) => (
-            <input
-              key={index}
-              type="text"
-              maxLength={1}
-              value={digit}
-              ref={(el) => (inputs.current[index] = el)}
-              onChange={(e) => handleChange(e, index)}
-              onKeyDown={(e) => handleKeyDown(e, index)}
-            />
-          ))}
         </div>
-
-        <button className="verify-btn" onClick={handleVerify} style={{padding:"10px"}}>
-          Verify Identity  <img src={Righticon} alt="" style={{width:"16px",height:"15px"}} />
-        </button>
-
-        <p className="resend">
-          Didn't receive the code?
-          <span> Resend in 00:58</span>
-        </p>
-
-        <hr />
-
-        <button className="back-btn">
-          <img src={Backtover} alt="" style={{width:"12px", height:"12px"}}/>
-          Back to verification options
-        </button>
-
-        <a href="/">Contact Support</a>
       </div>
 
+
+      <div className="right-panel-Mobile">
+        <div className="verification-box-Mobile">
+          <h2>Enter Verification Code</h2>
+
+          <p className="subtitle-Mobile">
+            We've sent a 6-digit code to your mobile number +91 9....5678
+          </p>
+
+          <div className="otp-boxes-Mobile">
+            {otp.map((digit, index) => (
+              <input
+                key={index}
+                id={`otp-${index}`}
+                type="text"
+                maxLength="1"
+                value={digit}
+                onChange={(e) => handleChange(e.target.value, index)}
+              />
+            ))}
+          </div>
+
+          {Error && <h3 style={{color:"red", fontSize:"15px",margin:"10px"}}>{Error}</h3>}
+
+          <button className="verify-btn-Mobile" onClick={handleVerify}>
+            Verify Identity 
+            <img src={Righticon} alt="" style={{width:"15px",height:"10px"}} />
+          </button>
+
+           <p className="resend-Mobile">
+           Didn't receive the code?{" "}
+           {sec > 0 ? (
+           <span>Resend in 00:{sec.toString().padStart(2, "0")}</span>
+           ) : (
+           <button
+           className="resend-btn-Mobile"
+           onClick={() => setSec(59)}
+           >
+            Resend Code 
+          </button>
+           )}
+          </p>
+
+          <hr />
+
+          <button className="back-btn-Mobile">
+           <img src={Backtover} alt="" style={{width:"12px", height:"12px"}}/>
+           Back to verification options
+          </button>
+
+          <a href="/">Contact Support</a>
+        </div>
+      </div>
     </div>
   );
 }

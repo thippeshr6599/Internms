@@ -7,7 +7,7 @@ function Navbar() {
 
   return (
     <nav className="navbar-land">
-      <div className="logo" style={{color:"#0058BE", marginLeft:"25px"}}>InternMS</div>
+      <div className="logo">InternMS</div>
 
       <div className="nav-buttons">
         <span

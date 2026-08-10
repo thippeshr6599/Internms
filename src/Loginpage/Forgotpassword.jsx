@@ -25,7 +25,7 @@ export default function Forgot() {
       <div className="forgot-left">
 
         <div className="left-text">
-          <h1 style={{fontSize:"40px"}}>
+          <h1>
             Regain access to
             <br />
             your professional
@@ -34,8 +34,8 @@ export default function Forgot() {
           </h1>
 
           <p>
-            We're here to help you get back on track. Secure your account and
-            continue exploring the best internship opportunities worldwide.
+            We're here to help you get back on track. Secure your <br /> account and
+            continue exploring the best internship <br />opportunities worldwide.
           </p>
         </div>
 
@@ -55,20 +55,20 @@ export default function Forgot() {
           <span onClick={() => navigate("/")}>Login</span>
         </div>
 
-        <div className="form-box">
+        <div className="form-box-forgot">
 
           <div className="icon-boxf">
-              <img src={Forgotimg} alt="" style={{width:"30px", height:"30px"}} />
+              <img src={Forgotimg} alt="forgotimg" />
           </div>
 
-          <h2 style={{fontSize:"30px"}}>Forgot Password?</h2>
+          <h2>Forgot Password?</h2>
 
           <p className="sub-text">
-            Choose your preferred method to receive a one-time verification
+            Choose your preferred method to receive a one-time <br />verification
             code.
           </p>
 
-          <h4>Verification Method <img src={Rightarrow} alt="" /></h4>
+          <h4>Verification Method <img src={Rightarrow} alt="rightarrow" /></h4>
 
 
           <div
@@ -108,12 +108,12 @@ export default function Forgot() {
               className="send-btn-Forgot"
               onClick={handleSendCode}
               >
-              Send Verification Code <img src={Rightarrow} alt="" style={{width:"15px"}} />
+              Send Verification Code <img src={Rightarrow} alt="" style={{width:"12px",height:"12px"}} />
 
             </button>
 
           <div className="back-btn" onClick={() => navigate("/")}>
-            <img src={Leftline} alt="" style={{width:"10px",height:"10px"}} />
+            <img src={Leftline} alt="" style={{width:"5.5px",height:"9px"}} />
             Back to Login
           </div>
 

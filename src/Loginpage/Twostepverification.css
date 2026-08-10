@@ -1,16 +1,24 @@
+@import url("https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 .Content-Two{
-    width:1275px;
-    height:1024px;
-    margin:20px auto;
+    width:100%;
+    height:100vh;
     display:flex;
-    border-radius:10px;
-    border: 1px solid rgb(189, 176, 176);
-    overflow:hidden;
 }
 
 .left-panel-Two{
-    width:52%;
+    width: 49%;
+    min-width: 100vh;
     background:linear-gradient(180deg,#3D79EA,#1B1A2D);
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
     color:white;
     display:flex;
     flex-direction:column;
@@ -21,7 +29,6 @@
     border: 1px solid none ;
     width: 560px;
     height: 574.38px;
-    margin-top: 183px;
     margin-left: 40px;
     padding-top: 203.63px;
     padding-bottom: 96px;
@@ -32,6 +39,7 @@
     font-size:40px;
     font-weight:700;
     font-style: bold;
+    font-family: "Manrope";
     line-height: 48px;
     letter-spacing: -0.8px;
     color: #FFFFFF;
@@ -42,6 +50,7 @@
     width:379.48px;
     font-weight: 400;
     line-height:29.25px;
+    font-family: "Hanken Grotesk";
     color:#DAD7FF;
     font-size:18px;
 }
@@ -73,6 +82,7 @@
     font-size:14px;
     font-weight: 600;
     line-height: 20px;
+    font-family: "Hanken Grotesk";
     letter-spacing: 0.7px;
     color: #FFFFFF;
 }
@@ -82,6 +92,7 @@
     font-size:14px;
     font-weight: 400;
     line-height: 20px;
+    font-family: "Hanken Grotesk";
 }
 
 .copyright-Two {
@@ -91,11 +102,13 @@
     line-height: 20px;
     margin-left: 40px;
     margin-bottom: 50px;
+    font-family: "Hanken Grotesk";
 }
 
 
 .right-panel-Two{
-    width:635px;
+    width:51%;
+    height: 100vh;
     display:flex;
     background:#fff;
 }
@@ -103,10 +116,10 @@
     border: 1px solid none;
     width: 443px;
     height: 519px;
-    margin-top: 252.5px;
     margin-left: 96px;
     display: grid;
     gap: 32px;
+    padding-top: 20%;
 }
 .verify-card-Two{
     width:443px;
@@ -119,6 +132,7 @@
     line-height: 40px;
     letter-spacing: -0.32px;
     color:#111C2D;
+    font-family: "Manrope";
 }
 
 .verify-card-Two p{
@@ -127,6 +141,7 @@
     font-weight: 400;
     line-height: 24px;
     margin-bottom: 32px;
+    font-family: "Hanken Grotesk";
 }
 
 .option-Two{
@@ -174,6 +189,7 @@
     color:#111C2D;
     margin-left: 4px;
     margin-top: 30px;
+    font-family: "Hanken Grotesk";
 }
 
 .option-Two p{
@@ -183,6 +199,7 @@
     font-weight: 400;
     line-height: 20px;
     margin-left: 4px;
+    font-family: "Hanken Grotesk";
 }
 
 .radio-Two{
@@ -213,6 +230,7 @@
     font-size:14px;
     font-weight:600;
     line-height:20px;
+    font-family: "Hanken Grotesk";
     cursor:pointer;
     display:flex;
     justify-content:center;
@@ -228,6 +246,7 @@
     cursor:pointer;
     font-size:14px;
     font-weight: 600;
+    font-family: "Hanken Grotesk";
 }
 
 .help-Two{
@@ -236,9 +255,11 @@
     color:#464555;
     font-size:14px;
     font-weight: 400;
+    font-family: "Hanken Grotesk";
 }
 
 .help-Two span{
     color:#3525CD;
     cursor:pointer;
+    font-family: "Hanken Grotesk";
 }
