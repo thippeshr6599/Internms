@@ -43,6 +43,18 @@ import GoldenStar from "../assets/GoldenStar.png";
 import CerificateLast from "../assets/tabler_certificate.png";
 import DownloadIDB from "../assets/DownloadIDB.png";
 import { PieChart, Pie, Cell, ResponsiveContainer } from "recharts";
+import Myprofileintern from "./Myprofileintern";
+import Internship from "./Internship";
+import Tasksintern from "./Tasksintern";
+import Attendanceintern from "./Attendanceintern";
+import Reportsintern from "./Reportsintern";
+import Projectsintern from "./Projectsintern";
+import Mentorintern from "./Mentorintern";
+import Learningintern from "./Learningintern";
+import Resourcesintern from "./Resourcesintern";
+import Certificatesintern from "./Certificatesintern";
+import Settingsintern from "./Settingsintern";
+import DashboardIDB from "./DashboardIDB";
 
 export const InternDashboard = () => {
   const [activeTab, setActiveTab] = useState("Dashboard");
@@ -260,10 +272,10 @@ export const InternDashboard = () => {
             {!Show && <span>Dashboard</span>}
           </div>
 
-          <div
-            onClick={() => setActiveTab("My Profile")}
+           <div
+            onClick={() => setActiveTab("MyProfile")}
             className={
-              activeTab === "My Profile"
+              activeTab === "MyProfile"
                 ? "sidebar-item-IDB active-IDB"
                 : "sidebar-item-IDB"
             }
@@ -883,17 +895,18 @@ export const InternDashboard = () => {
           </div>
         )}
 
-        {activeTab === "My Profile" && <h2>MyProfile</h2>}
-        {activeTab === "Internship" && <h2> Internship </h2>}
-        {activeTab === "Tasks" && <h2>Tasks </h2>}
-        {activeTab === "Attendance" && <h2>Attendance </h2>}
-        {activeTab === "Reports" && <h2>Reports</h2>}
-        {activeTab === "Projects" && <h2>Projects</h2>}
-        {activeTab === "Mentor" && <h2>Mentor</h2>}
-        {activeTab === "Learning" && <h2>Learning</h2>}
-        {activeTab === "Resources" && <h2>Resources</h2>}
-        {activeTab === "Certificates" && <h2>Certificates</h2>}
-        {activeTab === "Settings" && <h2>Settings</h2>}
+        {activeTab === "Dashboard" && <DashboardIDB />}
+        {activeTab === "MyProfile" && <Myprofileintern />}
+        {activeTab === "Internship" && <Internship />}
+        {activeTab === "Tasks" && <Tasksintern />}
+        {activeTab === "Attendance" && <Attendanceintern />}
+        {activeTab === "Reports" && <Reportsintern />}
+        {activeTab === "Projects" && <Projectsintern />}
+        {activeTab === "Mentor" && <Mentorintern />}
+        {activeTab === "Learning" && <Learningintern />}
+        {activeTab === "Resources" && <Resourcesintern />}
+        {activeTab === "Certificates" && <Certificatesintern />}
+        {activeTab === "Settings" && <Settingsintern/>}
       </div>
     </div>
   );

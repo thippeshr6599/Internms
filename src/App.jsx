@@ -17,6 +17,18 @@ import Company from "./Signuppage/Company";
 import Admin from "./Signuppage/Admin";
 import HRandCompanyport from "./Loginpage/HRandCompanyport";
 import { InternDashboard } from "./Interndashboard/InternDashboard";
+import DashboardIDB from "./Interndashboard/DashboardIDB";
+import Myprofileintern from "./Interndashboard/Myprofileintern";
+import Internship from "./Interndashboard/Internship";
+import Tasksintern from "./Interndashboard/Tasksintern";
+import Attendanceintern from "./Interndashboard/Attendanceintern";
+import Reportsintern from "./Interndashboard/Reportsintern";
+import Projectsintern from "./Interndashboard/Projectsintern";
+import Mentorintern from "./Interndashboard/Mentorintern";
+import Learningintern from "./Interndashboard/Learningintern";
+import Resourcesintern from "./Interndashboard/Resourcesintern";
+import Certificatesintern from "./Interndashboard/Certificatesintern";
+import Settingsintern from "./Interndashboard/Settingsintern";
 
 import "./App.css";
 
@@ -106,6 +118,66 @@ const router = createBrowserRouter(
       path: "/InternDashboard",
       element: <InternDashboard />,
     },
+
+    {
+      path: "/DashboardIDB",
+      element: <DashboardIDB />,
+    },
+
+    {
+      path: "/Myprofileintern",
+      element: <Myprofileintern />,
+    },
+
+    {
+      path: "/Internship",
+      element: <Internship />,
+    },
+
+    {
+      path: "/Tasksintern",
+      element: <Tasksintern />,
+    },
+
+    {
+      path: "/Attendanceintern",
+      element: <Attendanceintern />,
+    },
+
+    {
+      path: "/Reportsintern",
+      element: <Reportsintern />,
+    },
+
+    {
+      path: "/Projectsintern",
+      element: <Projectsintern />,
+    },
+
+    {
+      path: "/Mentorintern",
+      element: <Mentorintern />,
+    },
+
+    {
+      path: "/Learningintern",
+      element: <Learningintern />,
+    },
+
+    {
+      path: "/Resourcesintern",
+      element: <Resourcesintern />,
+    },
+
+    {
+      path: "/Certificatesintern",
+      element: <Certificatesintern />,
+    },
+
+    {
+      path: "/Settingsintern",
+      element: <Settingsintern />,
+    }
   ],
   {
     basename: "/Internms",

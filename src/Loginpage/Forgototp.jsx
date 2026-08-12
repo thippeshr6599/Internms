@@ -62,7 +62,7 @@ export default function Forgototp() {
 
       <div className="verify-left">
         <div className="shield-circle">
-           <img src={Forgoticon2} alt="" style={{width:"30px", height:"40px"}}/>
+           <img src={Forgoticon2} alt="" style={{width:"32px", height:"40px"}}/>
         </div>
 
         <h1>Verify Identity</h1>
@@ -100,24 +100,25 @@ export default function Forgototp() {
           </div>
 
            <button className="verify-btn" onClick={handleVerify}>
-            Verify and Continue <img src={Rightarrow} alt="" style={{width:"18",height:"12px"}}/>
+            Verify and Continue <img src={Rightarrow} alt="" style={{width:"12px",height:"12px"}}/>
 
           </button>
 
-           <p className="resend">
-           Didn't receive the code?{" "}
-           {sec > 0 ? (
-           <span>Resend in 00:{sec.toString().padStart(2, "0")}</span>
-           ) : (
-           <button
-           className="resend-btn"
-           onClick={() => setSec(59)}
-           >
-            Resend Code 
-          </button>
-           )}
+          <p className="resend">
+              Didn't receive the code?{" "}
+             {sec > 0 ? (
+            <span>Resend in 00:{sec.toString().padStart(2, "0")}</span>
+             ) : (
+          <span
+             className="resend-link"
+             onClick={() => setSec(59)}
+             >
+             Resend Code
+          </span>
+            )}
           </p>
 
+          
           <div className="bottom-line"></div>
 
           <div className="security">
