@@ -1,9 +1,9 @@
 import React from 'react'
 
-export default function () {
+export const ProjectsMain = () => {
   return (
     <div>
-      <h1>Reports</h1>
+      <h1>Projects</h1>
     </div>
   )
 }

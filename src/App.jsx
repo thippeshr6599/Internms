@@ -17,18 +17,18 @@ import Company from "./Signuppage/Company";
 import Admin from "./Signuppage/Admin";
 import HRandCompanyport from "./Loginpage/HRandCompanyport";
 import { InternDashboard } from "./Interndashboard/InternDashboard";
-import DashboardIDB from "./Interndashboard/DashboardIDB";
-import Myprofileintern from "./Interndashboard/Myprofileintern";
-import Internship from "./Interndashboard/Internship";
-import Tasksintern from "./Interndashboard/Tasksintern";
-import Attendanceintern from "./Interndashboard/Attendanceintern";
-import Reportsintern from "./Interndashboard/Reportsintern";
-import Projectsintern from "./Interndashboard/Projectsintern";
-import Mentorintern from "./Interndashboard/Mentorintern";
-import Learningintern from "./Interndashboard/Learningintern";
-import Resourcesintern from "./Interndashboard/Resourcesintern";
-import Certificatesintern from "./Interndashboard/Certificatesintern";
-import Settingsintern from "./Interndashboard/Settingsintern";
+import { DashboardMain } from "./Interndashboard/DashboardMain";
+import { MyprofileMain } from "./Interndashboard/MyprofileMain";
+import { InternshipMain } from "./Interndashboard/InternshipMain";
+import { TasksMain } from "./Interndashboard/TasksMain";
+import { AttendanceMain } from "./Interndashboard/AttendanceMain";
+import { ReportsMain } from "./Interndashboard/ReportsMain";
+import { ProjectsMain } from "./Interndashboard/ProjectsMain";
+import { MentorMain } from "./Interndashboard/MentorMain";
+import { LearningMain } from "./Interndashboard/LearningMain";
+import { ResourcesMain } from "./Interndashboard/ResourcesMain";
+import { CertificatesMain } from "./Interndashboard/CertificatesMain";
+import { SettingsMain } from "./Interndashboard/SettingsMain";
 
 import "./App.css";
 
@@ -120,63 +120,63 @@ const router = createBrowserRouter(
     },
 
     {
-      path: "/DashboardIDB",
-      element: <DashboardIDB />,
+      path: "/DashboardMain",
+      element: <DashboardMain />,
     },
 
     {
-      path: "/Myprofileintern",
-      element: <Myprofileintern />,
+      path: "/MyprofileMain",
+      element: <MyprofileMain />,
     },
 
     {
-      path: "/Internship",
-      element: <Internship />,
+      path: "/InternshipMain",
+      element: <InternshipMain />,
     },
 
     {
-      path: "/Tasksintern",
-      element: <Tasksintern />,
+      path: "/TasksMain",
+      element: <TasksMain />,
     },
 
     {
-      path: "/Attendanceintern",
-      element: <Attendanceintern />,
+      path: "/AttendanceMain",
+      element: <AttendanceMain />,
     },
 
     {
-      path: "/Reportsintern",
-      element: <Reportsintern />,
+      path: "/ReportsMain",
+      element: <ReportsMain />,
     },
 
     {
-      path: "/Projectsintern",
-      element: <Projectsintern />,
+      path: "/ProjectsMain",
+      element: <ProjectsMain />,
     },
 
     {
-      path: "/Mentorintern",
-      element: <Mentorintern />,
+      path: "/MentorMain",
+      element: <MentorMain />,
     },
 
     {
-      path: "/Learningintern",
-      element: <Learningintern />,
+      path: "/LearningMain",
+      element: <LearningMain />,
     },
 
     {
-      path: "/Resourcesintern",
-      element: <Resourcesintern />,
+      path: "/ResourcesMain",
+      element: <ResourcesMain />,
     },
 
     {
-      path: "/Certificatesintern",
-      element: <Certificatesintern />,
+      path: "/CertificatesMain",
+      element: <CertificatesMain />,
     },
 
     {
-      path: "/Settingsintern",
-      element: <Settingsintern />,
+      path: "/SettingsMain",
+      element: <SettingsMain />,
     }
   ],
   {

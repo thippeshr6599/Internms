@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "../Interndashboard/InternDashboard.css"
+import "../Interndashboard/InternDashboard.css";
 import IDBmore from "../assets/ADBmore.png";
 import IDBsearch from "../assets/ADBsearch.png";
 import IDBnotification from "../assets/ADBnotification.png";
@@ -17,18 +17,19 @@ import LearningIDB from "../assets/LearningIDB.png";
 import ResourcesIDB from "../assets/ResourcesIDB.png";
 import Certificateidb from "../assets/Certificatesidb.png";
 import SettingsIDB from "../assets/SettingsIDB.png";
-import Myprofileintern from "./Myprofileintern";
-import Internship from "./Internship";
-import Tasksintern from "./Tasksintern";
-import Attendanceintern from "./Attendanceintern";
-import Reportsintern from "./Reportsintern";
-import Projectsintern from "./Projectsintern";
-import Mentorintern from "./Mentorintern";
-import Learningintern from "./Learningintern";
-import Resourcesintern from "./Resourcesintern";
-import Certificatesintern from "./Certificatesintern";
-import Settingsintern from "./Settingsintern";
-import DashboardIDB from "./DashboardIDB";
+import { DashboardMain } from "./DashboardMain";
+import { MyprofileMain } from "./MyprofileMain";
+import { InternshipMain } from "./InternshipMain";
+import { TasksMain } from "./TasksMain";
+import { AttendanceMain } from "./AttendanceMain";
+import { ReportsMain } from "./ReportsMain";
+import { ProjectsMain } from "./ProjectsMain";
+import { MentorMain } from "./MentorMain";
+import { LearningMain } from "./LearningMain";
+import { ResourcesMain } from "./ResourcesMain";
+import { CertificatesMain } from "./CertificatesMain";
+import { SettingsMain } from "./SettingsMain";
+
 
 export const InternDashboard = () => {
   const [activeTab, setActiveTab] = useState("Dashboard");
@@ -294,18 +295,18 @@ export const InternDashboard = () => {
           </div>
         </div>
 
-        {activeTab === "Dashboard" && <DashboardIDB />}
-        {activeTab === "MyProfile" && <Myprofileintern />}
-        {activeTab === "Internship" && <Internship />}
-        {activeTab === "Tasks" && <Tasksintern />}
-        {activeTab === "Attendance" && <Attendanceintern />}
-        {activeTab === "Reports" && <Reportsintern />}
-        {activeTab === "Projects" && <Projectsintern />}
-        {activeTab === "Mentor" && <Mentorintern />}
-        {activeTab === "Learning" && <Learningintern />}
-        {activeTab === "Resources" && <Resourcesintern />}
-        {activeTab === "Certificates" && <Certificatesintern />}
-        {activeTab === "Settings" && <Settingsintern/>}
+        {activeTab === "Dashboard" && <DashboardMain />}
+        {activeTab === "MyProfile" && <MyprofileMain />}
+        {activeTab === "Internship" && <InternshipMain />}
+        {activeTab === "Tasks" && <TasksMain />}
+        {activeTab === "Attendance" && <AttendanceMain />}
+        {activeTab === "Reports" && <ReportsMain />}
+        {activeTab === "Projects" && <ProjectsMain />}
+        {activeTab === "Mentor" && <MentorMain />}
+        {activeTab === "Learning" && <LearningMain />}
+        {activeTab === "Resources" && <ResourcesMain />}
+        {activeTab === "Certificates" && <CertificatesMain />}
+        {activeTab === "Settings" && <SettingsMain/>}
       </div>
     </div>
   );

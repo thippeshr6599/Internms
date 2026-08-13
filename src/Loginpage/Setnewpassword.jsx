@@ -6,6 +6,7 @@ import Newpasslock from "../assets/Newpasslock.png"
 import Lockicon from "../assets/Lockicon.png"
 import Righticon1 from "../assets/PassRight.png"
 import Rightarrow from "../assets/Righticon (2).png"
+import Setnewpasswordselect from "../assets/Setnewpasswordselect.png"
 
 export default function Setnewpassword() {
   const [showPass, setShowPass] = useState(false);
@@ -43,10 +44,10 @@ export default function Setnewpassword() {
         </div>
 
         <div className="shield-box">
-           <img src={Newpicon} alt="" style={{width:"100px", height:"100px",marginleft:"200px"}} />
+           <img src={Newpicon} alt="" style={{width:"80px", height:"100px",marginleft:"200px"}} />
         </div>
 
-        <div className="footer-text">
+        <div className="footer-text-Setnew">
           @ 2024 InternMS • Privacy Policy
         </div>
       </div>
@@ -55,7 +56,7 @@ export default function Setnewpassword() {
       <div className="new-right">
         <div className="form-box">
           <div className="top-icon">
-            <img src={Newpasslock} alt="" style={{width:"30px", height:"30px"}} />
+            <img src={Newpasslock} alt="" style={{width:"23.81px", height:"23.81px"}} />
           </div>
 
           <h2>Set New Password</h2>
@@ -65,10 +66,8 @@ export default function Setnewpassword() {
           </p>
 
           <label>New Password</label>
-
            <div className="input-wrapper">
                 <img src={Lockicon} alt="Lock" className="input-icon" />
-
                 <input
                 type={showPass ? "text" : "password"}
                  placeholder="Min. 8 characters"
@@ -76,7 +75,7 @@ export default function Setnewpassword() {
                  onChange={(e) => setPassword(e.target.value)}
                />
            </div>
-
+           
           <label>Confirm New Password</label>
 
           <div className="input-wrapper">
@@ -94,15 +93,24 @@ export default function Setnewpassword() {
           </div>
 
           <div className="condition-box">
-            <div className={isLength ? "valid" : ""}>
-              <span>○</span> At least 8 characters
-            </div>
+               <div className={isLength ? "valid" : ""}>
+                <img
+                  src={Setnewpasswordselect}
+                  alt="selecticon"
+                  className={isLength ? "condition-valid-icon" : ""}
+                />
+                 At least 8 characters
+               </div>
 
-            <div className={isMatch ? "valid" : ""}>
-              <span>○</span> Passwords match
-            </div>
+              <div className={isMatch ? "valid" : ""}>
+               <img
+                src={Setnewpasswordselect}
+                alt="selecticon"
+                className={isMatch ? "condition-valid-icon" : ""}
+               />
+               Passwords match
+              </div>
           </div>
-
           <button className="update-btn" onClick={handleUpdate}>
             Update Password <img src={Rightarrow} alt="" style={{width:"18",height:"12px"}}/>
           </button>

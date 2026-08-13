@@ -162,12 +162,13 @@
 
 .resend-link:hover {
   text-decoration: underline;
+  color: #3525CD;
 }
 
 .bottom-line {
   width: 100%;
   height: 1px;
-  background: #ececec;
+  background: #C7C4D84D;
   margin: 55px 0 28px;
 }
 
@@ -175,9 +176,12 @@
   display: flex;
   justify-content: center;
   gap: 35px;
-  color: #888;
+  color: #111C2D;
   font-size: 12px;
-  letter-spacing: 1px;
+  letter-spacing: 1.2px;
+  font-weight: 500;
+  line-height: 16px;
+  font-family: "Hanken Grotesk";
 }
 
 .security span {

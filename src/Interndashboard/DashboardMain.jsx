@@ -1,5 +1,5 @@
 import React from 'react'
-import "../Interndashboard/DashboardIDB.css";
+import "../Interndashboard/DashboardMain.css";
 import { Link } from "react-router-dom";
 import Currentinternships from "../assets/Currentinternship.png";
 import IDBsectiononearrow from "../assets/IDBsectionarrow.png";
@@ -27,7 +27,7 @@ import CerificateLast from "../assets/tabler_certificate.png";
 import DownloadIDB from "../assets/DownloadIDB.png";
 import { PieChart, Pie, Cell, ResponsiveContainer } from "recharts";
 
-export default function DashboardIDB() {
+export const DashboardMain = () => {
   const tasksData = [
       {
         id: 1,
@@ -257,7 +257,7 @@ export default function DashboardIDB() {
                         <div className="icon-Dur green">
                           <img
                             src={InternshipduratoinIDB}
-                            alt=""
+                            alt="Internship duration"
                             style={{ width: "26px", height: "26px" }}
                           />
                         </div>

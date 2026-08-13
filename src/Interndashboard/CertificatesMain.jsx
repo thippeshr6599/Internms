@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default function Certificatesintern() {
+export const  CertificatesMain = () => {
   return (
     <div>
       <h1>Certificates</h1>

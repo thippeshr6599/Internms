@@ -1,9 +1,9 @@
 import React from 'react'
 
-export default function Mentorintern() {
+export const  AttendanceMain = () => {
   return (
     <div>
-      <h1>Mentor</h1>
+      <h1>Attendance</h1>
     </div>
   )
 }

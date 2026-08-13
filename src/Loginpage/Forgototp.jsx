@@ -123,12 +123,12 @@ export default function Forgototp() {
 
           <div className="security">
             <span>
-              <img src={Lockicon} alt="" style={{width:"10px", height:"10px"}} />
+              <img src={Lockicon} alt="" style={{width:"10.67px", height:"14px"}} />
               END-TO-END ENCRYPTED
             </span>
 
             <span>
-              <img src={Lockicon2} alt="" style={{width:"10px", height:"10px"}} />
+              <img src={Lockicon2} alt="" style={{width:"10.67px", height:"13.33px"}} />
               SECURE HANDSHAKE
             </span>
           </div>

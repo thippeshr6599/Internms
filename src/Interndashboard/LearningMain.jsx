@@ -1,9 +1,9 @@
 import React from 'react'
 
-export default function () {
+export const  LearningMain = () => {
   return (
     <div>
-      <h1>Resources</h1>
+       <h1>Learning</h1>
     </div>
   )
 }
