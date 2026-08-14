@@ -7,3 +7,9 @@ export const  ResourcesMain = () => {
     </div>
   )
 }
+ <p className="Profile-ID-Intern">
+              <span>ID: {ProfileData.employeeId}</span>
+              <span className="Profile-department-Intern">
+                Dept: {ProfileData.department}
+               </span>
+          </p>
