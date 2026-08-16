@@ -48,7 +48,7 @@ export default function Setnewpassword() {
         </div>
 
         <div className="footer-text-Setnew">
-          @ 2024 InternMS • Privacy Policy
+          © 2024 InternMS • Privacy Policy
         </div>
       </div>
 

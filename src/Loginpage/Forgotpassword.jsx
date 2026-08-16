@@ -40,7 +40,7 @@ export default function Forgot() {
         </div>
 
         <div className="left-footer">
-          <span>@ 2024 InternMS</span>
+          <span>© 2024 InternMS</span>
           <span>•</span>
           <span>Privacy Policy</span>
         </div>

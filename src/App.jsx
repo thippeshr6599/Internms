@@ -16,7 +16,7 @@ import Intern from "./Signuppage/Intern";
 import Company from "./Signuppage/Company";
 import Admin from "./Signuppage/Admin";
 import HRandCompanyport from "./Loginpage/HRandCompanyport";
-import { InternDashboard } from "./Interndashboard/InternDashboard";
+import { InternDashboard } from "./Interndashboard/Interndashboard";
 import { DashboardMain } from "./Interndashboard/DashboardMain";
 import { MyprofileMain } from "./Interndashboard/MyprofileMain";
 import { InternshipMain } from "./Interndashboard/InternshipMain";

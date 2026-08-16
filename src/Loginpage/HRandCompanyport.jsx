@@ -76,7 +76,7 @@ export default function HRandCompanyport() {
         </div>
       <div className='copyright-HRandCompany'>
         <p>
-          @2024 HR and Company portal.All rights reserved.
+           © 2024 HR and Company Portal. All rights reserved. 
         </p>
       </div>
        </div>

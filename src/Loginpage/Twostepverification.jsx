@@ -53,7 +53,7 @@ function Twostepverification() {
           </div>
 
           <div className="copyright-Two">
-            @ 2024 InternMS
+            © 2024 InternMS
           </div>
         </div>
         <div className="right-panel-Two">

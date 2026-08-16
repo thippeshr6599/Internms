@@ -85,7 +85,7 @@ function App() {
     </div>
 
     <div className="copyright-Login">
-      @2024 InternMS
+      © 2024 InternMS
     </div>
 
 </div>
