@@ -1,5 +1,5 @@
 import React from "react";
-import "../Landingpage/Hero.css"
+import "../Components-Landingpage/Hero.css"
 import dashboard from "../assets/Internship Management Dashboard.png";
 import successIcon from "../assets/Icon (4).png";
 import Star from "../assets/Landingpagestar.png"
@@ -37,7 +37,7 @@ function Hero() {
         </p>
 
         <div className="hero-buttons">
-          <button className="primary-btn" onClick={() => navigate("/Createaccount")}>
+          <button className="primary-btn" onClick={() => navigate("/HRaccount")}>
             Get Started
             <span> <img src={Righticon} alt="" style={{width:"20px", height:"15px"}} /></span>
           </button>

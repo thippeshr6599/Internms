@@ -1,14 +1,14 @@
 import React from 'react'
-import "../Signuppage/Admin.css"
-import Adminleft from "../assets/Adminleftimage.png"
-import Adminright from "../assets/Adminright.png"
-import Admintrust from "../assets/Admintrust.png"
+import "../Components-Signuppage/Admin.css";
+import Adminleft from "../assets/Adminleftimage.png";
+import Adminright from "../assets/Adminright.png";
+import Admintrust from "../assets/Admintrust.png";
 import EyeIcon from "../assets/Eyeicon.png";
-import Adminimage from "../assets/Adminimage.png"
-import HRimg from "../assets/HR.png"
-import Mentor from "../assets/Mentor.png"
-import Intern from "../assets/Intern.png"
-import Company from "../assets/Company.png"
+import Adminimage from "../assets/Adminimage.png";
+import HRimg from "../assets/HR.png";
+import Mentor from "../assets/Mentor.png";
+import Intern from "../assets/Intern.png";
+import Company from "../assets/Company.png";
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 
@@ -133,7 +133,7 @@ export default function Admin() {
            
                 <div 
                  className="Icon1-Admin"
-                 onClick={() => navigate("/Createaccount")}
+                 onClick={() => navigate("/HRaccount")}
                  >
                 <img src={HRimg} alt="HRimage" />
                   <span>HR</span>

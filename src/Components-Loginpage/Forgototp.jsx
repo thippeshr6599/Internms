@@ -1,6 +1,6 @@
 import React, { useRef , useState , useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import "../Loginpage/Forgototp.css"
+import "../Components-Loginpage/Forgototp.css"
 import Forgoticon2 from "../assets/forgoticon2.png"
 import Lockicon from "../assets/Lockicon.png"
 import Lockicon2 from "../assets/Lockicon2.png"

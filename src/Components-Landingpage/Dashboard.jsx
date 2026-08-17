@@ -1,5 +1,5 @@
 import { useState } from "react";
-import "../Landingpage/Dashboard.css"
+import "../Components-Landingpage/Dashboard.css"
 import officeImg from "../assets/Collaborative Modern Office.png";
 import LRrightmark from "../assets/LRightmark.png"
 

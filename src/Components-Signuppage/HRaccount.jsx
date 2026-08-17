@@ -7,11 +7,11 @@ import Company from "../assets/Company.png"
 import EyeIcon from "../assets/Eyeicon.png";
 import Internhub from "../assets/Internhub inside.png";
 import Adminimage from "../assets/Adminimage.png"
-import "../Signuppage/HRaccount.css";
+import "../Components-Signuppage/HRaccount.css";
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 
-export default function Createaccount() {
+export const HRaccount = () => {
   const navigate = useNavigate();
      const [showPassword, setShowPassword] = useState(false);
      const [showConfirmPassword, setShowConfirmPassword] = useState(false);
@@ -137,7 +137,7 @@ export default function Createaccount() {
 
       <div 
       className="Icon1-HR active-HR"
-      onClick={() => navigate("/Createaccount")}
+      onClick={() => navigate("/HRaccount")}
       
       >
         <img src={HRimg} alt="HRimage" />

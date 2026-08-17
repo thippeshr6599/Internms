@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import "../Interndashboard/MyprofileMain.css";
+import "./MyprofileMain.css";
 import fullName from "../assets/Fullnameprofileintern.png";
 import Email from "../assets/Emailprofileintern.png";
 import DOB from "../assets/DOBprofileintern.png";

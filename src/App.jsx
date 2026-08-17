@@ -1,34 +1,34 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
-import Landingpage from "./Landingpage/Landingpage";
-import Loginmainpage from "./Loginpage/Loginmainpage";
-import Twostepverification from "./Loginpage/Twostepverification";
-import Emailverification from "./Loginpage/Emailverification";
-import Sucesslogin from "./Loginpage/Sucesslogin";
-import Mobileverification from "./Loginpage/Mobileverification";
-import Forgotpassword from "./Loginpage/Forgotpassword";
-import Forgototp from "./Loginpage/Forgototp";
-import Setnewpassword from "./Loginpage/Setnewpassword";
-import Passresetsucess from "./Loginpage/Passresetsucess";
-import Createaccount from "./Signuppage/Createaccount";
-import Mentor from "./Signuppage/Mentor";
-import Intern from "./Signuppage/Intern";
-import Company from "./Signuppage/Company";
-import Admin from "./Signuppage/Admin";
-import HRandCompanyport from "./Loginpage/HRandCompanyport";
-import { InternDashboard } from "./Interndashboard/Interndashboard";
-import { DashboardMain } from "./Interndashboard/DashboardMain";
-import { MyprofileMain } from "./Interndashboard/MyprofileMain";
-import { InternshipMain } from "./Interndashboard/InternshipMain";
-import { TasksMain } from "./Interndashboard/TasksMain";
-import { AttendanceMain } from "./Interndashboard/AttendanceMain";
-import { ReportsMain } from "./Interndashboard/ReportsMain";
-import { ProjectsMain } from "./Interndashboard/ProjectsMain";
-import { MentorMain } from "./Interndashboard/MentorMain";
-import { LearningMain } from "./Interndashboard/LearningMain";
-import { ResourcesMain } from "./Interndashboard/ResourcesMain";
-import { CertificatesMain } from "./Interndashboard/CertificatesMain";
-import { SettingsMain } from "./Interndashboard/SettingsMain";
+import Landingpage from "./Components-Landingpage/Landingpage";
+import Loginmainpage from "./Components-Loginpage/Loginmainpage";
+import Twostepverification from "./Components-Loginpage/Twostepverification";
+import Emailverification from "./Components-Loginpage/Emailverification";
+import Sucesslogin from "./Components-Loginpage/Sucesslogin";
+import Mobileverification from "./Components-Loginpage/Mobileverification";
+import Forgotpassword from "./Components-Loginpage/Forgotpassword";
+import Forgototp from "./Components-Loginpage/Forgototp";
+import Setnewpassword from "./Components-Loginpage/Setnewpassword";
+import Passresetsucess from "./Components-Loginpage/Passresetsucess";
+import { HRaccount } from "./Components-Signuppage/HRaccount";
+import Mentor from "./Components-Signuppage/Mentor";
+import Intern from "./Components-Signuppage/Intern";
+import Company from "./Components-Signuppage/Company";
+import Admin from "./Components-Signuppage/Admin";
+import HRandCompanyport from "./Components-Loginpage/HRandCompanyport";
+import { InternDashboard } from "./Components-Interndashboard/Interndashboard";
+import { DashboardMain } from "./Components-Interndashboard/DashboardMain";
+import { MyprofileMain } from "./Components-Interndashboard/MyprofileMain";
+import { InternshipMain } from "./Components-Interndashboard/InternshipMain";
+import { TasksMain } from "./Components-Interndashboard/TasksMain";
+import { AttendanceMain } from "./Components-Interndashboard/AttendanceMain";
+import { ReportsMain } from "./Components-Interndashboard/ReportsMain";
+import { ProjectsMain } from "./Components-Interndashboard/ProjectsMain";
+import { MentorMain } from "./Components-Interndashboard/MentorMain";
+import { LearningMain } from "./Components-Interndashboard/LearningMain";
+import { ResourcesMain } from "./Components-Interndashboard/ResourcesMain";
+import { CertificatesMain } from "./Components-Interndashboard/CertificatesMain";
+import { SettingsMain } from "./Components-Interndashboard/SettingsMain";
 
 import "./App.css";
 
@@ -85,8 +85,8 @@ const router = createBrowserRouter(
     },
 
     {
-      path: "/Createaccount",
-      element: <Createaccount />,
+      path: "/HRaccount",
+      element: <HRaccount />,
     },
 
     {

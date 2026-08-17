@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "../Interndashboard/Interndashboard.css";
+import "../Components-Interndashboard/Interndashboard.css";
 import IDBmore from "../assets/ADBmore.png";
 import IDBsearch from "../assets/ADBsearch.png";
 import IDBnotification from "../assets/ADBnotification.png";

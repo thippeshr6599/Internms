@@ -2,7 +2,7 @@ import React, {useState} from "react";
 import { useNavigate, Link } from "react-router-dom";
 import EyeIcon from "../assets/Eyeicon.png";
 import GoogleIcon from "../assets/SVG.png";
-import "../Loginpage/HRandCompanyportal.css"
+import "../Components-Loginpage/HRandCompanyportal.css"
 import HRandCompany from "../assets/HRandCompanyimageBackground.png"
 import username from "../assets/username.png"
 import Lock1 from "../assets/Pass1.png";
@@ -158,7 +158,7 @@ export default function HRandCompanyport() {
           
                    <p className="signup-HRandCompany">
                       Don't have an account?
-                      <Link to="/Createaccount"> Create Account</Link>
+                      <Link to="/HRaccount"> Create Account</Link>
                      </p>
           
                     <div className="footer-links-HRandCompany">

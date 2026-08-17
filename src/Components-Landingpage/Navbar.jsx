@@ -1,6 +1,6 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
-import "../Landingpage/Navbar.css";
+import "../Components-Landingpage/Navbar.css";
 
 function Navbar() {
   const navigate = useNavigate();
@@ -18,7 +18,7 @@ function Navbar() {
           Login
         </span>
 
-        <button onClick={() => navigate("/Createaccount")}>Register</button>
+        <button onClick={() => navigate("/HRaccount")}>Register</button>
       </div>
     </nav>
   );

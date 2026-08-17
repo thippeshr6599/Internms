@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import "../Loginpage/Setnewpassword.css"
+import "../Components-Loginpage/Setnewpassword.css"
 import Newpicon from "../assets/Newpasswordicon.png"
 import Newpasslock from "../assets/Newpasslock.png"
 import Lockicon from "../assets/Lockicon.png"

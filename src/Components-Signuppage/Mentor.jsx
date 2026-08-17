@@ -1,5 +1,5 @@
 import React from "react";
-import "../Signuppage/Mentor.css"
+import "../Components-Signuppage/Mentor.css"
 import Mentorright from "../assets/Mentor Right.png"
 import Mentorteams from "../assets/MentorTeams.png"
 import Mentorstar from "../assets/Metrostar.png"
@@ -169,7 +169,7 @@ export default function Mentor() {
     
           <div 
           className="Icon1-Mentor"
-          onClick={() => navigate("/Createaccount")}
+          onClick={() => navigate("/HRaccount")}
           style={{cursor:"pointer"}}
           >
             <img src={HRimg} alt="" />

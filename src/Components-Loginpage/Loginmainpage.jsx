@@ -1,6 +1,6 @@
 import React, {useState} from "react";
 import { useNavigate, Link } from "react-router-dom";
-import "../Loginpage/Loginmainpage.css"
+import "../Components-Loginpage/Loginmainpage.css"
 import EyeIcon from "../assets/Eyeicon.png";
 import GoogleIcon from "../assets/SVG.png";
 import Gmail1 from "../assets/Gmail1.png";
@@ -166,7 +166,7 @@ function App() {
 
          <p className="signup-Login">
             Don't have an account?
-            <Link to="/Createaccount"> Create Account</Link>
+            <Link to="/HRaccount"> Create Account</Link>
            </p>
 
           <div className="footer-links-Login">

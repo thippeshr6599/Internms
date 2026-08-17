@@ -1,5 +1,5 @@
 import React from "react";
-import "../Landingpage/Footer.css"
+import "../Components-Landingpage/Footer.css"
 import globeIcon from "../assets/Web.png";
 import mailIcon from "../assets/Gamilwhite.png";
 import Heart from "../assets/Heart.png"

@@ -1,5 +1,5 @@
 import React from "react";
-import "../Signuppage/Intern.css"
+import "../Components-Signuppage/Intern.css"
 import Internright from "../assets/Internright.png"
 import Internsmart from "../assets/Internsmart.png"
 import Internvector from "../assets/Internvector.png"
@@ -176,7 +176,7 @@ export default function Intern() {
       
             <div 
             className="Icon1-Intern"
-            onClick={() => navigate("/Createaccount")}
+            onClick={() => navigate("/HRaccount")}
             
             >
               <img src={HRimg} alt="" />

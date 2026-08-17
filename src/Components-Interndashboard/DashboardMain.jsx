@@ -1,5 +1,5 @@
 import React from 'react'
-import "../Interndashboard/DashboardMain.css";
+import "../Components-Interndashboard/DashboardMain.css";
 import { Link } from "react-router-dom";
 import Currentinternships from "../assets/Currentinternship.png";
 import IDBsectiononearrow from "../assets/IDBsectionarrow.png";

@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import "../Loginpage/Mobileverification.css"
+import "../Components-Loginpage/Emailverification.css"
 import Verifyicon from "../assets/Verificationicon.png";
 import Righticon from "../assets/Righticon (2).png"
 import Backtover from "../assets/Backtover.png";
 
-export default function Mobileverification() {
+export default function Emailverification() {
   const navigate = useNavigate();
    const [sec, setSec] = useState(59);
 
@@ -45,10 +45,10 @@ export default function Mobileverification() {
   };
 
   return (
-    <div className="Content-Mobile">
-      <div className="left-panel-Mobile">
-        <div className="left-content-Mobile">
-          <div className="shield-box-Mobile">
+    <div className="Content-Email">
+      <div className="left-panel-Email">
+        <div className="left-content-Email">
+          <div className="shield-box-Email">
            <img src={Verifyicon} alt="verifyicon"  />
         </div>
 
@@ -64,15 +64,16 @@ export default function Mobileverification() {
       </div>
 
 
-      <div className="right-panel-Mobile">
-        <div className="verification-box-Mobile">
+      <div className="right-panel-Email">
+        <div className="verification-box-Email">
           <h2>Enter Verification Code</h2>
 
-          <p className="subtitle-Mobile">
-            We've sent a 6-digit code to your mobile number +91 9....5678
+          <p className="subtitle-Email">
+            We've sent a 6-digit code to your email
+            j**n@g***t.com
           </p>
 
-          <div className="otp-boxes-Mobile">
+          <div className="otp-boxes-Email">
             {otp.map((digit, index) => (
               <input
                 key={index}
@@ -87,18 +88,18 @@ export default function Mobileverification() {
 
           {Error && <h3 style={{color:"red", fontSize:"15px",margin:"10px"}}>{Error}</h3>}
 
-          <button className="verify-btn-Mobile" onClick={handleVerify}>
+          <button className="verify-btn-Email" onClick={handleVerify}>
             Verify Identity 
             <img src={Righticon} alt="" style={{width:"15px",height:"10px"}} />
           </button>
 
-           <p className="resend-Mobile">
+           <p className="resend-Email">
            Didn't receive the code?{" "}
            {sec > 0 ? (
            <span>Resend in 00:{sec.toString().padStart(2, "0")}</span>
            ) : (
            <button
-           className="resend-btn-Mobile"
+           className="resend-btn-Email"
            onClick={() => setSec(59)}
            >
             Resend Code 
@@ -108,7 +109,7 @@ export default function Mobileverification() {
 
           <hr />
 
-          <button className="back-btn-Mobile">
+          <button className="back-btn-Email">
            <img src={Backtover} alt="" style={{width:"12px", height:"12px"}}/>
            Back to verification options
           </button>

@@ -1,5 +1,5 @@
 import React from "react";
-import "../Signuppage/Company.css";
+import "../Components-Signuppage/Company.css";
 import Addicon from "../assets/Addcontact.png";
 import Companyright from "../assets/Companyright.png"
 import Handicon from "../assets/Hand.png"
@@ -148,7 +148,7 @@ export default function Company() {
            
                  <div 
                  className="Icon1-Company "
-                 onClick={() => navigate("/Createaccount")}
+                 onClick={() => navigate("/HRaccount")}
                  
                  >
                    <img src={HRimg} alt="" />
