@@ -200,7 +200,7 @@ export const  MyprofileMain = () => {
                 <p>Full Name</p>
                 <span>{profileInfoMockData.fullName}</span>
               </div>
-            </div>
+            </div> 
 
             <div className="profile-field">
               <div className="icon-container">
