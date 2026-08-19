@@ -1,220 +1,284 @@
-.Content-Intern{
-    border: 1px solid rgb(223, 210, 210);
-    width:1280px;
-    height:1180px;
-     margin: 20px auto;
-    display:flex;
-    border-radius:12px;
-    overflow:hidden;
+* {
     box-sizing: border-box;
 }
 
+.Content-Intern {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    border-radius: 12px;
+    overflow: hidden;
+    background: #ffffff;
+}
 
-.Left-panel-Intern{
-    width:512px;
-    height:1180;
+.Left-panel-Intern {
+    width: 40%;
+    min-width: 420px;
+    min-height: 100vh;
+    background: linear-gradient(180deg, #16224B, #26569F);
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     border-top-right-radius: 10px;
     border-bottom-right-radius: 10px;
-    background:linear-gradient(180deg,#16224B,#26569F);
-    padding:40px;
-    box-sizing:border-box;
-    display:flex;
-    flex-direction:column;
-    justify-content: space-between;
 }
-.Logo-box-Intern{
-    border: 1px solid none;
-    width: 432px;
-    height: 338px;
+
+.Logo-box-Intern {
+    width: 100%;
+    max-width: 432px;
     display: grid;
     gap: 24px;
 }
-.logo-Intern{
-    font-size:24px;
-    font-weight:800;
+
+.logo-Intern {
+    font-size: 24px;
+    font-weight: 800;
     line-height: 32px;
-    color: #FFFFFF;
-    margin-bottom: 24px;
+    letter-spacing: -0.6px;
+    color: #ffffff;
+    margin: 0 0 24px;
+    font-family: "Manrope";
 }
 
-.Top-Intern h1{
-    font-size:40px;
-    line-height:50px;
-    font-weight:700;
+.Top-Intern h1 {
+    font-size: 40px;
+    line-height: 50px;
+    font-weight: 700;
     letter-spacing: -0.8px;
-    color: #FFFFFF;
-    margin-bottom: 24px;
+    color: #ffffff;
+    font-family: "Manrope";
+    margin: 0 0 24px;
 }
 
-.Top-Intern p{
-    color:#DAD7FFE5;
-    font-size:18px;
-    line-height:28px;
+.Top-Intern p {
+    color: #DAD7FFE5;
+    font-size: 18px;
+    line-height: 28px;
+    font-weight: 400;
+    margin: 0;
+    font-family: "Hanken Grotesk";
 }
 
-.Left-panel-Box2Intern{
-    border: 1px solid none;
-    width: 432px;
-    height: 361px;
+.Left-panel-Box2Intern {
+    width: 100%;
+    max-width: 432px;
+    margin-top: 40px;
 }
 
-.feature-section-Intern{
-    border: 1px solid none;
-    width: 432px;
-    height: 192px;
+.feature-section-Intern {
+    width: 100%;
     display: grid;
-    gap: 24px;
-    margin-bottom: 48px;
+    gap: 16px;
+    margin-bottom: 40px;
 }
-.feature-card-Intern{
-    display:flex;
-    align-items:flex-start;
-    border-radius:16px;
+
+.feature-card-Intern {
+    width: 100%;
+    min-width: 452px;
+    height: 74px;
+    display: flex;
+    align-items: flex-start;
+    border-radius: 16px;
     padding: 16px;
     gap: 16px;
-    background:#FFFFFF1A 10%;
-    border:1px solid rgba(255,255,255,.12);
-
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.12);
 }
 
-.feature-card-Intern img{
-    color: #C3C0FF;
-    width:22px;
+.feature-card-Intern img {
+    width: 22px;
     height: 21px;
+    flex-shrink: 0;
 }
 
-.feature-card-Intern h4{
-    color: #FFFFFF;
-    font-size:14px;
+.feature-card-Intern h4 {
+    color: #ffffff;
+    font-size: 14px;
     line-height: 20px;
     letter-spacing: 0.7px;
-    font-weight:600;
+    font-weight: 600;
+    font-family: "Hanken Grotesk";
+    margin: 0 0 4px;
 }
 
-.feature-card-Intern p{
-    font-size:14px;
-    line-height:20px;
-    color:#DAD7FFB2;
+.feature-card-Intern p {
+    width: 442px;
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: 0.7px;
+    color: #DAD7FFB2;
     font-weight: 400;
+    font-family: "Hanken Grotesk";
+    margin: 0;
 }
 
-
-.testimonial-Intern hr{
-    border:1px solid #FFFFFF1A;
-    height:1px;
-    margin-bottom:32px;
+.feature-card-Intern-box2 {
+    width: 100%;
+    min-width: 432px;
+    height: 94px;
+    display: flex;
+    align-items: flex-start;
+    border-radius: 16px;
+    padding: 16px;
+    gap: 16px;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.12);
 }
 
-.quote-Intern{
-    color:#DAD7FF99;
-    font-size:14px;
-    line-height:20px;
+.feature-card-Intern-box2 img {
+    width: 22px;
+    height: 21px;
+    flex-shrink: 0;
 }
 
-.user-info-Intern{
-    display:flex;
-    align-items:center;
-    gap:12px;
-    margin-top:10px;
+.feature-card-Intern-box2 h4 {
+    color: #ffffff;
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: 0.7px;
+    font-weight: 600;
+    font-family: "Hanken Grotesk";
+    margin: 0 0 4px;
 }
 
-.user-info-Intern img{
-    width:35px;
-    height:35px;
-    border-radius:50%;
-    color: #165EF9;
+.feature-card-Intern-box2 p {
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: 0.7px;
+    color: #DAD7FFB2;
+    font-weight: 400;
+    font-family: "Hanken Grotesk";
+    margin: 0;
+}
+
+.testimonial-Intern {
+    width: 100%;
+}
+
+.testimonial-Intern hr {
+    border: none;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    margin: 0 0 32px;
+}
+
+.quote-Intern {
+    color: #DAD7FF99;
+    font-size: 14px;
+    line-height: 20px;
+    font-style: italic;
+    font-family: "Hanken Grotesk";
+    margin: 0;
+}
+
+.user-info-Intern {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-top: 12px;
+}
+
+.user-info-Intern img {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
     background: #D8E3FB;
+    flex-shrink: 0;
 }
 
-
-.user-info-Intern span{
-    font-size:12px;
+.user-info-Intern span {
+    font-size: 12px;
     font-weight: 500;
     line-height: 16px;
-    color:#FFFFFF;
+    color: #ffffff;
+    font-family: "Hanken Grotesk";
 }
 
-
-
-
-.Right-content-Intern{
-    width:768px;
-    min-height:1180px;
-    padding:48px;
-    background: #FFFFFF;
-    box-sizing:border-box;
+.Right-content-Intern {
+    width: 60%;
+    min-width: 0;
+    min-height: 100vh;
+    padding: 48px;
+    background: #ffffff;
 }
-.Right-insidecontent-Intern{
-    border: 1px solid none;
-    width:672px ;
-    height: 1084px ;
+
+.Right-insidecontent-Intern {
+    width: 100%;
+    max-width: 672px;
+    margin: 0 auto;
     padding: 40px;
-    box-sizing: border-box;
-    display: grid;
+    display: flex;
+    flex-direction: column;
     gap: 40px;
 }
-.Right-head-Intern{
-    border: 1px solid none;
-    width: 592px;
-    height: 72px;
+
+.Right-head-Intern {
+    width: 100%;
     display: grid;
     gap: 8px;
 }
 
-.Right-head-Intern h2{
-    font-size:32px;
+.Right-head-Intern h2 {
+    font-size: 32px;
     font-weight: 700;
     line-height: 40px;
     letter-spacing: -0.32px;
-    color:#111C2D;
+    color: #111C2D;
+    font-family: "Manrope";
+    margin: 0;
 }
 
-.Right-head-Intern p{
-    color:#464555;
-    font-size:16px;
+.Right-head-Intern p {
+    color: #464555;
+    font-size: 16px;
     font-weight: 400;
-    line-height: 24px;  
+    line-height: 24px;
+    font-family: "Hanken Grotesk";
+    margin: 0;
 }
 
-.register-section-Intern{
-    border: 1px solid none;
-    width: 592px;
-    height: 126px;
+.register-section-Intern {
+    width: 100%;
     display: grid;
     gap: 16px;
-} 
+}
 
-.register-title-Intern{
-    font-size:14px;
-    font-weight:600;
+.register-title-Intern {
+    font-size: 14px;
+    font-weight: 600;
     line-height: 20px;
     letter-spacing: 0.7px;
     color: #111C2D;
+    font-family: "Hanken Grotesk";
+    margin: 0;
 }
 
-.Icon-group-Intern{
-    display:flex;
-    gap:16px;
-    justify-content: center;
+.Icon-group-Intern {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 12px;
 }
 
 .Icon1-Intern {
-    width: 113px;
-    height: 90px;
+    width: 100%;
+    min-width: 0;
+    min-height: 90px;
     border: 1px solid #C7C4D8;
     border-radius: 16px;
-    padding: 24px;
-    gap: 16px;
+    padding: 12px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    gap: 8px;
     cursor: pointer;
-    transition: none;
+    transition: background 0.2s ease,
+                border-color 0.2s ease;
 }
 
 .Icon1-Intern:hover {
-    background: #C7E6FF; 
+    background: #C7E6FF;
 }
 
 .Icon1-Intern:hover span {
@@ -222,142 +286,142 @@
     font-weight: 600;
 }
 
-
-.Icon1-Intern:hover img {
-    transition: none;
-}
-
-
-.Icon1-Intern img{
-    width:28.8px;
+.Icon1-Intern img {
+    width: 28.8px;
     height: 24px;
-    margin-top: 15px;
+    object-fit: contain;
 }
 
-.Icon1-Intern span{
+.Icon1-Intern span {
     color: #0F172A;
-    font-size:16px;
-    line-height: 24px;
+    font-size: 14px;
+    line-height: 20px;
     font-weight: 700;
-    font-style: bold;
+    font-family: "Manrope";
+    text-align: center;
 }
-.Icon1-Intern.active-Intern{
-    background:#C7E6FF;
-    border:1px solid #C7C4D8;
+
+.Icon1-Intern.active-Intern {
+    background: #C7E6FF;
+    border: 1px solid #C7C4D8;
 }
-.form-box-Intern{
-    border: 1px solid none;
-    width: 592px;
-    height: 726px;
+
+.form-box-Intern {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.form-area-Intern {
+    width: 100%;
     display: grid;
-}
-.form-area-Intern{
-    display:grid;
-    grid-template-columns:repeat(2,1fr);
-    column-gap:18px;
-    row-gap:10px;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    column-gap: 18px;
+    row-gap: 5px;
 }
 
-
-.form-group-Intern{
-    display:flex;
-    flex-direction:column;
-    width:100%;
+.form-group-Intern {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
 }
 
-.form-group-Intern label{
-    font-size:14px;
+.form-group-Intern label {
+    font-size: 14px;
     color: #111C2D;
-    font-weight:600;
+    font-weight: 600;
     line-height: 20px;
     letter-spacing: 0.7px;
+    font-family: "Hanken Grotesk";
+    margin-bottom: 6px;
 }
 
 .form-group-Intern input,
-.form-group-Intern select{
-    width:100%;
-    height:50px;
-    border:1px solid #C7C4D8;
+.form-group-Intern select {
+    width: 100%;
+    height: 50px;
+    border: 1px solid #C7C4D8;
     color: #6B7280;
-    border-radius:8px;
-    padding:13px 16px 14px 16px;
-    font-size:16px;
+    border-radius: 8px;
+    padding: 13px 16px;
+    font-size: 16px;
     line-height: 100%;
     font-weight: 400;
-    box-sizing:border-box;
-    outline:none;
+    font-family: "Hanken Grotesk";
+    outline: none;
+    background: #ffffff;
 }
 
 .form-group-Intern input:focus,
-.form-group-Intern select:focus{
-    border-color:#4d6fff;
+.form-group-Intern select:focus {
+    border-color: #4d6fff;
 }
 
-.phone-box-Intern{
-    display:flex;
-    width:100%;
-    gap:4px;
+.phone-box-Intern {
+    display: flex;
+    width: 100%;
+    gap: 4px;
 }
 
-.phone-box-Intern select{
-    flex:0 0 70px;
-    padding-left: 5px;
+.phone-box-Intern input {
+    flex: 1;
+    min-width: 0;
 }
 
-.phone-box-Intern input{
-    flex:1;
-    min-width:0;
-}
 .country-code-box {
-  width: 50px;
-  height: 50px;
-  color: #000000;
-  border: 1px solid #C7C4D8;
-  border-radius: 8px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: #fff;
-  font-size: 16px;
-  font-weight: 500;
+    width: 60px;
+    height: 50px;
+    flex-shrink: 0;
+    color: #000000;
+    border: 1px solid #C7C4D8;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #ffffff;
+    font-size: 16px;
+    font-weight: 500;
 }
+
 .resume-upload {
-  width: 100%;
-  height: 50px;
-  border: 1px solid  #C7C4D8;
-  border-radius: 8px;
-  background: #fff;
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  padding: 0 16px;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  box-sizing: border-box;
-  margin-top: 0;
+    width: 100%;
+    height: 50px;
+    border: 1px solid #C7C4D8;
+    border-radius: 8px;
+    background: #ffffff;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 0 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
 }
 
 .resume-upload:hover {
-  border-color: #0058BE;
-  background: #F8FBFF;
+    border-color: #0058BE;
+    background: #F8FBFF;
 }
 
 .resume-upload img {
-  width: 22px;
-  height: 22px;
-  object-fit: contain;
+    width: 22px;
+    height: 22px;
+    object-fit: contain;
+    flex-shrink: 0;
 }
 
 .resume-upload span {
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 24px;
-  color: #3525CD;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  flex: 1;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    color: #3525CD;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-family: "Hanken Grotesk";
+    flex: 1;
 }
+
 .password-box-Intern {
     position: relative;
     width: 100%;
@@ -368,9 +432,13 @@
     height: 50px;
     border: 1px solid #C7C4D8;
     border-radius: 8px;
-    padding: 0 45px 0 14px; 
+    padding: 0 45px 0 14px;
     font-size: 16px;
     box-sizing: border-box;
+}
+
+.password-box-Intern input:focus {
+    border-color: #4d6fff;
 }
 
 .eye-icon-Intern {
@@ -385,95 +453,254 @@
     object-fit: contain;
 }
 
-.password-box-Intern input:focus {
-    border-color: #4d6fff;
-}
-.checkbox-Intern{
+.checkbox-Intern {
     width: 20px;
     height: 20px;
+    flex-shrink: 0;
     border: 1px solid #C7C4D8;
     border-radius: 4px;
 }
-.agree-Intern{
+
+.agree-Intern {
     grid-column: 1 / -1;
     display: flex;
     align-items: center;
     gap: 12px;
     width: 100%;
-    padding-bottom: 16px;
-    margin-top: 15px;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 
-.agree-Intern p{
+.agree-Intern p {
     margin: 0;
     font-size: 14px;
     font-weight: 400;
     line-height: 20px;
-    white-space: nowrap;
+    font-family: "Hanken Grotesk";
+    color: #111C2D;
 }
 
-.agree-Intern span{
+.agree-Intern span {
     color: #3525CD;
     cursor: pointer;
-}
-.button-row-Intern{
-    grid-column:1 / -1;
-    width:100%;
-}
-
-.create-btn-Intern{
-    width:100%;
-    height:48px;
-    border:none;
-    border-radius:8px;
-    background:#4328f5;
-    color:#FFFFFF;
-    font-size:14px;
+    font-size: 14px;
+    font-weight: 400;
     line-height: 20px;
-    font-weight:600;
-    letter-spacing: 0.7px;
-    cursor:pointer;
-    margin-top:8px;
+    font-family: "Hanken Grotesk";
 }
 
-.create-btn-Intern:hover{
-    background:#3720d8;
-}
-
-.divider-Intern{
-    display:flex;
-    align-items:center;
-    gap:12px;
-    margin:20px 0;
-    color:#777587;
-    font-size:12px;
-    justify-content: center;
+.button-row-Intern {
+    grid-column: 1 / -1;
     width: 100%;
 }
+
+.create-btn-Intern {
+    width: 100%;
+    height: 52px;
+    border: none;
+    border-radius: 8px;
+    background: #4328f5;
+    color: #ffffff;
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 600;
+    letter-spacing: 0.7px;
+    font-family: "Hanken Grotesk";
+    cursor: pointer;
+    margin-top: 8px;
+}
+
+.create-btn-Intern:hover {
+    background: #3720d8;
+}
+
+.divider-Intern {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin: 20px 0;
+    color: #777587;
+    font-size: 12px;
+    justify-content: center;
+    width: 100%;
+    font-family: "Hanken Grotesk";
+}
+
 .divider-Intern hr {
     flex: 1;
     border: none;
     border-top: 1px solid #d1d5db;
 }
+
 .divider-Intern span {
     color: #777587;
     font-size: 12px;
     font-weight: 500;
     line-height: 16px;
     letter-spacing: 1.2px;
+    font-family: "Hanken Grotesk";
 }
 
-.signin-Intern{
-    text-align:center;
-    font-size:16px;
-    color:#464555;
+.signin-Intern {
+    text-align: center;
+    font-size: 16px;
+    color: #464555;
     line-height: 24px;
     font-weight: 400;
+    font-family: "Hanken Grotesk";
+    margin: 0;
 }
 
-.signin-Intern span{
-    color:#3525CD;
-    cursor:pointer;
-    font-weight:600;
+.signin-Intern span {
+    color: #3525CD;
+    cursor: pointer;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 400;
+    font-family: "Hanken Grotesk";
+    
+}
+
+ /*Laptop*/
+
+@media (max-width: 1200px) {
+
+    .Left-panel-Intern {
+        width: 38%;
+        min-width: 360px;
+
+        padding: 32px;
+    }
+
+    .Right-content-Intern {
+        width: 62%;
+
+        padding: 32px;
+    }
+
+    .Right-insidecontent-Intern {
+        padding: 24px;
+    }
+
+    .Icon-group-Intern {
+        gap: 8px;
+    }
+
+    .Icon1-Intern {
+        padding: 8px;
+    }
+
+    .Icon1-Intern span {
+        font-size: 13px;
+    }
+}
+
+   /*Tablet*/
+
+@media (max-width: 900px) {
+
+    .Content-Intern {
+        flex-direction: column;
+        min-height: 100vh;
+        margin: 0;
+        border-radius: 0;
+        border: none;
+    }
+
+    .Left-panel-Intern {
+        width: 100%;
+        min-width: 0;
+        min-height: auto;
+
+        padding: 40px 30px;
+
+        border-radius: 0;
+    }
+
+    .Logo-box-Intern,
+    .Left-panel-Box2Intern {
+        max-width: 100%;
+    }
+
+    .Left-panel-Box2Intern {
+        margin-top: 40px;
+    }
+
+    .Right-content-Intern {
+        width: 100%;
+        min-height: auto;
+
+        padding: 30px;
+    }
+
+    .Right-insidecontent-Intern {
+        max-width: 100%;
+
+        padding: 0;
+
+        gap: 32px;
+    }
+
+    .Icon-group-Intern {
+        grid-template-columns: repeat(5, minmax(80px, 1fr));
+    }
+}
+
+   /*Mobile*/
+
+@media (max-width: 650px) {
+
+    .Left-panel-Intern {
+        padding: 30px 20px;
+    }
+
+    .Top-Intern h1 {
+        font-size: 30px;
+        line-height: 40px;
+    }
+
+    .Top-Intern p {
+        font-size: 16px;
+        line-height: 24px;
+    }
+
+    .Right-content-Intern {
+        padding: 25px 20px;
+    }
+
+    .Right-head-Intern h2 {
+        font-size: 26px;
+        line-height: 34px;
+    }
+
+    .Right-head-Intern p {
+        font-size: 14px;
+        line-height: 22px;
+    }
+
+    /* Registration cards become 3 + 2 */
+    .Icon-group-Intern {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .form-area-Intern {
+        grid-template-columns: 1fr;
+
+        column-gap: 0;
+        row-gap: 16px;
+    }
+
+    .agree-Intern {
+        grid-column: 1;
+        align-items: flex-start;
+    }
+
+    .button-row-Intern {
+        grid-column: 1;
+    }
+
+    .agree-Intern p {
+        white-space: normal;
+    }
 }
 

@@ -204,6 +204,7 @@ body {
   background: #FFFFFF;
   border: 1px solid #E5E7EB;
   border-radius: 14px;
+  display: grid;
 }
 
 .Profile-staticon-Intern {
@@ -234,7 +235,6 @@ body {
   line-height: 20px;
 }
 
-
 .profile-main-container {
   width: 100%;
   display: grid;
@@ -244,6 +244,7 @@ body {
   box-sizing: border-box;
   padding: 0 15px 0 8px;
 }
+
 .personalInfo-container {
   width: 100%;
   min-width: 0;

@@ -91,8 +91,8 @@ export default function Mentor() {
             </h1>
 
             <p>
-              Join a community of experts dedicated to guiding
-              students through their career journey. Share your
+              Join a community of experts dedicated to guiding <br />
+              students through their career journey. Share your <br />
               wisdom, foster growth, and shape the industry's future.
             </p>
           </div>
@@ -101,7 +101,7 @@ export default function Mentor() {
 
             <div className="feature-item-Mentor">
               <div className="feature-icon-Mentor">
-                <img src={Mentorright} alt="" />
+                <img src={Mentorright} alt="Mentor right" />
               </div>
 
               <div>
@@ -115,7 +115,7 @@ export default function Mentor() {
 
             <div className="feature-item-Mentor">
               <div className="feature-icon-Mentor">
-                <img src={Mentorteams} alt="" style={{width:"15px"}} />
+                <img src={Mentorteams} alt="Mentor teams" style={{width:"15px"}} />
               </div>
 
               <div>
@@ -129,7 +129,7 @@ export default function Mentor() {
 
             <div className="feature-item-Mentor">
               <div className="feature-icon-Mentor">
-                <img src={Mentorstar} alt="" />
+                <img src={Mentorstar} alt="Mentor star" style={{width:"15px",height:"15px"}} />
               </div>
 
               <div>
@@ -278,6 +278,13 @@ export default function Mentor() {
             value={formData.skills}
             onChange={handlechange}
             placeholder="e.g. UI/UX, React, Mentoring" />
+          <p style={{
+            color:"#464555",
+            fontSize:"11px",
+            fontWeight:"400",
+            fontFamily:"Hanken Grotesk",
+            lineHeight:"16.5px"
+          }}>Seperate multiple skills with comma</p>
          </div>
 
           <div className="form-group-Mentor">
@@ -386,7 +393,7 @@ export default function Mentor() {
        <div className="footer-linem-Mentor"></div>
        <hr />
        <div className="footerm-Mentor">
-       <p>@ 2024 InternHub. All rights reserved.</p>
+       <p>© 2024 InternHub. All rights reserved.</p>
 
        <div className="footer-linksm-Mentor">
         <span>Support</span>

@@ -112,7 +112,7 @@ export default function Intern() {
 
           <div className="feature-card-Intern">
 
-            <img src={Internright} alt="" />
+            <img src={Internright} alt="intern right" />
 
             <div>
               <h4>Verified Employers</h4>
@@ -124,9 +124,9 @@ export default function Intern() {
 
           </div>
 
-          <div className="feature-card-Intern">
+          <div className="feature-card-Intern-box2">
 
-            <img src={Internsmart} alt="" />
+            <img src={Internsmart} alt="intern smart" />
 
             <div>
               <h4>Smart Tracking</h4>
@@ -151,7 +151,7 @@ export default function Intern() {
 
           <div className="user-info-Intern">
 
-            <img src={Internvector} alt=""/>
+            <img src={Internvector} alt="Intern vector"/>
 
             <span> --Sarah J., Product Design Intern</span>
 
@@ -315,8 +315,8 @@ export default function Intern() {
             </select>
           </div>
 
-          <div className="form-group-Intern">
-           <label>Resume (Optional)</label>
+          <div className="form-group-Intern-resume">
+           <label style={{marginBottom:"0px"}}>Resume (Optional)</label>
 
             <input
               type="file"
