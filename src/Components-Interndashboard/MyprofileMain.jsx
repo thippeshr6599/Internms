@@ -1,455 +1,333 @@
-import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import React from "react";
 import "./MyprofileMain.css";
-import fullName from "../assets/Fullnameprofileintern.png";
-import Email from "../assets/Emailprofileintern.png";
-import DOB from "../assets/DOBprofileintern.png";
-import Department from "../assets/Departmentprofileintern.png";
-import University from "../assets/Universityprofileintern.png";
-import InternshipID from "../assets/Internshipidprofile.png";
-import PhoneNumber from "../assets/Phonenumprofileintern.png";
-import Gender from "../assets/Genderprofileintern.png";
-import Designation from "../assets/Designationprofileintern.png"
-import Course from "../assets/Courseprofileintern.png";
-import EndDate from "../assets/Enddateprofileintern.png";
-import StartDate from "../assets/Startdateprofileintern.png";
-import AssignedMentor from "../assets/Assignedmentorprofile.png";
-import EmergencyContact from "../assets/Emergencyprofileintern.png";
-import Address from "../assets/Addressprofileintern.png";
-import LanguagesKnown from "../assets/Languageprofileintern.png";
-import ReceivedCertificate from "../assets/Receivedcertificatesprofile.png";
-import SubmittedTask from "../assets/BackgroundSubmittedprofile.png";
-import CompletedAssessment from "../assets/CompletedAssesmentsprofile.png";
-import Techflowcompanyicon from "../assets/Technoflowsolutions.png";
-import Companydurationprofile from "../assets/Companyduration.png";
-import Editprofileintern from "../assets/Editprofileintern.png";
-import TasksIcon from "../assets/Tasksdoneintern.png";
-import TrainingIcon from "../assets/Trainingmodules.png";
-import AssessmentIcon from "../assets/Assesmentspassed.png";
-import CertificateIcon from "../assets/Certificatesprofile.png";
 
-export const  MyprofileMain = () => {
+import Editprofileintern from "../assets/Intern-myprofile/Editprofileintern.png";
+
+import fullName from "../assets/Intern-myprofile/Fullnameintern.png";
+import Email from "../assets/Intern-myprofile/Gmailprofileintern.png";
+import DOB from "../assets/Intern-myprofile/DOBprofileintern.png";
+import Department from "../assets/Intern-myprofile/Departmentprofileintern.png";
+import InternshipID from "../assets/Intern-myprofile/IDprofileintern.png";
+import PhoneNumber from "../assets/Intern-myprofile/Phoneprofileintern.png";
+import Gender from "../assets/Intern-myprofile/Genderprofilrintern.png";
+import Designation from "../assets/Intern-myprofile/Designationintern.png";
+
+import Course from "../assets/Intern-myprofile/Educationprofileintern.png";
+import Datemyprofile from "../assets/Intern-myprofile/Datemyprofileintern.png";
+import Starmyprofileintern from "../assets/Intern-myprofile/Starmyprofileintern.png"
+
+import pdf from "../assets/Intern-myprofile/Internpdf.png";
+import jpg from "../assets/Intern-myprofile/Internpdf.png";
+import doc from "../assets/Intern-myprofile/Interndoc.png";
+import downloadFile from "../assets/Intern-myprofile/Downloadintern.png"
+
+const ProfileData = {
+  initials: "AU",
+  name: "Akshara",
+  role: "INTERN",
+  status: "ACTIVE",
+};
+
+
+const PersonalInfoData = [
+  {
+    id: 1,
+    label: "FULL NAME",
+    value: "Akshara",
+    icon: fullName,
+  },
+  {
+    id: 2,
+    label: "INTERN ID",
+    value: "INT-2024-089",
+    icon: InternshipID,
+  },
+  {
+    id: 3,
+    label: "EMAIL ADDRESS",
+    value: "akshara@internflow.com",
+    icon: Email,
+  },
+  {
+    id: 4,
+    label: "PHONE NUMBER",
+    value: "+91 98765 12345",
+    icon: PhoneNumber,
+  },
+  {
+    id: 5,
+    label: "DATE OF BIRTH",
+    value: "May 22, 2002",
+    icon: DOB,
+  },
+  {
+    id: 6,
+    label: "GENDER",
+    value: "Female",
+    icon: Gender,
+  },
+  {
+    id: 7,
+    label: "DEPARTMENT",
+    value: "Engineering",
+    icon: Department,
+  },
+  {
+    id: 8,
+    label: "DESIGNATION",
+    value: "Software Intern",
+    icon: Designation,
+  },
+];
+
+
+const EducationData = {
+  course: "Bachelor of Technology in Computer Science",
+  university: "Indian Institute of Technology",
+  startYear: "2021",
+  endYear: "2025",
+  status: "Expected",
+  cgpa: "9.2",
+  icon: Course,
+};
+
+
+ const InternDocumentData = [
+    {
+      id: 1,
+      name: 'Resume_Updated_2024.pdf',
+      size: '2.4MB',
+      uploadedAt: 'Uploaded 2 mos ago',
+      type: 'pdf',
+    },
+    {
+      id: 2,
+      name:'ID_Proof_Front.jpg',
+      size:'850 KB',
+      uploadedAt: 'Uploaded 1 yr ago',
+      type:'image',
+    },
+    {
+      id: 3,
+      name:'AWS_Certification.pdf',
+      size:'1.1 MB',
+      uploadedAt: 'Uploaded 6 mos ago',
+      type:'doc',
+    },
+  ]
+
+  const skillsData = {
+     technicalSkills: [
+      "System Administration",
+      "Network Security",
+      "Cloud Computing (AWS, Azure)",
+      "Linux/Unix",
+      "Database Management",
+  ],
+
+  softSkills: [
+    "Leadership",
+    "Problem Solving",
+    "Communication",
+    "Project Management",
+  ],
+};
+
+  const documentIcons = (type) => {
+    switch(type?.toLowerCase()) {
+      case 'pdf':
+        return <img src={pdf} alt="pdf" />;
+
+      case 'image':
+      case 'jpg':
+      case 'jpeg':
+      case 'png':
+        return <img src={jpg} alt="jpg" />;
+        
+      case 'doc':
+        return <img src={doc} alt="doc" />;
       
-      const ProfileData = {
-        initials:"AK",
-        name: "Akshara",
-        role: "SOFTWARE INTERN",
-        status: "ACTIVE",
-        employeeId: "INT-2026-0042",
-        department: "Product Development",
-        companyicon: Techflowcompanyicon,
-        company: "TechFlow Solutions",
-        duration: "6 Months Duration",
-       }
+      default:
+        return null;
+    }
+  }
 
-      const ProfileStatsData = [
-           {
-              id: 1,
-              icon: TasksIcon,
-              count: "12",
-              title: "Tasks Done",
-           },
-           {
-              id: 2,
-              icon: TrainingIcon,
-              count: "06",
-              title: "Training Modules",
-           },
-           {
-              id: 3,
-              icon: AssessmentIcon,
-              count: "03",
-              title: "Assessments",
-              subtitle: "Passed",
-           },
-           {
-              id: 4,
-              icon: CertificateIcon,
-              count: "08",
-              title: "Certificates",
-           },
-        ];
 
-     const profileInfoMockData = {
-          fullName: "Akshara",
-          internshipId: "INT-2026-0042",
-          email: "akshara123@gmail.com",
-          phoneNumber: "+91 9976385019",
-          dateOfBirth: "03.05.2001",
-          gender: "Female",
-          department: "Product Development",
-          designation: "Software Intern",
-          university: "Hitech Technological University",
-          course: "B.Tech Computer Science",
-          startDate: "May 01, 2026",
-          endDate: "Oct 31, 2026",
-          assignedMentor: "Harsha",
-          address: "Pune, Maharashtra, India",
-          emergencyContact: "+91 90000 00000",
-          languagesKnown: "English, Hindi",
-    };
-
-     const activities = [
-         {
-           id: 1,
-           title: "Submitted Task",
-           subtitle: "API Documentation Refactor",
-           time: "2 hours ago",
-           icon: SubmittedTask,
-           alt: "Task Icon",
-         },
-         {
-          id: 2,
-          title: "Completed Assessment",
-          subtitle: "Frontend Frameworks Masterclass",
-          time: "Yesterday",
-          icon: CompletedAssessment,
-          alt: "Assessment Icon",
-         },
-         {
-          id: 3,
-          title: "Received Certificate",
-          subtitle: "Agile Essentials Foundation",
-          time: "May 24, 2026",
-          icon: ReceivedCertificate,
-          alt: "Certificate Icon",
-         },
-  ];
-
+export const MyprofileMain = () => {
 
   return (
     <div className="myProfile-page">
-    <div className='Profile-content-Intern'>
-      <div className='Profile-Section-Intern'>
-         <div className='Profile-info-Intern'>
+
+      <div className="Profile-content-Intern">
+        <div className="Profile-Section-Intern">
+          <div className="Profile-info-Intern">
             <h2>{ProfileData.initials}</h2>
-         </div>
-         <div className='Profile-details-Intern'>
-          <div className='Profile-name-row'>
+          </div>
+
+          <div className="Profile-details-Intern">
+            <div className="Profile-name-row">
               <h2>{ProfileData.name}</h2>
-              <span className='Profile-role-Intern'>{ProfileData.role}</span>
-              <span className='Profile-status-Intern'>{ProfileData.status}</span>
-          </div>
-           <p className="Profile-ID-Intern">
-              <span>ID: {ProfileData.employeeId}</span>
-              <span className="Profile-department-Intern">
-                Dept: {ProfileData.department}
-               </span>
-          </p>
-          <div className="Profile-company-duration">
-            <span> 
-              <img 
-              src={ProfileData.companyicon} 
-              alt="" 
-              style={{width:"14.45px", height:"13.12px"}}
-               /> 
-               {ProfileData.company}
-               </span>
-            <span>
-              <img 
-              src={Companydurationprofile} 
-              alt="company duration"
-              className='Profile-durationimg-Intern'
-               /> 
-              {ProfileData.duration}
+              <span className="Profile-role-Intern">
+                {ProfileData.role}
               </span>
-          </div>
-         </div>
-         <div className='Profile-btn-Intern'>
-            <button className='Editprofile-btn-Intern'>
-               <img
-                src={Editprofileintern} 
-                alt="Editprofileintern" 
-                style={{width:"17px", height:"17px"}}
-               />
-               Edit Profile</button>
-         </div>
-      </div>
 
-      <div className='Profile-statscont-Intern'>
-        {ProfileStatsData.map((item) => (
-          <div className='Profile-statcard-Intern' key={item.id}>
-            
-            <div className='Profile-staticon-Intern'>
-              <img src={item.icon} alt={item.title} />
-            </div>
-
-            <div className='Profile-statcount-Intern'>
-                 {item.count}
-            </div>
-
-            <div className='Profile-stattitle-Intern'>
-               {item.title} <br />{item.subtitle}
+              <span className="Profile-status-Intern">
+                {ProfileData.status}
+              </span>
             </div>
           </div>
-        ))}
-      </div>
-    </div>
-      {/* right column */}
-      <div className="profile-main-container">
-        <div className="personalInfo-container">
-          <div className="personal-info-Header">
-            <h1>Personal Info</h1>
-          </div>
-          <div className="personl-info-details">
-            <div className="profile-field">
-              <div className="icon-container">
-                <img src={fullName} alt="Profile" className="profile-image" />
-              </div>
-              <div className="profile-details">
-                <p>Full Name</p>
-                <span>{profileInfoMockData.fullName}</span>
-              </div>
-            </div> 
 
-            <div className="profile-field">
-              <div className="icon-container">
-                <img
-                  src={InternshipID}
-                  alt="Internship-ID "
-                  className="Internship-ID-icon"
-                />
-              </div>
-              <div className="profile-details">
-                <p>Internship ID</p>
-                <span>{profileInfoMockData.internshipId}</span>
-              </div>
-            </div>
-
-            <div className="profile-field">
-              <div className="icon-container">
-                <img src={Email} alt="mail" className="email-address-icon" />
-              </div>
-
-              <div className="profile-details">
-                <p>Email Address</p>
-                <span>{profileInfoMockData.email}</span>
-              </div>
-            </div>
-
-            <div className="profile-field">
-              <div className="icon-container">
-                <img
-                  src={PhoneNumber}
-                  alt="Phone Number"
-                  className="Phone-icon"
-                />
-              </div>
-
-              <div className="profile-details">
-                <p>Phone Number</p>
-                <span>{profileInfoMockData.phoneNumber}</span>
-              </div>
-            </div>
-
-            <div className="profile-field">
-              <div className="icon-container">
-                <img src={DOB} alt="Date of Birth" className="DOB-icon" />
-              </div>
-
-              <div className="profile-details">
-                <p>Date of Birth</p>
-                <span>{profileInfoMockData.dateOfBirth}</span>
-              </div>
-            </div>
-
-            <div className="profile-field">
-              <div className="icon-container">
-                <img src={Gender} alt="Gender" className="Gender-icon" />
-              </div>
-
-              <div className="profile-details">
-                <p>Gender</p>
-                <span>{profileInfoMockData.gender}</span>
-              </div>
-            </div>
-
-            <div className="profile-field">
-              <div className="icon-container">
-                <img
-                  src={Department}
-                  alt="Department"
-                  className="Department-icon"
-                />
-              </div>
-
-              <div className="profile-details">
-                <p>Department</p>
-                <span>{profileInfoMockData.department}</span>
-              </div>
-            </div>
-
-            <div className="profile-field">
-              <div className="icon-container">
-                <img src={Designation} alt="Profile" className="profile-image" />
-              </div>
-              <div className="profile-details">
-                <p>Designation</p>
-                <span>{profileInfoMockData.designation}</span>
-              </div>
-            </div>
-
-            <div className="profile-field">
-              <div className="icon-container">
-                <img
-                  src={University}
-                  alt="University"
-                  className="University-icon"
-                />
-              </div>
-
-              <div className="profile-details">
-                <p>University</p>
-                <span>{profileInfoMockData.university}</span>
-              </div>
-            </div>
-
-            <div className="profile-field">
-              <div className="icon-container">
-                <img src={Course} alt="Course" className="Course-icon" />
-              </div>
-
-              <div className="profile-details">
-                <p>Course</p>
-                <span>{profileInfoMockData.course}</span>
-              </div>
-            </div>
-
-            <div className="profile-field">
-              <div className="icon-container">
-                {" "}
-                <img
-                  src={StartDate}
-                  alt="Start Date"
-                  className="Start-Date-icon"
-                />
-              </div>
-
-              <div className="profile-details">
-                <p>Start Date</p>
-                <span>{profileInfoMockData.startDate}</span>
-              </div>
-            </div>
-
-            <div className="profile-field">
-              <div className="icon-container">
-                <img src={EndDate} alt="End Date" className="End-Date-icon" />
-              </div>
-
-              <div className="profile-details">
-                <p>End Date</p>
-                <span>{profileInfoMockData.endDate}</span>
-              </div>
-            </div>
-
-            <div className="profile-field">
-              <div className="icon-container">
-                <img
-                  src={AssignedMentor}
-                  alt="Assigned Mentor"
-                  className="Assigned-Mentor-icon"
-                />
-              </div>
-
-              <div className="profile-details">
-                <p>Assigned Mentor</p>
-                <span>{profileInfoMockData.assignedMentor}</span>
-              </div>
-            </div>
-
-            <div className="profile-field">
-              <div className="icon-container">
-                {" "}
-                <img src={Address} alt="Address " className="Address-icon" />
-              </div>
-
-              <div className="profile-details">
-                <p>Address</p>
-                <span>{profileInfoMockData.address}</span>
-              </div>
-            </div>
-
-            <div className="profile-field">
-              <div className="icon-container">
-                <img
-                  src={EmergencyContact}
-                  alt="Emergency Contact"
-                  className="Emergency-Contact-icon"
-                />
-              </div>
-
-              <div className="profile-details">
-                <p>Emergency Contact</p>
-                <span>{profileInfoMockData.emergencyContact}</span>
-              </div>
-            </div>
-
-            <div className="profile-field">
-              <div className="icon-container">
-                <img
-                  src={LanguagesKnown}
-                  alt="Languages Known"
-                  className="Languages-Known-icon"
-                />
-              </div>
-
-              <div className="profile-details">
-                <p>Languages Known</p>
-                <span>{profileInfoMockData.languagesKnown}</span>
-              </div>
-            </div>
+          <div className="Profile-btn-Intern">
+            <button className="Editprofile-btn-Intern">
+              <img
+                src={Editprofileintern}
+                alt="Edit Profile"
+              />
+              Edit Profile
+            </button>
           </div>
         </div>
+      </div>
 
-        <div className="recent-activity">
-          {/* Header */}
-          <div className="recent-activity-header">
-            <h2>Recent Activity</h2>
+      <div className="Profile-main-grid-Intern">
+        <div className="Profile-left-column-Intern">
+          <section className="Profile-card-Intern Personal-info-card-Intern">
+           
+            <div className="Profile-card-header-Intern">
+              <h3>Personal Info</h3>
+            </div>
 
-            <Link to="/view-all" className="recent-activity-btn">
-              View All
-            </Link>
-          </div>
-          <div className="recent-activity-container">
-            <div className="activity-timeline">
-              <div className="activity-vertical-line"></div>
 
-              <div className="activity-items">
-                {activities.map((activity) => (
-                  <div key={activity.id} className="activity-item">
-                    <div className="activity-icon-wrapper">
-                      <img
-                        src={activity.icon}
-                        alt={activity.alt}
-                        className="recent-activity-icon"
-                      />
+            <div className="Personal-info-grid-Intern">
+              {PersonalInfoData.map((item) => (
+                <div
+                  className="Personal-info-item-Intern"
+                  key={item.id}
+                >
+                  <img
+                    src={item.icon}
+                    alt={item.label}
+                  />
+                  <div className="Personal-info-text-Intern">
+                    <span className="Personal-info-label-Intern">
+                      {item.label}
+                    </span>
+                    <span className="Personal-info-value-Intern">
+                      {item.value}
+                    </span>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </section>
+
+
+          <section className="Profile-card-Intern Documents-card-Intern">
+             <div className='document-card-container'>
+                    <div className='document-card-header'>
+                      <h1>Documents</h1>
+                      <button>View All</button>
                     </div>
-
-                    <div className="activity-content">
-                      <h3 className="activity-title">{activity.title}</h3>
-
-                      <p className="activity-subtitle">{activity.subtitle}</p>
-
-                      <span className="activity-time">{activity.time}</span>
+                    <div className='document-card-content'>
+                      {InternDocumentData.slice(0, 4).map((doc) => (
+                        <div key={doc.id} className='intern-document-card'>
+                          <div className='intern-files-icons'>
+                            <span>{documentIcons(doc.type)}</span>
+                          </div>
+                          <div className='intern-file-info'>
+                            <span className="intern-file-title" title={doc.name}>
+                              {doc.name}
+                            </span>
+                            <span className="intern-file-meta">
+                              {doc.size} • {doc.uploadedAt}
+                            </span>
+                          </div>
+                          <div className='download-file-icon-containar'>
+                            <img src={downloadFile} alt="Download File" />
+                          </div>
+                        </div>
+                      ))}
                     </div>
                   </div>
-                ))}
+          </section>
+        </div>
+
+        <div className="Profile-right-column-Intern">
+          <section className="Profile-card-Intern Education-card-Intern">
+            <div className="Profile-card-header-Intern">
+              <h3>Education</h3>
+            </div>
+
+            <div className="Education-content-Intern">
+              <div className="Education-icon-Intern">
+                <img
+                  src={EducationData.icon}
+                  alt="Education"
+                />
               </div>
+
+
+              <div className="Education-details-Intern">
+                <h4>
+                  {EducationData.course}
+                </h4>
+                <p>
+                  {EducationData.university}
+                </p>
+                <span>
+                  <img 
+                  src={Datemyprofile} 
+                  alt="Date myprofile"
+                  />
+                  {EducationData.startYear} - {EducationData.endYear}
+                  ({EducationData.status})
+                </span>
+
+                <span className="Education-cgpa-Intern">
+                  <img 
+                  src={Starmyprofileintern} 
+                  alt="Star intern"
+                   />
+                  CGPA: {EducationData.cgpa}
+                </span>
+              </div>
+            </div>
+          </section>
+
+      <section className="Profile-card-Intern Skills-card-Intern">
+      <div className='intern-skill-card'>
+        <div className='skill-card-header'>
+          <h1>Skills</h1>
+        </div>
+        <div className='skill-card-main-contents'>
+          <div className='skill-card-main-content'>
+            <div className='intern-skill-title'>
+              <h1>TECHNICAL SKILLS</h1>
+            </div>
+            <div className='intern-skill-tags'>
+              {skillsData.technicalSkills.map((skill, index) => (
+                <span key={index} className='skill-tag'>{skill}</span>
+              ))}
+            </div>
+          </div>
+          <div className='skill-card-main-content'>
+            <div className='intern-skill-title'>
+              <h1>SOFT SKILLS</h1>
+              </div>
+            <div className='intern-skill-tags'>
+              {skillsData.softSkills.map((skill, index) => (
+                <span key={index} className='skill-tag'>{skill}</span>
+              ))}
             </div>
           </div>
         </div>
       </div>
+     </section>
 
-      {/* FOOTER */}
-      <footer className="myProfile-footer">
-        <span>© 2026 InternFlow Management System</span>
+     </div>
 
-        <div className="myProfile-footer-links">
-          <Link to="/privacy-policy">Privacy Policy</Link>
-          <Link to="/terms">Terms</Link>
-          <Link to="/help-center">Help Center</Link>
-        </div>
-      </footer>
+     </div>
+
     </div>
   );
 };
